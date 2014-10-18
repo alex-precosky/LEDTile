@@ -1,0 +1,1294 @@
+Archive member included because of file (symbol)
+
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              obj/default/hello_world.o (__modsi3)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+                              obj/default/hello_world.o (printf)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                              obj/default/hello_world.o (puts)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o) (strlen)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o) (___vfprintf_internal_r)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o) (__sfvwrite_small_dev)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o) (_impure_ptr)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o) (_write_r)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o) (errno)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o) (__mulsi3)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                              obj/default/hello_world.o (alt_alarm_start)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+                              ../LEDTileApplication_bsp//obj/HAL/src/crt0.o (alt_load)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+                              ../LEDTileApplication_bsp//obj/HAL/src/crt0.o (alt_main)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+                              obj/default/hello_world.o (_alt_tick_rate)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o) (write)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_epcs_flash_init)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_init)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_ioctl)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o) (epcs_sector_erase)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (close)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (_do_ctors)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (_do_dtors)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o) (alt_errno)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o) (alt_flash_dev_list)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o) (alt_ic_isr_register)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (alt_io_redirect)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o) (alt_irq_active)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o) (open)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o) (alt_release_fd)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_qsys_irq_init)
+../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o) (alt_avalon_spi_command)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o) (alt_find_dev)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o) (alt_find_file)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o) (alt_get_fd)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (atexit)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o) (exit)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o) (memcmp)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+                              ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o) (memcpy)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o) (__register_exitproc)
+c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o) (__call_exitprocs)
+../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+                              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+errno               0x4               c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+_atexit0            0x8c              c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+sdram_controller_BEFORE_EXCEPTION 0x0000000002000000 0x0000000000000020
+sdram_controller 0x0000000002000020 0x0000000001ffffe0
+onchip_memory2   0x0000000004000000 0x0000000000006590
+reset            0x0000000004009000 0x0000000000000020
+epcs_flash_controller 0x0000000004009020 0x00000000000007e0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/hello_world.o
+LOAD c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a
+LOAD ../LEDTileApplication_bsp/\libhal_bsp.a
+END GROUP
+LOAD c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a
+                0x0000000002000000                __alt_mem_sdram_controller = 0x2000000
+                0x0000000004000000                __alt_mem_onchip_memory2 = 0x4000000
+                0x0000000004009000                __alt_mem_epcs_flash_controller = 0x4009000
+
+.entry          0x0000000004009000       0x20
+ *(.entry)
+ .entry         0x0000000004009000       0x20 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+                0x0000000004009000                __reset
+
+.exceptions     0x0000000002000020      0x198
+                0x0000000002000020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x0000000002000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000002000020        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                0x0000000002000020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000002000020        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                0x0000000002000020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000002000020       0x54 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000002000074       0x10 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000002000084        0x4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000002000088        0x4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000200008c        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000200008c        0x8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000002000094        0x4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x0000000002000098        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x0000000002000098        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x0000000002000098       0x54 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000020000ec       0xcc ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x00000000020000ec                alt_irq_handler
+                0x00000000020001b8                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x0000000002000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x00000000020001b8     0x4450
+                0x00000000020001b8                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000000020001b8       0x3c ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+                0x00000000020001b8                _start
+ .text          0x00000000020001f4      0x374 obj/default/hello_world.o
+                0x00000000020001f4                delay
+                0x000000000200022c                longDelay
+                0x0000000002000268                blank
+                0x0000000002000340                my_alarm_callback
+                0x00000000020003ac                displayBitmap
+                0x00000000020004e8                main
+ .text          0x0000000002000568      0x130 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x00000000020005dc                __divsi3
+                0x000000000200062c                __modsi3
+                0x0000000002000688                __udivsi3
+                0x0000000002000690                __umodsi3
+ .text          0x0000000002000698       0x88 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+                0x0000000002000698                _printf_r
+                0x00000000020006d4                printf
+ .text          0x0000000002000720       0x94 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                0x0000000002000720                _puts_r
+                0x00000000020007a0                puts
+ .text          0x00000000020007b4       0x28 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x00000000020007b4                strlen
+ .text          0x00000000020007dc      0x758 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                0x00000000020007dc                ___vfprintf_internal_r
+                0x0000000002000f10                __vfprintf_internal
+ .text          0x0000000002000f34       0xe0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+                0x0000000002000f34                __sfvwrite_small_dev
+ .text          0x0000000002001014        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .text          0x0000000002001014       0x6c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+                0x0000000002001014                _write_r
+ .text          0x0000000002001080        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .text          0x0000000002001080       0x28 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x0000000002001080                __mulsi3
+ .text          0x00000000020010a8      0x140 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                0x00000000020010a8                alt_alarm_start
+ .text          0x00000000020011e8       0xec ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000002001254                alt_load
+ .text          0x00000000020012d4       0x78 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+                0x00000000020012d4                alt_main
+ .text          0x000000000200134c      0x19c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000200134c                alt_alarm_stop
+                0x00000000020013e4                alt_tick
+ .text          0x00000000020014e8      0x140 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+                0x0000000002001538                write
+ .text          0x0000000002001628       0xd8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000002001660                alt_irq_init
+                0x0000000002001694                alt_sys_init
+ .text          0x0000000002001700      0x990 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+                0x0000000002001738                alt_epcs_flash_init
+                0x0000000002001b00                alt_epcs_flash_write
+                0x0000000002001d60                alt_epcs_flash_get_info
+                0x0000000002001e80                alt_epcs_flash_erase_block
+                0x0000000002001ef4                alt_epcs_flash_write_block
+                0x0000000002001ff8                alt_epcs_flash_read
+ .text          0x0000000002002090      0x164 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x0000000002002090                altera_avalon_jtag_uart_read_fd
+                0x00000000020020f0                altera_avalon_jtag_uart_write_fd
+                0x0000000002002150                altera_avalon_jtag_uart_close_fd
+                0x00000000020021a0                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x00000000020021f4      0x3d0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x00000000020021f4                altera_avalon_jtag_uart_init
+                0x000000000200255c                altera_avalon_jtag_uart_close
+ .text          0x00000000020025c4       0xf4 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x00000000020025c4                altera_avalon_jtag_uart_ioctl
+ .text          0x00000000020026b8      0x218 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x00000000020026b8                altera_avalon_jtag_uart_read
+ .text          0x00000000020028d0      0x220 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x00000000020028d0                altera_avalon_jtag_uart_write
+ .text          0x0000000002002af0       0xfc ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x0000000002002b64                alt_avalon_timer_sc_init
+ .text          0x0000000002002bec      0x624 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+                0x0000000002002bec                epcs_read_status_register
+                0x0000000002002cb8                epcs_sector_erase
+                0x0000000002002db0                epcs_read_buffer
+                0x0000000002002ea4                epcs_write_enable
+                0x0000000002002ef4                epcs_write_status_register
+                0x0000000002002f5c                epcs_write_buffer
+                0x0000000002003078                epcs_read_electronic_signature
+                0x00000000020030e0                epcs_read_device_id
+                0x0000000002003160                epcs_enter_4_bytes_mode
+                0x00000000020031b8                epcs_exit_4_bytes_mode
+ .text          0x0000000002003210      0x11c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+                0x0000000002003260                close
+ .text          0x000000000200332c       0x1c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000000000200332c                alt_dcache_flush_all
+ .text          0x0000000002003348       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x0000000002003374       0xf0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x00000000020033c4                alt_dev_llist_insert
+ .text          0x0000000002003464       0x5c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                0x0000000002003464                _do_ctors
+ .text          0x00000000020034c0       0x5c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                0x00000000020034c0                _do_dtors
+ .text          0x000000000200351c        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x000000000200351c       0xb8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                0x000000000200351c                alt_flash_open_dev
+                0x0000000002003584                alt_flash_close_dev
+ .text          0x00000000020035d4       0x1c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x00000000020035d4                alt_icache_flush_all
+ .text          0x00000000020035f0      0x1d8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+                0x00000000020035f0                alt_ic_isr_register
+                0x0000000002003640                alt_ic_irq_enable
+                0x00000000020036dc                alt_ic_irq_disable
+                0x000000000200377c                alt_ic_irq_enabled
+ .text          0x00000000020037c8       0xf0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000020037c8                alt_iic_isr_register
+ .text          0x00000000020038b8      0x158 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                0x0000000002003998                alt_io_redirect
+ .text          0x0000000002003a10        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000002003a10        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000002003a10        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000002003a10      0x298 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+                0x0000000002003b50                open
+ .text          0x0000000002003ca8       0x80 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+                0x0000000002003ca8                alt_release_fd
+ .text          0x0000000002003d28       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x0000000002003d28                altera_nios2_qsys_irq_init
+ .text          0x0000000002003d48      0x208 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+                0x0000000002003d48                alt_avalon_spi_command
+ .text          0x0000000002003f50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000002003f50       0x90 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+                0x0000000002003f50                alt_find_dev
+ .text          0x0000000002003fe0      0x114 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+                0x0000000002003fe0                alt_find_file
+ .text          0x00000000020040f4       0xd4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+                0x00000000020040f4                alt_get_fd
+ .text          0x00000000020041c8       0x14 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                0x00000000020041c8                atexit
+ .text          0x00000000020041dc       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                0x00000000020041dc                exit
+ .text          0x00000000020041fc       0x48 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                0x00000000020041fc                memcmp
+ .text          0x0000000002004244       0x28 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+                0x0000000002004244                memcpy
+ .text          0x000000000200426c      0x188 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+                0x000000000200426c                __register_exitproc
+ .text          0x00000000020043f4      0x1d8 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                0x00000000020043f4                __call_exitprocs
+ .text          0x00000000020045cc       0x3c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+                0x00000000020045cc                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                0x0000000002004608                PROVIDE (__etext, ABSOLUTE (.))
+                0x0000000002004608                PROVIDE (_etext, ABSOLUTE (.))
+                0x0000000002004608                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x0000000002004608                . = ALIGN (0x4)
+                0x0000000002004608                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x0000000002004608                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x0000000002004608                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x0000000002004608                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x0000000002004608                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x0000000002004608                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                0x0000000002004608                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x0000000002004608                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x0000000002004608                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x0000000002004608                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x0000000002004608                . = ALIGN (0x4)
+
+.rodata         0x0000000002004608     0xf164
+                0x0000000002004608                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000002004608                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000002004608     0xf118 obj/default/hello_world.o
+                0x0000000002004608                cie1931
+                0x0000000002004708                Mushroom
+                0x0000000002005708                Goomba
+                0x0000000002006708                CheepCheep
+                0x0000000002007708                KoopaTroopa
+                0x0000000002008708                Bowser
+                0x0000000002009708                QuestionBlock
+                0x000000000200a708                Coin
+                0x000000000200b708                MegaMan
+                0x000000000200c708                Link
+                0x000000000200d708                Kain
+                0x000000000200e708                BlueVirus
+                0x000000000200f708                RedSlime
+                0x0000000002010708                BlueGhost
+                0x0000000002011708                Octoroc1
+                0x0000000002012708                Octoroc2
+ .rodata.str1.4
+                0x0000000002013720        0x4 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .rodata        0x0000000002013724       0x10 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .rodata        0x0000000002013734       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .rodata        0x0000000002013760        0xc ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ *(.rodata1)
+                0x000000000201376c                . = ALIGN (0x4)
+                0x000000000201376c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000002004608                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x000000000201376c     0x1424 load address 0x0000000002014b90
+                0x000000000201376c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000000000201376c                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000201376c        0x0 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .data          0x000000000201376c       0x34 obj/default/hello_world.o
+                0x000000000201376c                bitmapPtrs
+ .data          0x00000000020137a0        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x00000000020137a0        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .data          0x00000000020137a0        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .data          0x00000000020137a0        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .data          0x00000000020137a0        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .data          0x00000000020137a0        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .data          0x00000000020137a0       0xe0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .data          0x0000000002013880        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .data          0x0000000002013880        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .data          0x0000000002013880        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .data          0x0000000002013880        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .data          0x0000000002013880        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x0000000002013880        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x0000000002013880        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .data          0x0000000002013880        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .data          0x0000000002013880     0x1128 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .data          0x00000000020149a8        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00000000020149a8      0x1a8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+                0x00000000020149a8                alt_dev_null
+                0x00000000020149d0                alt_fd_list
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .data          0x0000000002014b50        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .data          0x0000000002014b50        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .data          0x0000000002014b50        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .data          0x0000000002014b50        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .data          0x0000000002014b50        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .data          0x0000000002014b50        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .data          0x0000000002014b50        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+                0x000000000201cb50                _gp = ABSOLUTE ((. + 0x8000))
+                0x000000000201cb50                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x0000000002014b50        0xc obj/default/hello_world.o
+                0x0000000002014b50                octorocPtrs
+                0x0000000002014b58                numBitmaps
+ .sdata         0x0000000002014b5c        0x8 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x0000000002014b5c                _global_impure_ptr
+                0x0000000002014b60                _impure_ptr
+ .sdata         0x0000000002014b64        0x8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+                0x0000000002014b64                alt_alarm_list
+ .sdata         0x0000000002014b6c       0x14 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000000002014b6c                alt_fs_list
+                0x0000000002014b74                alt_dev_list
+                0x0000000002014b7c                alt_max_fd
+ .sdata         0x0000000002014b80        0x4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+                0x0000000002014b80                alt_errno
+ .sdata         0x0000000002014b84        0x8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                0x0000000002014b84                alt_flash_dev_list
+ .sdata         0x0000000002014b8c        0x4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000002014b8c                alt_priority_mask
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x0000000002014b90                . = ALIGN (0x4)
+                0x0000000002014b90                _edata = ABSOLUTE (.)
+                0x0000000002014b90                PROVIDE (edata, ABSOLUTE (.))
+                0x0000000002014b90                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000002014b90                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x0000000002015fb4      0x1c4
+                0x0000000002015fb4                __bss_start = ABSOLUTE (.)
+                0x0000000002015fb4                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x0000000002015fb4                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000000002015fb4        0x4 obj/default/hello_world.o
+ .sbss          0x0000000002015fb8        0x4 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                0x0000000002015fb8                errno
+ .sbss          0x0000000002015fbc        0xc ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000002015fbc                alt_argc
+                0x0000000002015fc0                alt_argv
+                0x0000000002015fc4                alt_envp
+ .sbss          0x0000000002015fc8        0x8 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+                0x0000000002015fc8                _alt_tick_rate
+                0x0000000002015fcc                _alt_nticks
+ .sbss          0x0000000002015fd0        0x4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000002015fd0                alt_irq_active
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x0000000002015fd4                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x0000000002015fd4                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000002015fd4        0x0 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000002015fd4       0x18 obj/default/hello_world.o
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .bss           0x0000000002015fec        0x0 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000002015fec        0x0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+ COMMON         0x0000000002015fec      0x100 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x0000000002015fec                alt_irq
+ COMMON         0x00000000020160ec       0x8c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                0x00000000020160ec                _atexit0
+                0x0000000002016178                . = ALIGN (0x4)
+                0x0000000002016178                __bss_end = ABSOLUTE (.)
+
+.sdram_controller
+                0x0000000002016178        0x0
+                0x0000000002016178                PROVIDE (_alt_partition_sdram_controller_start, ABSOLUTE (.))
+ *(.sdram_controller .sdram_controller. sdram_controller.*)
+                0x0000000002016178                . = ALIGN (0x4)
+                0x0000000002016178                PROVIDE (_alt_partition_sdram_controller_end, ABSOLUTE (.))
+                0x0000000002016178                _end = ABSOLUTE (.)
+                0x0000000002016178                end = ABSOLUTE (.)
+                0x0000000002016178                __alt_stack_base = ABSOLUTE (.)
+                0x0000000002016178                PROVIDE (_alt_partition_sdram_controller_load_addr, LOADADDR (.sdram_controller))
+
+.onchip_memory2
+                0x0000000004000000        0x0 load address 0x0000000002016178
+                0x0000000004000000                PROVIDE (_alt_partition_onchip_memory2_start, ABSOLUTE (.))
+ *(.onchip_memory2 .onchip_memory2. onchip_memory2.*)
+                0x0000000004000000                . = ALIGN (0x4)
+                0x0000000004000000                PROVIDE (_alt_partition_onchip_memory2_end, ABSOLUTE (.))
+                0x0000000002016178                PROVIDE (_alt_partition_onchip_memory2_load_addr, LOADADDR (.onchip_memory2))
+
+.epcs_flash_controller
+                0x0000000004009020        0x0 load address 0x0000000002016178
+                0x0000000004009020                PROVIDE (_alt_partition_epcs_flash_controller_start, ABSOLUTE (.))
+ *(.epcs_flash_controller .epcs_flash_controller. epcs_flash_controller.*)
+                0x0000000004009020                . = ALIGN (0x4)
+                0x0000000004009020                PROVIDE (_alt_partition_epcs_flash_controller_end, ABSOLUTE (.))
+                0x0000000002016178                PROVIDE (_alt_partition_epcs_flash_controller_load_addr, LOADADDR (.epcs_flash_controller))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x23
+ *(.comment)
+ .comment       0x0000000000000000       0x23 obj/default/hello_world.o
+                                         0x24 (size before relaxing)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .comment       0x0000000000000000       0x24 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000000       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x710
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/hello_world.o
+ .debug_aranges
+                0x0000000000000048       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x0000000000000068       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_aranges
+                0x0000000000000088       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x00000000000000c8       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_aranges
+                0x00000000000000e8       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_aranges
+                0x0000000000000108       0x18 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000120       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_aranges
+                0x0000000000000140       0x18 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_aranges
+                0x0000000000000158       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_aranges
+                0x0000000000000178       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_aranges
+                0x0000000000000198       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000000000001b8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000000000001d8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x00000000000001f8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_aranges
+                0x0000000000000218       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x0000000000000238       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .debug_aranges
+                0x0000000000000258       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x0000000000000278       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_aranges
+                0x0000000000000298       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_aranges
+                0x00000000000002b8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x00000000000002d8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000000000002f8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x0000000000000318       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .debug_aranges
+                0x0000000000000338       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x0000000000000358       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x0000000000000378       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x0000000000000398       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x00000000000003b8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x00000000000003d8       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x00000000000003f8       0x18 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x0000000000000410       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_aranges
+                0x0000000000000430       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000450       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x0000000000000470       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x0000000000000490       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x00000000000004b0       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x00000000000004e0       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000500       0x18 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000518       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_aranges
+                0x0000000000000538       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x0000000000000558       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_aranges
+                0x0000000000000578       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .debug_aranges
+                0x0000000000000598       0x38 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x00000000000005d0       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x00000000000005f0       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x0000000000000610       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x0000000000000630       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x0000000000000650       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000670       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x0000000000000690       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x00000000000006b0       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x00000000000006d0       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x00000000000006f0       0x20 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0xb439
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x77 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000077      0x518 obj/default/hello_world.o
+ .debug_info    0x000000000000058f      0x289 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000818      0x765 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_info    0x0000000000000f7d      0x6f4 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_info    0x0000000000001671       0xc6 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000001737      0xc69 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_info    0x00000000000023a0      0x6d9 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_info    0x0000000000002a79      0x631 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_info    0x00000000000030aa      0x6cb c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_info    0x0000000000003775       0x84 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_info    0x00000000000037f9       0xb8 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x00000000000038b1      0x2e4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_info    0x0000000000003b95      0x159 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000003cee      0x139 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000003e27      0x2b1 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_info    0x00000000000040d8      0x507 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_info    0x00000000000045df      0x83b ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000004e1a      0x8ae ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .debug_info    0x00000000000056c8      0x58a ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x0000000000005c52      0x3d8 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_info    0x000000000000602a      0x2a9 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_info    0x00000000000062d3      0x371 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x0000000000006644      0x36c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00000000000069b0      0x235 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x0000000000006be5      0x482 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .debug_info    0x0000000000007067      0x350 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_info    0x00000000000073b7       0x90 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000007447      0x4e3 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x000000000000792a      0x1b9 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000007ae3       0x8d ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x0000000000007b70       0x8d ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x0000000000007bfd       0xa3 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000007ca0      0x3ce ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_info    0x000000000000806e       0x90 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000000000080fe      0x364 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x0000000000008462      0x1f6 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x0000000000008658      0x4f0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x0000000000008b48       0x80 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000008bc8      0x190 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000008d58       0x8a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000008de2      0x3f0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_info    0x00000000000091d2      0x2dd ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x00000000000094af       0x90 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_info    0x000000000000953f      0x18b ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .debug_info    0x00000000000096ca       0x86 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000009750      0x30d ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000000000009a5d      0x30c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x0000000000009d69      0x339 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x000000000000a0a2      0x1eb c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000a28d       0xf8 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_info    0x000000000000a385       0xf1 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_info    0x000000000000a476       0xcd c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_info    0x000000000000a543      0x6fc c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_info    0x000000000000ac3f      0x70e c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_info    0x000000000000b34d       0xec ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x39b8
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012      0x19d obj/default/hello_world.o
+ .debug_abbrev  0x00000000000001af      0x112 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x00000000000002c1      0x1e2 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_abbrev  0x00000000000004a3      0x1d4 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_abbrev  0x0000000000000677       0x7f c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_abbrev  0x00000000000006f6      0x2db c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_abbrev  0x00000000000009d1      0x1a8 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_abbrev  0x0000000000000b79      0x13b c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000000cb4      0x199 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_abbrev  0x0000000000000e4d       0x37 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x0000000000000e84       0x6f c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x0000000000000ef3      0x162 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_abbrev  0x0000000000001055       0x9f ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000010f4       0xba ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000011ae      0x15a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x0000000000001308      0x133 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_abbrev  0x000000000000143b      0x17f ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000015ba      0x1c9 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .debug_abbrev  0x0000000000001783      0x118 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x000000000000189b      0x18f ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_abbrev  0x0000000000001a2a      0x102 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_abbrev  0x0000000000001b2c      0x19b ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x0000000000001cc7      0x199 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000001e60      0x155 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x0000000000001fb5      0x169 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .debug_abbrev  0x000000000000211e      0x11f ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x000000000000223d       0x42 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x000000000000227f       0xd9 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x0000000000002358      0x114 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x000000000000246c       0x79 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x00000000000024e5       0x79 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x000000000000255e       0x5a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x00000000000025b8      0x11a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_abbrev  0x00000000000026d2       0x42 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000002714      0x16a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x000000000000287e      0x169 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x00000000000029e7      0x114 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x0000000000002afb       0x12 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000002b0d      0x124 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000002c31       0x40 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000002c71      0x148 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x0000000000002db9       0xde ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x0000000000002e97       0x42 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_abbrev  0x0000000000002ed9       0x8a ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .debug_abbrev  0x0000000000002f63       0x12 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000002f75       0xf0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000003065       0xf0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x0000000000003155      0x10d ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x0000000000003262      0x115 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000003377       0xa9 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000003420       0x7f c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x000000000000349f       0x95 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000003534      0x1f5 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000003729      0x1e9 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000003912       0xa6 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x0000000000000000     0x4044
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x66 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066      0x1c1 obj/default/hello_world.o
+ .debug_line    0x0000000000000227       0xd6 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000000000002fd      0x215 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_line    0x0000000000000512      0x20e c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_line    0x0000000000000720      0x172 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000000892      0x40a c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_line    0x0000000000000c9c      0x221 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_line    0x0000000000000ebd      0x16a c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_line    0x0000000000001027      0x208 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_line    0x000000000000122f       0x60 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_line    0x000000000000128f       0x80 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x000000000000130f       0xfa ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_line    0x0000000000001409       0x92 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x000000000000149b       0xa4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000153f      0x102 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x0000000000001641      0x1fc ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_line    0x000000000000183d      0x1a4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000019e1      0x2b1 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .debug_line    0x0000000000001c92      0x131 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x0000000000001dc3      0x199 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x0000000000001f5c      0x129 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x0000000000002085      0x174 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x00000000000021f9      0x173 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x000000000000236c       0xfd ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x0000000000002469      0x118 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .debug_line    0x0000000000002581      0x188 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_line    0x0000000000002709       0x51 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x000000000000275a      0x11b ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x0000000000002875       0xd0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000002945       0x59 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x000000000000299e       0x59 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x00000000000029f7       0x51 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000002a48       0xc5 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_line    0x0000000000002b0d       0x4f ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000002b5c       0xed ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000002c49       0xdb ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000002d24      0x158 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x0000000000002e7c       0x6b ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000002ee7       0xae ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000002f95       0x50 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000002fe5      0x128 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_line    0x000000000000310d       0xb0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x00000000000031bd       0x51 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_line    0x000000000000320e       0xb6 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .debug_line    0x00000000000032c4       0xab ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x000000000000336f       0xb9 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x0000000000003428       0xd5 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x00000000000034fd       0xd4 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x00000000000035d1      0x16c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_line    0x000000000000373d      0x16c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_line    0x00000000000038a9      0x17d c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000003a26      0x100 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000003b26      0x24a c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000003d70      0x263 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000003fd3       0x71 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x0000000000000000      0xde0
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0xb8 obj/default/hello_world.o
+ .debug_frame   0x00000000000000b8       0x70 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x0000000000000128       0x40 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_frame   0x0000000000000168       0x3c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_frame   0x00000000000001a4       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_frame   0x00000000000001c4       0x4c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_frame   0x0000000000000210       0x30 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_frame   0x0000000000000240       0x2c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_frame   0x000000000000026c       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x000000000000028c       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_frame   0x00000000000002b8       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000000000000300       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x000000000000032c       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x0000000000000374       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_frame   0x00000000000003bc       0x64 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000420      0x128 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .debug_frame   0x0000000000000548       0x80 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x00000000000005c8       0x80 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_frame   0x0000000000000648       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_frame   0x0000000000000674       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x00000000000006a0       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000000000006cc       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x0000000000000714      0x160 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .debug_frame   0x0000000000000874       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_frame   0x00000000000008bc       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000000000008e8       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x0000000000000914       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x000000000000095c       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x0000000000000988       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x00000000000009b4       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_frame   0x00000000000009fc       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x0000000000000a28       0x80 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000aa8       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x0000000000000ad4       0x4c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x0000000000000b20       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x0000000000000b4c       0x68 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_frame   0x0000000000000bb4       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x0000000000000be4       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_frame   0x0000000000000c10       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .debug_frame   0x0000000000000c3c       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000000c68       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x0000000000000c94       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x0000000000000cc4       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000ce4       0x28 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000d0c       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000d2c       0x20 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000000d4c       0x30 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000d7c       0x38 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000db4       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x0000000000000000     0x20c3
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x21e obj/default/hello_world.o
+                                        0x288 (size before relaxing)
+ .debug_str     0x000000000000021e      0x110 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                        0x167 (size before relaxing)
+ .debug_str     0x000000000000032e      0x3d2 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+                                        0x4b2 (size before relaxing)
+ .debug_str     0x0000000000000700       0x4f c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                                        0x461 (size before relaxing)
+ .debug_str     0x000000000000074f       0xdc c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                                        0x18e (size before relaxing)
+ .debug_str     0x000000000000082b      0x196 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                                        0x632 (size before relaxing)
+ .debug_str     0x00000000000009c1       0x82 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+                                        0x48d (size before relaxing)
+ .debug_str     0x0000000000000a43       0xf9 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                                        0x467 (size before relaxing)
+ .debug_str     0x0000000000000b3c       0x3d c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+                                        0x461 (size before relaxing)
+ .debug_str     0x0000000000000b79       0x40 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                                        0x181 (size before relaxing)
+ .debug_str     0x0000000000000bb9       0x40 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+                                        0x128 (size before relaxing)
+ .debug_str     0x0000000000000bf9       0xd9 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                                        0x23e (size before relaxing)
+ .debug_str     0x0000000000000cd2       0xe9 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+                                        0x1d2 (size before relaxing)
+ .debug_str     0x0000000000000dbb       0x51 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+                                        0x15d (size before relaxing)
+ .debug_str     0x0000000000000e0c       0x4a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+                                        0x212 (size before relaxing)
+ .debug_str     0x0000000000000e56      0x14e ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+                                        0x2b8 (size before relaxing)
+ .debug_str     0x0000000000000fa4      0x2bc ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                        0x4e8 (size before relaxing)
+ .debug_str     0x0000000000001260      0x219 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+                                        0x507 (size before relaxing)
+ .debug_str     0x0000000000001479       0xb2 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                                        0x364 (size before relaxing)
+ .debug_str     0x000000000000152b       0xbc ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                                        0x2f8 (size before relaxing)
+ .debug_str     0x00000000000015e7       0x4a ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                                        0x253 (size before relaxing)
+ .debug_str     0x0000000000001631       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                                        0x2a8 (size before relaxing)
+ .debug_str     0x0000000000001679       0x4a ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x2a9 (size before relaxing)
+ .debug_str     0x00000000000016c3       0x6d ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                                        0x20b (size before relaxing)
+ .debug_str     0x0000000000001730      0x178 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+                                        0x29f (size before relaxing)
+ .debug_str     0x00000000000018a8       0x1b ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+                                        0x1cb (size before relaxing)
+ .debug_str     0x00000000000018c3       0x34 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x115 (size before relaxing)
+ .debug_str     0x00000000000018f7       0x49 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+                                        0x2c5 (size before relaxing)
+ .debug_str     0x0000000000001940       0x34 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                                        0x18c (size before relaxing)
+ .debug_str     0x0000000000001974       0x48 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                                         0x9c (size before relaxing)
+ .debug_str     0x00000000000019bc       0x4c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                                         0x9b (size before relaxing)
+ .debug_str     0x0000000000001a08       0x14 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_errno.o)
+                                        0x105 (size before relaxing)
+ .debug_str     0x0000000000001a1c       0x3f ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                                        0x2af (size before relaxing)
+ .debug_str     0x0000000000001a5b       0x34 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x115 (size before relaxing)
+ .debug_str     0x0000000000001a8f       0xbd ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+                                        0x1fe (size before relaxing)
+ .debug_str     0x0000000000001b4c       0x4c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                                        0x1a8 (size before relaxing)
+ .debug_str     0x0000000000001b98       0x56 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                                        0x2d6 (size before relaxing)
+ .debug_str     0x0000000000001bee       0x3a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                                        0x157 (size before relaxing)
+ .debug_str     0x0000000000001c28       0x17 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                                        0x106 (size before relaxing)
+ .debug_str     0x0000000000001c3f       0x29 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+                                        0x20b (size before relaxing)
+ .debug_str     0x0000000000001c68       0x28 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+                                        0x19f (size before relaxing)
+ .debug_str     0x0000000000001c90       0x3b ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                                        0x11c (size before relaxing)
+ .debug_str     0x0000000000001ccb       0xa5 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+                                        0x1a0 (size before relaxing)
+ .debug_str     0x0000000000001d70       0x24 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+                                        0x1ac (size before relaxing)
+ .debug_str     0x0000000000001d94       0x26 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+                                        0x1ba (size before relaxing)
+ .debug_str     0x0000000000001dba       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+                                        0x1dc (size before relaxing)
+ .debug_str     0x0000000000001dea      0x120 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                                        0x233 (size before relaxing)
+ .debug_str     0x0000000000001f0a       0x4d c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                                        0x199 (size before relaxing)
+ .debug_str     0x0000000000001f57       0x3e c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                                        0x188 (size before relaxing)
+ .debug_str     0x0000000000001f95       0x59 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+                                        0x11c (size before relaxing)
+ .debug_str     0x0000000000001fee       0x47 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+                                        0x4b4 (size before relaxing)
+ .debug_str     0x0000000000002035       0x64 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                                        0x492 (size before relaxing)
+ .debug_str     0x0000000000002099       0x2a ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+                                        0x111 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x2829
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x108 obj/default/hello_world.o
+ .debug_loc     0x0000000000000108      0x338 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000000440      0x125 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_loc     0x0000000000000565       0xb7 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_loc     0x000000000000061c       0x29 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000000645      0xc9d c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_loc     0x00000000000012e2      0x19e c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_loc     0x0000000000001480       0xde c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_loc     0x000000000000155e       0x93 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x00000000000015f1       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_loc     0x000000000000161d       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000000000001675       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x00000000000016a1       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_loc     0x00000000000016f9       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_loc     0x0000000000001751       0x84 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000000000017d5      0x1b9 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_epcs_flash_controller.o)
+ .debug_loc     0x000000000000198e       0xb0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_loc     0x0000000000001a3e       0xb0 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_loc     0x0000000000001aee       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_loc     0x0000000000001b1a       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_loc     0x0000000000001b46       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x0000000000001b72       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_loc     0x0000000000001bca      0x210 ../LEDTileApplication_bsp/\libhal_bsp.a(epcs_commands.o)
+ .debug_loc     0x0000000000001dda       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_loc     0x0000000000001e32       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_loc     0x0000000000001e5e       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_loc     0x0000000000001e8a       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_loc     0x0000000000001ee2       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_loc     0x0000000000001f0e       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_loc     0x0000000000001f3a       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_loc     0x0000000000001f92       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_loc     0x0000000000001fbe       0xb0 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x000000000000206e       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x000000000000209a       0x58 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_loc     0x00000000000020f2       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x000000000000211e       0x84 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_loc     0x00000000000021a2       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_loc     0x00000000000021ce       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_loc     0x00000000000021fa       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_spi.o)
+ .debug_loc     0x0000000000002226       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_loc     0x0000000000002252       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_loc     0x000000000000227e       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_loc     0x00000000000022aa       0x2c c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_loc     0x00000000000022d6       0x3e c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_loc     0x0000000000002314       0x6f c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_loc     0x0000000000002383       0xee c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_loc     0x0000000000002471      0x1f4 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_loc     0x0000000000002665      0x198 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_loc     0x00000000000027fd       0x2c ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x10 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+                0x0000000004000000                __alt_data_end = 0x4000000
+                0x0000000004000000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x0000000002016178                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x0000000002016178                PROVIDE (__alt_heap_start, end)
+                0x0000000004000000                PROVIDE (__alt_heap_limit, 0x4000000)
+OUTPUT(LEDTileApplication.elf elf32-littlenios2)
+
+.debug_ranges   0x0000000000000000      0x2b8
+ .debug_ranges  0x0000000000000000       0x20 ../LEDTileApplication_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020      0x188 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_ranges  0x00000000000001a8       0x18 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_ranges  0x00000000000001c0       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_ranges  0x00000000000001f0       0x18 ../LEDTileApplication_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_ranges  0x0000000000000208       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_ranges  0x0000000000000238       0x28 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x0000000000000260       0x10 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x0000000000000270       0x30 ../LEDTileApplication_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000000000002a0       0x18 c:/altera/14.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)

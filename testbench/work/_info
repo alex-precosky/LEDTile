@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\14.0
+Eledmatrix_ctrl
+Z0 w1413264192
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Alex\Desktop\LEDTile\testbench
+Z6 8C:/Users/Alex/Desktop/LEDTile/rtl/LEDMatrix_Ctrl.vhd
+Z7 FC:/Users/Alex/Desktop/LEDTile/rtl/LEDMatrix_Ctrl.vhd
+l0
+L12
+VXo:n0kI;LS91BZD8cl[>;3
+Z8 OV;C;10.1e;51
+32
+Z9 !s108 1413264952.294000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Alex/Desktop/LEDTile/rtl/LEDMatrix_Ctrl.vhd|
+Z11 !s107 C:/Users/Alex/Desktop/LEDTile/rtl/LEDMatrix_Ctrl.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 DQ<Fzo6hTkdf`lcXnczgN1
+!i10b 1
+Aledmatrix_ctrl_arch
+R1
+R2
+R3
+R4
+DEx4 work 14 ledmatrix_ctrl 0 22 Xo:n0kI;LS91BZD8cl[>;3
+l75
+L43
+V?bD<i70=i7;:Kj7aHIWhZ1
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 JEM;TH5PW6Oa^d<13j]eD0
+!i10b 1
+Eledmatrix_testbench
+Z14 w1413225771
+R3
+R4
+R5
+Z15 8C:/Users/Alex/Desktop/LEDTile/testbench/LEDMatrix_testbench.vhd
+Z16 FC:/Users/Alex/Desktop/LEDTile/testbench/LEDMatrix_testbench.vhd
+l0
+L5
+VoYL`1FiF=U=nhCbAD<oTa1
+!s100 2cQ0P5A<6_^T;6mQ[;gUX3
+R8
+32
+!i10b 1
+Z17 !s108 1413264952.402000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Alex/Desktop/LEDTile/testbench/LEDMatrix_testbench.vhd|
+Z19 !s107 C:/Users/Alex/Desktop/LEDTile/testbench/LEDMatrix_testbench.vhd|
+R12
+R13
+Aledmatrix_testbench_arch
+R3
+R4
+Z20 DEx4 work 19 ledmatrix_testbench 0 22 oYL`1FiF=U=nhCbAD<oTa1
+l40
+L11
+Z21 VZAe_Z[dDJ^8Wb7^nW5FW50
+Z22 !s100 GQ>i8IK3>Wg^AQ=:5FeK^3
+R8
+32
+!i10b 1
+R17
+R18
+R19
+R12
+R13
