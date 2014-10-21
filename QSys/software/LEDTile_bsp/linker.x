@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
  * SOPC Builder design path: ../../QSys.sopcinfo
  *
- * Generated: Thu Oct 16 20:56:42 PDT 2014
+ * Generated: Sat Oct 18 17:04:40 PDT 2014
  */
 
 /*
@@ -50,11 +50,10 @@
 
 MEMORY
 {
-    sdram_controller_BEFORE_EXCEPTION : ORIGIN = 0x2000000, LENGTH = 32
+    reset : ORIGIN = 0x2000000, LENGTH = 32
     sdram_controller : ORIGIN = 0x2000020, LENGTH = 33554400
     onchip_memory2 : ORIGIN = 0x4000000, LENGTH = 26000
-    reset : ORIGIN = 0x4009000, LENGTH = 32
-    epcs_flash_controller : ORIGIN = 0x4009020, LENGTH = 2016
+    epcs_flash_controller : ORIGIN = 0x4009000, LENGTH = 2048
 }
 
 /* Define symbols for each memory base-address */

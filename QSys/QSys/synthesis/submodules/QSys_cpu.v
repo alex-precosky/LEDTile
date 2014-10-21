@@ -517,7 +517,7 @@ defparam QSys_cpu_ociram_sp_ram.lpm_file = "QSys_cpu_ociram_default_contents.hex
     (MonAReg[4 : 2] == 3'd2)? 32'h00040000 :
     (MonAReg[4 : 2] == 3'd3)? 32'h00000100 :
     (MonAReg[4 : 2] == 3'd4)? 32'h20000000 :
-    (MonAReg[4 : 2] == 3'd5)? 32'h04009000 :
+    (MonAReg[4 : 2] == 3'd5)? 32'h02000000 :
     (MonAReg[4 : 2] == 3'd6)? 32'h00000000 :
     32'h00000000;
 
@@ -4168,7 +4168,7 @@ module QSys_cpu (
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
-          F_pc <= 16786432;
+          F_pc <= 8388608;
       else if (F_pc_en)
           F_pc <= F_pc_nxt;
     end
@@ -4832,15 +4832,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_jmp_indirect = D_op_eret|
-    D_op_bret|
-    D_op_rsvx17|
-    D_op_rsvx25|
-    D_op_ret|
-    D_op_jmp|
-    D_op_rsvx21|
-    D_op_callr;
-
+  assign D_ctrl_jmp_indirect = D_op_eret|D_op_bret|D_op_ret|D_op_jmp|D_op_callr;
   assign R_ctrl_jmp_indirect_nxt = D_ctrl_jmp_indirect;
   always @(posedge clk or negedge reset_n)
     begin
@@ -4862,7 +4854,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_implicit_dst_retaddr = D_op_call|D_op_rsv02;
+  assign D_ctrl_implicit_dst_retaddr = D_op_call;
   assign R_ctrl_implicit_dst_retaddr_nxt = D_ctrl_implicit_dst_retaddr;
   always @(posedge clk or negedge reset_n)
     begin
@@ -4873,7 +4865,54 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_implicit_dst_eretaddr = D_op_div|D_op_divu|D_op_mul|D_op_muli|D_op_mulxss|D_op_mulxsu|D_op_mulxuu;
+  assign D_ctrl_implicit_dst_eretaddr = D_op_div|
+    D_op_divu|
+    D_op_mul|
+    D_op_muli|
+    D_op_mulxss|
+    D_op_mulxsu|
+    D_op_mulxuu|
+    D_op_crst|
+    D_op_ldl|
+    D_op_rdprs|
+    D_op_rsv02|
+    D_op_rsv09|
+    D_op_rsv10|
+    D_op_rsv17|
+    D_op_rsv18|
+    D_op_rsv25|
+    D_op_rsv26|
+    D_op_rsv33|
+    D_op_rsv34|
+    D_op_rsv41|
+    D_op_rsv42|
+    D_op_rsv49|
+    D_op_rsv57|
+    D_op_rsv61|
+    D_op_rsv62|
+    D_op_rsv63|
+    D_op_rsvx00|
+    D_op_rsvx10|
+    D_op_rsvx15|
+    D_op_rsvx17|
+    D_op_rsvx21|
+    D_op_rsvx25|
+    D_op_rsvx33|
+    D_op_rsvx34|
+    D_op_rsvx35|
+    D_op_rsvx42|
+    D_op_rsvx43|
+    D_op_rsvx44|
+    D_op_rsvx47|
+    D_op_rsvx50|
+    D_op_rsvx51|
+    D_op_rsvx55|
+    D_op_rsvx56|
+    D_op_rsvx60|
+    D_op_rsvx63|
+    D_op_stc|
+    D_op_wrprs;
+
   assign R_ctrl_implicit_dst_eretaddr_nxt = D_ctrl_implicit_dst_eretaddr;
   always @(posedge clk or negedge reset_n)
     begin
@@ -4893,8 +4932,46 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_mulxss|
     D_op_mulxsu|
     D_op_mulxuu|
-    D_op_intr|
-    D_op_rsvx60;
+    D_op_crst|
+    D_op_ldl|
+    D_op_rdprs|
+    D_op_rsv02|
+    D_op_rsv09|
+    D_op_rsv10|
+    D_op_rsv17|
+    D_op_rsv18|
+    D_op_rsv25|
+    D_op_rsv26|
+    D_op_rsv33|
+    D_op_rsv34|
+    D_op_rsv41|
+    D_op_rsv42|
+    D_op_rsv49|
+    D_op_rsv57|
+    D_op_rsv61|
+    D_op_rsv62|
+    D_op_rsv63|
+    D_op_rsvx00|
+    D_op_rsvx10|
+    D_op_rsvx15|
+    D_op_rsvx17|
+    D_op_rsvx21|
+    D_op_rsvx25|
+    D_op_rsvx33|
+    D_op_rsvx34|
+    D_op_rsvx35|
+    D_op_rsvx42|
+    D_op_rsvx43|
+    D_op_rsvx47|
+    D_op_rsvx50|
+    D_op_rsvx51|
+    D_op_rsvx55|
+    D_op_rsvx56|
+    D_op_rsvx60|
+    D_op_rsvx63|
+    D_op_stc|
+    D_op_wrprs|
+    D_op_intr;
 
   assign R_ctrl_exception_nxt = D_ctrl_exception;
   always @(posedge clk or negedge reset_n)
@@ -4917,7 +4994,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_crst = D_op_crst|D_op_rsvx63;
+  assign D_ctrl_crst = 1'b0;
   assign R_ctrl_crst_nxt = D_ctrl_crst;
   always @(posedge clk or negedge reset_n)
     begin
@@ -4928,17 +5005,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_uncond_cti_non_br = D_op_call|
-    D_op_jmpi|
-    D_op_eret|
-    D_op_bret|
-    D_op_rsvx17|
-    D_op_rsvx25|
-    D_op_ret|
-    D_op_jmp|
-    D_op_rsvx21|
-    D_op_callr;
-
+  assign D_ctrl_uncond_cti_non_br = D_op_call|D_op_jmpi|D_op_eret|D_op_bret|D_op_ret|D_op_jmp|D_op_callr;
   assign R_ctrl_uncond_cti_non_br_nxt = D_ctrl_uncond_cti_non_br;
   always @(posedge clk or negedge reset_n)
     begin
@@ -4962,8 +5029,45 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_mulxss|
     D_op_mulxsu|
     D_op_mulxuu|
-    D_op_intr|
+    D_op_crst|
+    D_op_ldl|
+    D_op_rdprs|
+    D_op_rsv09|
+    D_op_rsv10|
+    D_op_rsv17|
+    D_op_rsv18|
+    D_op_rsv25|
+    D_op_rsv26|
+    D_op_rsv33|
+    D_op_rsv34|
+    D_op_rsv41|
+    D_op_rsv42|
+    D_op_rsv49|
+    D_op_rsv57|
+    D_op_rsv61|
+    D_op_rsv62|
+    D_op_rsv63|
+    D_op_rsvx00|
+    D_op_rsvx10|
+    D_op_rsvx15|
+    D_op_rsvx17|
+    D_op_rsvx21|
+    D_op_rsvx25|
+    D_op_rsvx33|
+    D_op_rsvx34|
+    D_op_rsvx35|
+    D_op_rsvx42|
+    D_op_rsvx43|
+    D_op_rsvx47|
+    D_op_rsvx50|
+    D_op_rsvx51|
+    D_op_rsvx55|
+    D_op_rsvx56|
     D_op_rsvx60|
+    D_op_rsvx63|
+    D_op_stc|
+    D_op_wrprs|
+    D_op_intr|
     D_op_break|
     D_op_hbreak;
 
@@ -4999,7 +5103,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_rot_right = D_op_rsvx10|D_op_ror|D_op_rsvx42|D_op_rsvx43;
+  assign D_ctrl_rot_right = D_op_ror;
   assign R_ctrl_rot_right_nxt = D_ctrl_rot_right;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5010,15 +5114,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_shift_rot_right = D_op_srli|
-    D_op_srl|
-    D_op_srai|
-    D_op_sra|
-    D_op_rsvx10|
-    D_op_ror|
-    D_op_rsvx42|
-    D_op_rsvx43;
-
+  assign D_ctrl_shift_rot_right = D_op_srli|D_op_srl|D_op_srai|D_op_sra|D_op_ror;
   assign R_ctrl_shift_rot_right_nxt = D_ctrl_shift_rot_right;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5030,21 +5126,14 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
 
 
   assign D_ctrl_shift_rot = D_op_slli|
-    D_op_rsvx50|
     D_op_sll|
-    D_op_rsvx51|
     D_op_roli|
-    D_op_rsvx34|
     D_op_rol|
-    D_op_rsvx35|
     D_op_srli|
     D_op_srl|
     D_op_srai|
     D_op_sra|
-    D_op_rsvx10|
-    D_op_ror|
-    D_op_rsvx42|
-    D_op_rsvx43;
+    D_op_ror;
 
   assign R_ctrl_shift_rot_nxt = D_ctrl_shift_rot;
   always @(posedge clk or negedge reset_n)
@@ -5094,12 +5183,8 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_ori|
     D_op_xori|
     D_op_roli|
-    D_op_rsvx10|
     D_op_slli|
     D_op_srli|
-    D_op_rsvx34|
-    D_op_rsvx42|
-    D_op_rsvx50|
     D_op_srai;
 
   assign R_ctrl_unsigned_lo_imm16_nxt = D_ctrl_unsigned_lo_imm16;
@@ -5112,7 +5197,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_br_uncond = D_op_br|D_op_rsv02;
+  assign D_ctrl_br_uncond = D_op_br;
   assign R_ctrl_br_uncond_nxt = D_ctrl_br_uncond;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5123,15 +5208,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_br = D_op_br|
-    D_op_bge|
-    D_op_blt|
-    D_op_bne|
-    D_op_beq|
-    D_op_bgeu|
-    D_op_bltu|
-    D_op_rsv62;
-
+  assign D_ctrl_br = D_op_br|D_op_bge|D_op_blt|D_op_bne|D_op_beq|D_op_bgeu|D_op_bltu;
   assign R_ctrl_br_nxt = D_ctrl_br;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5143,7 +5220,6 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
 
 
   assign D_ctrl_alu_subtract = D_op_sub|
-    D_op_rsvx25|
     D_op_cmplti|
     D_op_cmpltui|
     D_op_cmplt|
@@ -5155,9 +5231,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_cmpge|
     D_op_cmpgeu|
     D_op_bge|
-    D_op_rsv10|
-    D_op_bgeu|
-    D_op_rsv42;
+    D_op_bgeu;
 
   assign R_ctrl_alu_subtract_nxt = D_ctrl_alu_subtract;
   always @(posedge clk or negedge reset_n)
@@ -5187,21 +5261,18 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_beq|
     D_op_bgeu|
     D_op_bltu|
-    D_op_rsv62|
     D_op_cmpgei|
     D_op_cmplti|
     D_op_cmpnei|
     D_op_cmpgeui|
     D_op_cmpltui|
     D_op_cmpeqi|
-    D_op_rsvx00|
     D_op_cmpge|
     D_op_cmplt|
     D_op_cmpne|
     D_op_cmpgeu|
     D_op_cmpltu|
-    D_op_cmpeq|
-    D_op_rsvx56;
+    D_op_cmpeq;
 
   assign R_ctrl_br_cmp_nxt = D_ctrl_br_cmp;
   always @(posedge clk or negedge reset_n)
@@ -5213,15 +5284,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_ld_signed = D_op_ldb|
-    D_op_ldh|
-    D_op_ldl|
-    D_op_ldw|
-    D_op_ldbio|
-    D_op_ldhio|
-    D_op_ldwio|
-    D_op_rsv63;
-
+  assign D_ctrl_ld_signed = D_op_ldb|D_op_ldh|D_op_ldw|D_op_ldbio|D_op_ldhio|D_op_ldwio;
   assign R_ctrl_ld_signed_nxt = D_ctrl_ld_signed;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5234,12 +5297,10 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
 
   assign D_ctrl_ld = D_op_ldb|
     D_op_ldh|
-    D_op_ldl|
     D_op_ldw|
     D_op_ldbio|
     D_op_ldhio|
     D_op_ldwio|
-    D_op_rsv63|
     D_op_ldbu|
     D_op_ldhu|
     D_op_ldbuio|
@@ -5255,7 +5316,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_ld_non_io = D_op_ldbu|D_op_ldhu|D_op_ldb|D_op_ldh|D_op_ldw|D_op_ldl;
+  assign D_ctrl_ld_non_io = D_op_ldbu|D_op_ldhu|D_op_ldb|D_op_ldh|D_op_ldw;
   assign R_ctrl_ld_non_io_nxt = D_ctrl_ld_non_io;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5266,15 +5327,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_st = D_op_stb|
-    D_op_sth|
-    D_op_stw|
-    D_op_stc|
-    D_op_stbio|
-    D_op_sthio|
-    D_op_stwio|
-    D_op_rsv61;
-
+  assign D_ctrl_st = D_op_stb|D_op_sth|D_op_stw|D_op_stbio|D_op_sthio|D_op_stwio;
   assign R_ctrl_st_nxt = D_ctrl_st;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5285,7 +5338,7 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     end
 
 
-  assign D_ctrl_ld_io = D_op_ldbuio|D_op_ldhuio|D_op_ldbio|D_op_ldhio|D_op_ldwio|D_op_rsv63;
+  assign D_ctrl_ld_io = D_op_ldbuio|D_op_ldhuio|D_op_ldbio|D_op_ldhio|D_op_ldwio;
   assign R_ctrl_ld_io_nxt = D_ctrl_ld_io;
   always @(posedge clk or negedge reset_n)
     begin
@@ -5304,7 +5357,6 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_ori|
     D_op_xori|
     D_op_call|
-    D_op_rdprs|
     D_op_cmpgei|
     D_op_cmplti|
     D_op_cmpnei|
@@ -5312,21 +5364,12 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_cmpltui|
     D_op_cmpeqi|
     D_op_jmpi|
-    D_op_rsv09|
-    D_op_rsv17|
-    D_op_rsv25|
-    D_op_rsv33|
-    D_op_rsv41|
-    D_op_rsv49|
-    D_op_rsv57|
     D_op_ldb|
     D_op_ldh|
-    D_op_ldl|
     D_op_ldw|
     D_op_ldbio|
     D_op_ldhio|
     D_op_ldwio|
-    D_op_rsv63|
     D_op_ldbu|
     D_op_ldhu|
     D_op_ldbuio|
@@ -5353,23 +5396,13 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_beq|
     D_op_bgeu|
     D_op_bltu|
-    D_op_rsv62|
     D_op_stb|
     D_op_sth|
     D_op_stw|
-    D_op_stc|
     D_op_stbio|
     D_op_sthio|
     D_op_stwio|
-    D_op_rsv61|
-    D_op_jmpi|
-    D_op_rsv09|
-    D_op_rsv17|
-    D_op_rsv25|
-    D_op_rsv33|
-    D_op_rsv41|
-    D_op_rsv49|
-    D_op_rsv57;
+    D_op_jmpi;
 
   assign R_ctrl_ignore_dst_nxt = D_ctrl_ignore_dst;
   always @(posedge clk or negedge reset_n)
@@ -5389,7 +5422,6 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_ori|
     D_op_xori|
     D_op_call|
-    D_op_rdprs|
     D_op_cmpgei|
     D_op_cmplti|
     D_op_cmpnei|
@@ -5397,21 +5429,12 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_cmpltui|
     D_op_cmpeqi|
     D_op_jmpi|
-    D_op_rsv09|
-    D_op_rsv17|
-    D_op_rsv25|
-    D_op_rsv33|
-    D_op_rsv41|
-    D_op_rsv49|
-    D_op_rsv57|
     D_op_ldb|
     D_op_ldh|
-    D_op_ldl|
     D_op_ldw|
     D_op_ldbio|
     D_op_ldhio|
     D_op_ldwio|
-    D_op_rsv63|
     D_op_ldbu|
     D_op_ldhu|
     D_op_ldbuio|
@@ -5423,18 +5446,12 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_stb|
     D_op_sth|
     D_op_stw|
-    D_op_stc|
     D_op_stbio|
     D_op_sthio|
     D_op_stwio|
-    D_op_rsv61|
     D_op_roli|
-    D_op_rsvx10|
     D_op_slli|
     D_op_srli|
-    D_op_rsvx34|
-    D_op_rsvx42|
-    D_op_rsvx50|
     D_op_srai;
 
   assign R_ctrl_src2_choose_imm_nxt = D_ctrl_src2_choose_imm;
@@ -5475,17 +5492,51 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_callr|
     D_op_trap|
     D_op_rsvx44|
-    D_op_intr|
+    D_op_crst|
+    D_op_ldl|
+    D_op_rdprs|
+    D_op_rsv09|
+    D_op_rsv10|
+    D_op_rsv17|
+    D_op_rsv18|
+    D_op_rsv25|
+    D_op_rsv26|
+    D_op_rsv33|
+    D_op_rsv34|
+    D_op_rsv41|
+    D_op_rsv42|
+    D_op_rsv49|
+    D_op_rsv57|
+    D_op_rsv61|
+    D_op_rsv62|
+    D_op_rsv63|
+    D_op_rsvx00|
+    D_op_rsvx10|
+    D_op_rsvx15|
+    D_op_rsvx17|
+    D_op_rsvx21|
+    D_op_rsvx25|
+    D_op_rsvx33|
+    D_op_rsvx34|
+    D_op_rsvx35|
+    D_op_rsvx42|
+    D_op_rsvx43|
+    D_op_rsvx47|
+    D_op_rsvx50|
+    D_op_rsvx51|
+    D_op_rsvx55|
+    D_op_rsvx56|
     D_op_rsvx60|
+    D_op_rsvx63|
+    D_op_stc|
+    D_op_wrprs|
+    D_op_intr|
     D_op_break|
     D_op_hbreak|
     D_op_eret|
     D_op_bret|
-    D_op_rsvx17|
-    D_op_rsvx25|
     D_op_ret|
     D_op_jmp|
-    D_op_rsvx21|
     D_op_jmpi;
 
   assign R_ctrl_force_src2_zero_nxt = D_ctrl_force_src2_zero;
@@ -5507,15 +5558,10 @@ defparam QSys_cpu_register_bank_b.lpm_file = "QSys_cpu_rf_ram_b.hex";
     D_op_cmpnei|
     D_op_cmpne|
     D_op_bge|
-    D_op_rsv10|
     D_op_bgeu|
-    D_op_rsv42|
     D_op_beq|
-    D_op_rsv34|
     D_op_bne|
-    D_op_rsv62|
-    D_op_br|
-    D_op_rsv02;
+    D_op_br;
 
   assign R_ctrl_alu_force_xor_nxt = D_ctrl_alu_force_xor;
   always @(posedge clk or negedge reset_n)

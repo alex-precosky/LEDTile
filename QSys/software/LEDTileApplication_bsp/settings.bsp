@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 17, 2014 5:06:57 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1413590817169</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile\QSys\software\LEDTileApplication_bsp</BspGeneratedLocation>
-        <BspSettingsFile>C:\Users\Alex\Desktop\LEDTile\QSys\software\LEDTileApplication_bsp\settings.bsp</BspSettingsFile>
+        <BspGeneratedTimeStamp>Oct 19, 2014 1:39:42 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1413707982966</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>.\</BspGeneratedLocation>
+        <BspSettingsFile>..\LEDTileApplication_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\QSys.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
@@ -698,7 +698,7 @@
                 <SettingName>hal.enable_small_c_library</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>Boolean</Type>
-                <Value>1</Value>
+                <Value>0</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Causes the small newlib (C library) to be used. This reduces code and data footprint at the expense of reduced functionality. Several newlib features are removed such as floating-point support in printf(), stdin input routines, and buffered I/O. The small C library is not compatible with Micrium MicroC/OS-II. If true, adds -msmallc to ALT_LDFLAGS in public.mk.</Description>
@@ -863,12 +863,6 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x00000000 - 0x0000001F</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes>timer</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>sdram_controller</slaveDescriptor>
                 <addressRange>0x02000000 - 0x03FFFFFF</addressRange>
                 <addressSpan>33554432</addressSpan>
@@ -887,50 +881,56 @@
                 <attributes>flash, memory, non-volatile</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sys_clk_timer</slaveDescriptor>
+                <slaveDescriptor>timer_0</slaveDescriptor>
                 <addressRange>0x0400A000 - 0x0400A01F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>sys_clk_timer</slaveDescriptor>
+                <addressRange>0x0400A020 - 0x0400A03F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>display_buffer_ctrl</slaveDescriptor>
-                <addressRange>0x0400A020 - 0x0400A02F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>display_buffer_data</slaveDescriptor>
-                <addressRange>0x0400A030 - 0x0400A03F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>display_buffer_addr</slaveDescriptor>
                 <addressRange>0x0400A040 - 0x0400A04F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>altpll_0</slaveDescriptor>
+                <slaveDescriptor>display_buffer_data</slaveDescriptor>
                 <addressRange>0x0400A050 - 0x0400A05F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_led</slaveDescriptor>
+                <slaveDescriptor>display_buffer_addr</slaveDescriptor>
                 <addressRange>0x0400A060 - 0x0400A06F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>altpll_0</slaveDescriptor>
+                <addressRange>0x0400A070 - 0x0400A07F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_led</slaveDescriptor>
+                <addressRange>0x0400A080 - 0x0400A08F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x0400A070 - 0x0400A077</addressRange>
+                <addressRange>0x0400A090 - 0x0400A097</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x0400A078 - 0x0400A07F</addressRange>
+                <addressRange>0x0400A098 - 0x0400A09F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

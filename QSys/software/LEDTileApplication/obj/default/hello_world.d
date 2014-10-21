@@ -6,7 +6,8 @@ obj/default/hello_world.o: hello_world.c \
  ../LEDTileApplication_bsp//HAL/inc/sys/alt_alarm.h \
  ../LEDTileApplication_bsp//HAL/inc/sys/alt_llist.h \
  ../LEDTileApplication_bsp//HAL/inc/alt_types.h \
- ../LEDTileApplication_bsp//HAL/inc/priv/alt_alarm.h
+ ../LEDTileApplication_bsp//HAL/inc/priv/alt_alarm.h \
+ ../Giflib/GiflibNIOS/gif_lib.h Animations.h
 
 ../LEDTileApplication_bsp/system.h:
 
@@ -25,3 +26,7 @@ obj/default/hello_world.o: hello_world.c \
 ../LEDTileApplication_bsp//HAL/inc/alt_types.h:
 
 ../LEDTileApplication_bsp//HAL/inc/priv/alt_alarm.h:
+
+../Giflib/GiflibNIOS/gif_lib.h:
+
+Animations.h:

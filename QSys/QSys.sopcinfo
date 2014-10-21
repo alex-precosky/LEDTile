@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="QSys" kind="QSys" version="1.0" fabric="QSYS">
  <!-- Format version 14.0 200 (Future versions may contain additional information.) -->
- <!-- 2014.10.17.16:49:14 -->
+ <!-- 2014.10.19.01:24:18 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1413589754</value>
+  <value>1413707058</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1270,6 +1270,10 @@ the requested settings for a module instance. -->
    <value></value>
   </assignment>
   <assignment>
+   <name>embeddedsw.CMacro.HAS_ILLEGAL_INSTRUCTION_EXCEPTION</name>
+   <value></value>
+  </assignment>
+  <assignment>
    <name>embeddedsw.CMacro.HAS_JMPI_INSTRUCTION</name>
    <value></value>
   </assignment>
@@ -1291,7 +1295,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.RESET_ADDR</name>
-   <value>0x04009000</value>
+   <value>0x02000000</value>
   </assignment>
   <assignment>
    <name>embeddedsw.configuration.HDLSimCachesCleared</name>
@@ -1323,7 +1327,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.configuration.resetSlave</name>
-   <value>epcs_flash_controller.epcs_control_port</value>
+   <value>sdram_controller.s1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -1347,7 +1351,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.ALTR,reset-addr</name>
-   <value>0x04009000</value>
+   <value>0x02000000</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.clock-frequency</name>
@@ -1431,7 +1435,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="setting_illegalInstructionsTrap">
    <type>boolean</type>
-   <value>false</value>
+   <value>true</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1831,7 +1835,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="resetSlave">
    <type>java.lang.String</type>
-   <value>epcs_flash_controller.epcs_control_port</value>
+   <value>sdram_controller.s1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2175,7 +2179,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="resetAbsoluteAddr">
    <type>int</type>
-   <value>67145728</value>
+   <value>33554432</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2357,7 +2361,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='timer_0.s1' start='0x0' end='0x20' /><slave name='sdram_controller.s1' start='0x2000000' end='0x4000000' /><slave name='onchip_memory2.s1' start='0x4000000' end='0x4006590' /><slave name='epcs_flash_controller.epcs_control_port' start='0x4009000' end='0x4009800' /><slave name='cpu.jtag_debug_module' start='0x4009800' end='0x400A000' /><slave name='sys_clk_timer.s1' start='0x400A000' end='0x400A020' /><slave name='display_buffer_ctrl.s1' start='0x400A020' end='0x400A030' /><slave name='display_buffer_data.s1' start='0x400A030' end='0x400A040' /><slave name='display_buffer_addr.s1' start='0x400A040' end='0x400A050' /><slave name='altpll_0.pll_slave' start='0x400A050' end='0x400A060' /><slave name='pio_led.s1' start='0x400A060' end='0x400A070' /><slave name='sysid.control_slave' start='0x400A070' end='0x400A078' /><slave name='jtag_uart.avalon_jtag_slave' start='0x400A078' end='0x400A080' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x2000000' end='0x4000000' /><slave name='onchip_memory2.s1' start='0x4000000' end='0x4006590' /><slave name='epcs_flash_controller.epcs_control_port' start='0x4009000' end='0x4009800' /><slave name='cpu.jtag_debug_module' start='0x4009800' end='0x400A000' /><slave name='timer_0.s1' start='0x400A000' end='0x400A020' /><slave name='sys_clk_timer.s1' start='0x400A020' end='0x400A040' /><slave name='display_buffer_ctrl.s1' start='0x400A040' end='0x400A050' /><slave name='display_buffer_data.s1' start='0x400A050' end='0x400A060' /><slave name='display_buffer_addr.s1' start='0x400A060' end='0x400A070' /><slave name='altpll_0.pll_slave' start='0x400A070' end='0x400A080' /><slave name='pio_led.s1' start='0x400A080' end='0x400A090' /><slave name='sysid.control_slave' start='0x400A090' end='0x400A098' /><slave name='jtag_uart.avalon_jtag_slave' start='0x400A098' end='0x400A0A0' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2956,7 +2960,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>jtag_uart</moduleName>
     <slaveName>avalon_jtag_slave</slaveName>
     <name>jtag_uart.avalon_jtag_slave</name>
-    <baseAddress>67149944</baseAddress>
+    <baseAddress>67149976</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -2964,7 +2968,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>pio_led</moduleName>
     <slaveName>s1</slaveName>
     <name>pio_led.s1</name>
-    <baseAddress>67149920</baseAddress>
+    <baseAddress>67149952</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -2980,7 +2984,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>altpll_0</moduleName>
     <slaveName>pll_slave</slaveName>
     <name>altpll_0.pll_slave</name>
-    <baseAddress>67149904</baseAddress>
+    <baseAddress>67149936</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -2988,7 +2992,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sysid</moduleName>
     <slaveName>control_slave</slaveName>
     <name>sysid.control_slave</name>
-    <baseAddress>67149936</baseAddress>
+    <baseAddress>67149968</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -3004,7 +3008,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sys_clk_timer</moduleName>
     <slaveName>s1</slaveName>
     <name>sys_clk_timer.s1</name>
-    <baseAddress>67149824</baseAddress>
+    <baseAddress>67149856</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -3012,7 +3016,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>display_buffer_addr</moduleName>
     <slaveName>s1</slaveName>
     <name>display_buffer_addr.s1</name>
-    <baseAddress>67149888</baseAddress>
+    <baseAddress>67149920</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -3020,7 +3024,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>display_buffer_data</moduleName>
     <slaveName>s1</slaveName>
     <name>display_buffer_data.s1</name>
-    <baseAddress>67149872</baseAddress>
+    <baseAddress>67149904</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -3028,7 +3032,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>display_buffer_ctrl</moduleName>
     <slaveName>s1</slaveName>
     <name>display_buffer_ctrl.s1</name>
-    <baseAddress>67149856</baseAddress>
+    <baseAddress>67149888</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -3036,7 +3040,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>timer_0</moduleName>
     <slaveName>s1</slaveName>
     <name>timer_0.s1</name>
-    <baseAddress>0</baseAddress>
+    <baseAddress>67149824</baseAddress>
     <span>32</span>
    </memoryBlock>
   </interface>
@@ -8638,7 +8642,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1413589754</value>
+   <value>1413707058</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8658,7 +8662,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1413589754</value>
+   <value>1413707058</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -8674,7 +8678,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1413589754</value>
+   <value>1413707058</value>
    <derived>false</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -14168,7 +14172,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a078</value>
+   <value>0x0400a098</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14219,7 +14223,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a060</value>
+   <value>0x0400a080</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14677,7 +14681,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a050</value>
+   <value>0x0400a070</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14728,7 +14732,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a070</value>
+   <value>0x0400a090</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14830,7 +14834,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a000</value>
+   <value>0x0400a020</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15566,7 +15570,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a040</value>
+   <value>0x0400a060</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15671,7 +15675,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a030</value>
+   <value>0x0400a050</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15776,7 +15780,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0400a020</value>
+   <value>0x0400a040</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15908,7 +15912,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0000</value>
+   <value>0x0400a000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

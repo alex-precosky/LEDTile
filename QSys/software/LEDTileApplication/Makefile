@@ -165,7 +165,7 @@ APP_CFLAGS_UNDEFINED_SYMBOLS :=
 APP_CFLAGS_OPTIMIZATION := -O0
 APP_CFLAGS_DEBUG_LEVEL := -g
 APP_CFLAGS_WARNINGS := -Wall
-APP_CFLAGS_USER_FLAGS :=
+APP_CFLAGS_USER_FLAGS := -G 4
 
 APP_ASFLAGS_USER :=
 APP_LDFLAGS_USER :=
@@ -180,8 +180,8 @@ SYS_LIB :=
 BSP_ROOT_DIR := ../LEDTileApplication_bsp/
 
 # List of application specific include directories, library directories and library names
-APP_INCLUDE_DIRS :=
-APP_LIBRARY_DIRS :=
+APP_INCLUDE_DIRS := ../Giflib/GiflibNIOS
+APP_LIBRARY_DIRS := ../Giflib/GiflibNIOS/obj/default
 APP_LIBRARY_NAMES :=
 
 # Pre- and post- processor settings.
@@ -191,6 +191,8 @@ BUILD_POST_PROCESS :=
 QUARTUS_PROJECT_DIR := ../../
 
 
+ALT_LIBRARY_ROOT_DIR := ../Giflib/GiflibNIOS
+include ../Giflib/GiflibNIOS/public.mk
 #END GENERATED
 
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

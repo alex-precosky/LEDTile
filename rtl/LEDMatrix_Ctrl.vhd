@@ -173,15 +173,15 @@ begin
 					state <= hold_row;
 					
 					-- set timer for the next state
-					--if colour_bit = 0 then
-					--	pixel_timer <= 2;
-					--elsif colour_bit = 1 then
-					--	pixel_timer <= 4;
-					--elsif colour_bit = 2 then
-					--	pixel_timer <= 8;
-					--if colour_bit = 3 then
+					if colour_bit = 0 then
+						pixel_timer <= 32;
+					elsif colour_bit = 1 then
+						pixel_timer <= 64;
+					elsif colour_bit = 2 then
+						pixel_timer <= 128;
+					elsif colour_bit = 3 then
 						pixel_timer <= 256;
-					if colour_bit = 4 then
+					elsif colour_bit = 4 then
 						pixel_timer <= 512;
 					elsif colour_bit = 5 then
 						pixel_timer <= 1024;						

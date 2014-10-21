@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
  * SOPC Builder design path: ../../QSys.sopcinfo
  *
- * Generated: Fri Oct 17 17:07:53 PDT 2014
+ * Generated: Sun Oct 19 01:27:08 PDT 2014
  */
 
 /*
@@ -79,13 +79,14 @@
 #define ALT_CPU_HARDWARE_MULX_PRESENT 0
 #define ALT_CPU_HAS_DEBUG_CORE 1
 #define ALT_CPU_HAS_DEBUG_STUB
+#define ALT_CPU_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
 #define ALT_CPU_HAS_JMPI_INSTRUCTION
 #define ALT_CPU_ICACHE_LINE_SIZE 0
 #define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_ICACHE_SIZE 0
 #define ALT_CPU_INST_ADDR_WIDTH 0x1b
 #define ALT_CPU_NAME "cpu"
-#define ALT_CPU_RESET_ADDR 0x04009000
+#define ALT_CPU_RESET_ADDR 0x02000000
 
 
 /*
@@ -110,12 +111,13 @@
 #define NIOS2_HARDWARE_MULX_PRESENT 0
 #define NIOS2_HAS_DEBUG_CORE 1
 #define NIOS2_HAS_DEBUG_STUB
+#define NIOS2_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
 #define NIOS2_HAS_JMPI_INSTRUCTION
 #define NIOS2_ICACHE_LINE_SIZE 0
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 0
 #define NIOS2_ICACHE_SIZE 0
 #define NIOS2_INST_ADDR_WIDTH 0x1b
-#define NIOS2_RESET_ADDR 0x04009000
+#define NIOS2_RESET_ADDR 0x02000000
 
 
 /*
@@ -150,19 +152,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x400a078
+#define ALT_STDERR_BASE 0x400a098
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x400a078
+#define ALT_STDIN_BASE 0x400a098
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x400a078
+#define ALT_STDOUT_BASE 0x400a098
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -175,7 +177,7 @@
  *
  */
 
-#define ALTPLL_0_BASE 0x400a050
+#define ALTPLL_0_BASE 0x400a070
 #define ALTPLL_0_IRQ -1
 #define ALTPLL_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define ALTPLL_0_NAME "/dev/altpll_0"
@@ -190,7 +192,7 @@
  */
 
 #define ALT_MODULE_CLASS_display_buffer_addr altera_avalon_pio
-#define DISPLAY_BUFFER_ADDR_BASE 0x400a040
+#define DISPLAY_BUFFER_ADDR_BASE 0x400a060
 #define DISPLAY_BUFFER_ADDR_BIT_CLEARING_EDGE_REGISTER 0
 #define DISPLAY_BUFFER_ADDR_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define DISPLAY_BUFFER_ADDR_CAPTURE 0
@@ -217,7 +219,7 @@
  */
 
 #define ALT_MODULE_CLASS_display_buffer_ctrl altera_avalon_pio
-#define DISPLAY_BUFFER_CTRL_BASE 0x400a020
+#define DISPLAY_BUFFER_CTRL_BASE 0x400a040
 #define DISPLAY_BUFFER_CTRL_BIT_CLEARING_EDGE_REGISTER 0
 #define DISPLAY_BUFFER_CTRL_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define DISPLAY_BUFFER_CTRL_CAPTURE 0
@@ -244,7 +246,7 @@
  */
 
 #define ALT_MODULE_CLASS_display_buffer_data altera_avalon_pio
-#define DISPLAY_BUFFER_DATA_BASE 0x400a030
+#define DISPLAY_BUFFER_DATA_BASE 0x400a050
 #define DISPLAY_BUFFER_DATA_BIT_CLEARING_EDGE_REGISTER 0
 #define DISPLAY_BUFFER_DATA_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define DISPLAY_BUFFER_DATA_CAPTURE 0
@@ -296,7 +298,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x400a078
+#define JTAG_UART_BASE 0x400a098
 #define JTAG_UART_IRQ 2
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -343,7 +345,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_led altera_avalon_pio
-#define PIO_LED_BASE 0x400a060
+#define PIO_LED_BASE 0x400a080
 #define PIO_LED_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_LED_CAPTURE 0
@@ -410,7 +412,7 @@
 
 #define ALT_MODULE_CLASS_sys_clk_timer altera_avalon_timer
 #define SYS_CLK_TIMER_ALWAYS_RUN 0
-#define SYS_CLK_TIMER_BASE 0x400a000
+#define SYS_CLK_TIMER_BASE 0x400a020
 #define SYS_CLK_TIMER_COUNTER_SIZE 32
 #define SYS_CLK_TIMER_FIXED_PERIOD 0
 #define SYS_CLK_TIMER_FREQ 50000000
@@ -435,13 +437,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x400a070
+#define SYSID_BASE 0x400a090
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1413589754
+#define SYSID_TIMESTAMP 1413707058
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -452,7 +454,7 @@
 
 #define ALT_MODULE_CLASS_timer_0 altera_avalon_timer
 #define TIMER_0_ALWAYS_RUN 0
-#define TIMER_0_BASE 0x0
+#define TIMER_0_BASE 0x400a000
 #define TIMER_0_COUNTER_SIZE 32
 #define TIMER_0_FIXED_PERIOD 0
 #define TIMER_0_FREQ 50000000
