@@ -156,22 +156,6 @@
          type = "String";
       }
    }
-   element display_buffer_ctrl.s1
-   {
-      datum baseAddress
-      {
-         value = "67149888";
-         type = "String";
-      }
-   }
-   element sdram_controller.s1
-   {
-      datum baseAddress
-      {
-         value = "33554432";
-         type = "String";
-      }
-   }
    element pio_led.s1
    {
       datum baseAddress
@@ -180,11 +164,11 @@
          type = "String";
       }
    }
-   element display_buffer_addr.s1
+   element sys_clk_timer.s1
    {
       datum baseAddress
       {
-         value = "67149920";
+         value = "67149856";
          type = "String";
       }
    }
@@ -204,19 +188,35 @@
          type = "String";
       }
    }
-   element sys_clk_timer.s1
-   {
-      datum baseAddress
-      {
-         value = "67149856";
-         type = "String";
-      }
-   }
    element display_buffer_data.s1
    {
       datum baseAddress
       {
          value = "67149904";
+         type = "String";
+      }
+   }
+   element sdram_controller.s1
+   {
+      datum baseAddress
+      {
+         value = "33554432";
+         type = "String";
+      }
+   }
+   element display_buffer_ctrl.s1
+   {
+      datum baseAddress
+      {
+         value = "67149888";
+         type = "String";
+      }
+   }
+   element display_buffer_addr.s1
+   {
+      datum baseAddress
+      {
+         value = "67149920";
          type = "String";
       }
    }
@@ -780,7 +780,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="24" />
+  <parameter name="width" value="32" />
   <parameter name="clockRate" value="50000000" />
  </module>
  <module

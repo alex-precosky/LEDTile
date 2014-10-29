@@ -140,16 +140,12 @@ BSP_CFLAGS_DEBUG = -g
 # BSP_CFLAGS_OPTIMIZATION in Makefile. 
 BSP_CFLAGS_OPTIMIZATION = -O0
 
-# Custom flags passed to the compiler when compiling C, C++, and .S files. This 
-# setting defines the value of BSP_CFLAGS_USER_FLAGS in Makefile. 
-BSP_CFLAGS_USER_FLAGS = 
-
 # C/C++ compiler warning level. "-Wall" is commonly used.This setting defines 
 # the value of BSP_CFLAGS_WARNINGS in Makefile. 
 BSP_CFLAGS_WARNINGS = -Wall
 
 # C compiler command. 
-CC = nios2-elf-gcc -xc -G 4
+CC = nios2-elf-gcc -xc -G 2
 
 # C++ compiler command. 
 CXX = nios2-elf-gcc -xc++

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
  * SOPC Builder design path: ../../QSys.sopcinfo
  *
- * Generated: Sun Oct 19 01:27:08 PDT 2014
+ * Generated: Mon Oct 20 20:17:39 PDT 2014
  */
 
 /*
@@ -250,7 +250,7 @@
 #define DISPLAY_BUFFER_DATA_BIT_CLEARING_EDGE_REGISTER 0
 #define DISPLAY_BUFFER_DATA_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define DISPLAY_BUFFER_DATA_CAPTURE 0
-#define DISPLAY_BUFFER_DATA_DATA_WIDTH 24
+#define DISPLAY_BUFFER_DATA_DATA_WIDTH 32
 #define DISPLAY_BUFFER_DATA_DO_TEST_BENCH_WIRING 0
 #define DISPLAY_BUFFER_DATA_DRIVEN_SIM_VALUE 0
 #define DISPLAY_BUFFER_DATA_EDGE_TYPE "NONE"
@@ -443,7 +443,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1413707058
+#define SYSID_TIMESTAMP 1413860794
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

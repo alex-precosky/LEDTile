@@ -20,7 +20,7 @@ entity LEDMatrix_Ctrl is
 		
 		-- Display buffer connection
 		mem_a : out std_logic_vector(10 downto 0);
-		mem_q : in std_logic_vector(23 downto 0);
+		mem_q : in std_logic_vector(31 downto 0);
 		
 		-- Outputs to the LED panel
 		panel_SCLK : out std_logic;
@@ -45,25 +45,25 @@ architecture LEDMatrix_Ctrl_arch of LEDMatrix_Ctrl is
 
  
  -- pixel currently presented at the data port of the memory
- signal mem_pixel_r : std_logic_vector(7 downto 0);
- signal mem_pixel_g : std_logic_vector(7 downto 0);
- signal mem_pixel_b : std_logic_vector(7 downto 0);
+ signal mem_pixel_r : std_logic_vector(9 downto 0);
+ signal mem_pixel_g : std_logic_vector(9 downto 0);
+ signal mem_pixel_b : std_logic_vector(9 downto 0);
 
  
  -- Registers where we keep the low and high pixel.
  -- The panel is actually two mini-panels of 16 rows, and we can write
  -- an upper row and a lower row at once.
- signal pixel_lo_r : std_logic_vector(7 downto 0);
- signal pixel_lo_g : std_logic_vector(7 downto 0);
- signal pixel_lo_b : std_logic_vector(7 downto 0);
- signal pixel_hi_r : std_logic_vector(7 downto 0);
- signal pixel_hi_g : std_logic_vector(7 downto 0);
- signal pixel_hi_b : std_logic_vector(7 downto 0);
+ signal pixel_lo_r : std_logic_vector(9 downto 0);
+ signal pixel_lo_g : std_logic_vector(9 downto 0);
+ signal pixel_lo_b : std_logic_vector(9 downto 0);
+ signal pixel_hi_r : std_logic_vector(9 downto 0);
+ signal pixel_hi_g : std_logic_vector(9 downto 0);
+ signal pixel_hi_b : std_logic_vector(9 downto 0);
  
  signal row_addr : integer range 0 to 1023;		-- for generating ram address
  
  signal row_half_addr: integer range 0 to 31;	-- for iterating through rows in panel
- signal colour_bit: integer range 0 to 7; 		-- which of the 4 colour bits is being shifted out
+ signal colour_bit: integer range 0 to 15; 		-- which of the 4 colour bits is being shifted out
  
  signal col_addr : integer range 0 to 1023;		-- part of ram address generation
  
@@ -77,9 +77,9 @@ begin
 	--mem_a <= '1' & (conv_std_logic_vector(row_addr, 5) & conv_std_logic_vector(col_addr, 5);	
 
 
-	mem_pixel_r <= mem_q(23 downto 16);
-	mem_pixel_g <= mem_q(15 downto 8);
-	mem_pixel_b <= mem_q(7 downto 0);
+	mem_pixel_r <= mem_q(29 downto 20);
+	mem_pixel_g <= mem_q(19 downto 10);
+	mem_pixel_b <= mem_q(9 downto 0);
 
 	
 
@@ -102,9 +102,9 @@ begin
 					state <= latch_pixel_lo2;
 	
 				when latch_pixel_lo2 =>
-					pixel_lo_r <= mem_q(23 downto 16);
-					pixel_lo_g <= mem_q(15 downto 8);
-					pixel_lo_b <= mem_q(7 downto 0);
+					pixel_lo_r <= mem_q(29 downto 20);
+					pixel_lo_g <= mem_q(19 downto 10);
+					pixel_lo_b <= mem_q(9 downto 0);
 					
 					state <= latch_pixel_lo3;
 	
@@ -129,9 +129,9 @@ begin
 		
 
 				when latch_pixel_hi3 =>
-					pixel_hi_r <= mem_q(23 downto 16);
-					pixel_hi_g <= mem_q(15 downto 8);
-					pixel_hi_b <= mem_q(7 downto 0);
+					pixel_hi_r <= mem_q(29 downto 20);
+					pixel_hi_g <= mem_q(19 downto 10);
+					pixel_hi_b <= mem_q(9 downto 0);
 					
 					state <= latch_pixel_hi4;
 					
@@ -174,20 +174,24 @@ begin
 					
 					-- set timer for the next state
 					if colour_bit = 0 then
-						pixel_timer <= 32;
+						pixel_timer <= 8;
 					elsif colour_bit = 1 then
-						pixel_timer <= 64;
+						pixel_timer <= 16;
 					elsif colour_bit = 2 then
-						pixel_timer <= 128;
+						pixel_timer <= 32;
 					elsif colour_bit = 3 then
-						pixel_timer <= 256;
+						pixel_timer <= 64;
 					elsif colour_bit = 4 then
-						pixel_timer <= 512;
+						pixel_timer <= 128;
 					elsif colour_bit = 5 then
-						pixel_timer <= 1024;						
+						pixel_timer <= 256;
 					elsif colour_bit = 6 then
-						pixel_timer <= 2048;
+						pixel_timer <= 512;
 					elsif colour_bit = 7 then
+						pixel_timer <= 1024;						
+					elsif colour_bit = 8 then
+						pixel_timer <= 2048;
+					elsif colour_bit = 9 then
 						pixel_timer <= 4096;
 					else
 						pixel_timer <= 0;
@@ -202,7 +206,7 @@ begin
 						pixel_timer <= pixel_timer - 1;
 						state <= hold_row;
 					else
-						if colour_bit = 7 then
+						if colour_bit = 9 then
 							colour_bit <= 0;
 							if row_half_addr = 15 then
 								row_half_addr <= 0;

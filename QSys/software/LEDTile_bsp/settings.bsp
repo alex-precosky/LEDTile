@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 19, 2014 1:42:16 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1413708136044</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 20, 2014 9:37:37 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1413866257608</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile\QSys\software\LEDTile_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\QSys.sopcinfo</SopcDesignFile>
@@ -482,7 +482,7 @@
                 <SettingName>hal.make.cc</SettingName>
                 <Identifier>CC</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>nios2-elf-gcc -xc -G 4</Value>
+                <Value>nios2-elf-gcc -xc -G0</Value>
                 <DefaultValue>nios2-elf-gcc -xc</DefaultValue>
                 <DestinationFile>makefile_variable</DestinationFile>
                 <Description>C compiler command.</Description>
@@ -530,7 +530,7 @@
                 <SettingName>hal.make.bsp_cflags_user_flags</SettingName>
                 <Identifier>BSP_CFLAGS_USER_FLAGS</Identifier>
                 <Type>UnquotedString</Type>
-                <Value/>
+                <Value>none</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>makefile_variable</DestinationFile>
                 <Description>Custom flags passed to the compiler when compiling C, C++, and .S files. This setting defines the value of BSP_CFLAGS_USER_FLAGS in Makefile.</Description>

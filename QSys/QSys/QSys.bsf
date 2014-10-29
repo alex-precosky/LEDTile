@@ -160,8 +160,8 @@ agreement for further details.
 	(port
 		(pt 0 568)
 		(output)
-		(text "display_buffer_data_export[23..0]" (rect 0 0 135 12)(font "Arial" (font_size 8)))
-		(text "display_buffer_data_export[23..0]" (rect 4 557 202 568)(font "Arial" (font_size 8)))
+		(text "display_buffer_data_export[31..0]" (rect 0 0 134 12)(font "Arial" (font_size 8)))
+		(text "display_buffer_data_export[31..0]" (rect 4 557 202 568)(font "Arial" (font_size 8)))
 		(line (pt 0 568)(pt 176 568)(line_width 3))
 	)
 	(port

@@ -73,7 +73,7 @@ architecture LEDTile_arch of LEDTile is
 			reset_reset_n     : in    std_logic                     := 'X';              -- reset_n
 			pll_areset_export : in    std_logic                     := 'X';              -- export		
 			display_buffer_addr_export : out   std_logic_vector(10 downto 0);    -- export
-			display_buffer_data_export : out   std_logic_vector(23 downto 0);             -- export
+			display_buffer_data_export : out   std_logic_vector(31 downto 0);             -- export
 			display_buffer_ctrl_export : out   std_logic_vector(7 downto 0);               -- export
 			sys_clk_clk                : out   std_logic                                         -- clk
 		);
@@ -89,7 +89,7 @@ architecture LEDTile_arch of LEDTile is
 					
 			-- Display buffer connection
 			mem_a : out std_logic_vector(10 downto 0);
-			mem_q : in std_logic_vector(23 downto 0);
+			mem_q : in std_logic_vector(31 downto 0);
 			
 			-- Outputs to the LED panel
 			panel_SCLK : out std_logic;
@@ -109,19 +109,19 @@ architecture LEDTile_arch of LEDTile is
 		PORT
 		(
 			clock		: IN STD_LOGIC  := '1';
-			data		: IN STD_LOGIC_VECTOR (23 DOWNTO 0);
+			data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			rdaddress		: IN STD_LOGIC_VECTOR (10 DOWNTO 0);
 			wraddress		: IN STD_LOGIC_VECTOR (10 DOWNTO 0);
 			wren		: IN STD_LOGIC  := '0';
-			q		: OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
+			q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 		);
 	end component DisplayBuffer;
 	
 	
 	signal mem_ra : std_logic_vector(10 downto 0);
 	signal mem_wa : std_logic_vector(10 downto 0);
-	signal mem_d : std_logic_vector(23 downto 0);
-	signal mem_q : std_logic_vector(23 downto 0);
+	signal mem_d : std_logic_vector(31 downto 0);
+	signal mem_q : std_logic_vector(31 downto 0);
 	
 	signal display_buffer_ctrl : std_logic_vector(7 downto 0); -- control register so NIOS can send commands 
 																				  -- about displaying. bit 0 is write enable for buffer

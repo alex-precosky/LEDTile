@@ -3,7 +3,6 @@
 	<name>LEDTileApplication</name>
 	<comment></comment>
 	<projects>
-		<project>GiflibNIOS</project>
 		<project>LEDTile_bsp</project>
 	</projects>
 	<buildSpec>
@@ -99,7 +98,7 @@
 		<link>
 			<name>kain.zip</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/kain.zip</locationURI>
+			<location>C:/Users/Alex/Desktop/LEDTile/QSys/software/kain.zip</location>
 		</link>
 	</linkedResources>
 </projectDescription>

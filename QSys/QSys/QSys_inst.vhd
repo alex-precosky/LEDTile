@@ -20,7 +20,7 @@
 			sdram_clk_clk              : out   std_logic;                                        -- clk
 			pll_areset_export          : in    std_logic                     := 'X';             -- export
 			display_buffer_addr_export : out   std_logic_vector(10 downto 0);                    -- export
-			display_buffer_data_export : out   std_logic_vector(23 downto 0);                    -- export
+			display_buffer_data_export : out   std_logic_vector(31 downto 0);                    -- export
 			display_buffer_ctrl_export : out   std_logic_vector(7 downto 0);                     -- export
 			sys_clk_clk                : out   std_logic                                         -- clk
 		);

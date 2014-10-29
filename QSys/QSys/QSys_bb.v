@@ -44,7 +44,7 @@ module QSys (
 	output		sdram_clk_clk;
 	input		pll_areset_export;
 	output	[10:0]	display_buffer_addr_export;
-	output	[23:0]	display_buffer_data_export;
+	output	[31:0]	display_buffer_data_export;
 	output	[7:0]	display_buffer_ctrl_export;
 	output		sys_clk_clk;
 endmodule
