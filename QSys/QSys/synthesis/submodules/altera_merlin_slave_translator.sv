@@ -1,4 +1,4 @@
-// (C) 2001-2014 Altera Corporation. All rights reserved.
+// (C) 2001-2016 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files any of the foregoing (including device programming or simulation 
@@ -12,10 +12,10 @@
 
 
 
-// $Id: //acds/rel/14.1/ip/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator.sv#2 $
-// $Revision: #2 $
-// $Date: 2014/10/20 $
-// $Author: jyeap $
+// $Id: //acds/rel/16.0/ip/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator.sv#1 $
+// $Revision: #1 $
+// $Date: 2016/02/08 $
+// $Author: swbranch $
 
 // -------------------------------------
 // Merlin Slave Translator

@@ -1,4 +1,4 @@
-// (C) 2001-2014 Altera Corporation. All rights reserved.
+// (C) 2001-2016 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files any of the foregoing (including device programming or simulation 
@@ -11,9 +11,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/14.1/ip/merlin/altera_merlin_burst_adapter/new_source/altera_merlin_burst_adapter_new.sv#1 $
+// $Id: //acds/rel/16.0/ip/merlin/altera_merlin_burst_adapter/new_source/altera_merlin_burst_adapter_new.sv#1 $
 // $Revision: #1 $
-// $Date: 2014/10/06 $
+// $Date: 2016/02/08 $
 // $Author: swbranch $
 
 `timescale 1 ns / 1 ns

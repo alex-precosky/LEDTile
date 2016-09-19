@@ -9,7 +9,6 @@ module QSys (
 	epcs_sdo,
 	epcs_data0,
 	pio_led_export,
-	pll_areset_export,
 	pll_locked_export,
 	reset_reset_n,
 	sdram_addr,
@@ -21,10 +20,11 @@ module QSys (
 	sdram_dqm,
 	sdram_ras_n,
 	sdram_we_n,
+	sdram_clk_clk,
 	sys_clk_clk,
 	uart_0_rxd,
 	uart_0_txd,
-	sdram_clk_clk);	
+	pll_areset_export);	
 
 	input		clk_clk;
 	output	[10:0]	display_buffer_addr_export;
@@ -35,7 +35,6 @@ module QSys (
 	output		epcs_sdo;
 	input		epcs_data0;
 	output	[7:0]	pio_led_export;
-	input		pll_areset_export;
 	output		pll_locked_export;
 	input		reset_reset_n;
 	output	[12:0]	sdram_addr;
@@ -47,8 +46,9 @@ module QSys (
 	output	[1:0]	sdram_dqm;
 	output		sdram_ras_n;
 	output		sdram_we_n;
+	output		sdram_clk_clk;
 	output		sys_clk_clk;
 	input		uart_0_rxd;
 	output		uart_0_txd;
-	output		sdram_clk_clk;
+	input		pll_areset_export;
 endmodule

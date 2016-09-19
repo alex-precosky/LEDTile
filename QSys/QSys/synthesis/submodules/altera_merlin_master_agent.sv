@@ -1,4 +1,4 @@
-// (C) 2001-2014 Altera Corporation. All rights reserved.
+// (C) 2001-2016 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files any of the foregoing (including device programming or simulation 
@@ -11,9 +11,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/14.1/ip/merlin/altera_merlin_master_agent/altera_merlin_master_agent.sv#1 $
+// $Id: //acds/rel/16.0/ip/merlin/altera_merlin_master_agent/altera_merlin_master_agent.sv#1 $
 // $Revision: #1 $
-// $Date: 2014/10/06 $
+// $Date: 2016/02/08 $
 // $Author: swbranch $
 
 // --------------------------------------
@@ -120,8 +120,7 @@ module altera_merlin_master_agent
    input [AV_BURSTCOUNT_W-1 : 0] av_burstcount,
    input                         av_debugaccess,
    input                         av_lock,
-   output reg [1:0]              av_response,
-   // input                         av_writeresponserequest,
+   output reg [1 : 0]            av_response,
    output reg                    av_writeresponsevalid,
 
    // -------------------
@@ -147,7 +146,7 @@ module altera_merlin_master_agent
     // Utility Functions
     // ------------------------------------------------------------
    function integer clogb2;
-      input [31:0] value;
+      input [31 : 0] value;
       begin
          for (clogb2 = 0; value > 0; clogb2 = clogb2 + 1)
             value = value >> 1;
@@ -161,13 +160,13 @@ module altera_merlin_master_agent
    localparam BITS_TO_ZERO = clogb2(NUMSYMBOLS);
    localparam BURST_SIZE   = clogb2(NUMSYMBOLS);
 
-   typedef enum bit  [1:0]
+   typedef enum bit  [1 : 0]
    {
       FIXED       = 2'b00,
       INCR        = 2'b01,
       WRAP        = 2'b10,
       OTHER_WRAP  = 2'b11
-   } MerlinBurstType; 
+   } MerlinBurstType;
 
    // --------------------------------------
    // Potential optimization: compare in words to save bits?
@@ -175,10 +174,10 @@ module altera_merlin_master_agent
    wire is_burst;
    assign is_burst = (BURSTING) & (av_burstcount > NUMSYMBOLS);
 
-   wire [31:0] burstwrap_value_int = BURSTWRAP_VALUE;
-   wire [31:0] id_int              = ID; 
-   wire [PKT_BURST_SIZE_W-1:0] burstsize_sig = BURST_SIZE[PKT_BURST_SIZE_W-1:0];
-   wire [1:0] bursttype_value = burstwrap_value_int[PKT_BURSTWRAP_W-1] ? INCR : WRAP;
+   wire [31 : 0] burstwrap_value_int = BURSTWRAP_VALUE;
+   wire [31 : 0] id_int              = ID; 
+   wire [PKT_BURST_SIZE_W-1 : 0] burstsize_sig = BURST_SIZE[PKT_BURST_SIZE_W-1 : 0];
+   wire [1 : 0] bursttype_value = burstwrap_value_int[PKT_BURSTWRAP_W-1] ? INCR : WRAP;
 
    // --------------------------------------
    // Address alignment
@@ -200,49 +199,56 @@ module altera_merlin_master_agent
    // --------------------------------------
    // Command & Response Construction
    // --------------------------------------
-   always @* begin
-      cp_data                                            = '0; // default assignment; override below as needed.
+   always_comb begin
+      cp_data                                              = '0;
 
-      cp_data[PKT_PROTECTION_L]                          = av_debugaccess;    
-      cp_data[PKT_PROTECTION_L+1]                        = SECURE_ACCESS_BIT[0];    // Default Non-secured (AXI)
-      cp_data[PKT_PROTECTION_L+2]                        = 1'b0;                  // Default Data access (AXI)
-      cp_data[PKT_BURSTWRAP_H:PKT_BURSTWRAP_L  ]         = burstwrap_value_int[PKT_BURSTWRAP_W-1:0];
-      cp_data[PKT_BYTE_CNT_H :PKT_BYTE_CNT_L   ]         = av_burstcount;
-      cp_data[PKT_ADDR_H     :PKT_ADDR_L       ]         = av_address_aligned;
-      cp_data[PKT_TRANS_EXCLUSIVE              ]         = 1'b0;
-      cp_data[PKT_TRANS_LOCK                   ]         = av_lock;
-      cp_data[PKT_TRANS_COMPRESSED_READ        ]         = av_read & is_burst;
-      cp_data[PKT_TRANS_READ                   ]         = av_read;
-      cp_data[PKT_TRANS_WRITE                  ]         = av_write;
-      // posted and non-posted write avaiable now
-      cp_data[PKT_TRANS_POSTED                 ]         = av_write & !USE_WRITERESPONSE/* & !av_writeresponserequest*/;
-      cp_data[PKT_DATA_H     :PKT_DATA_L       ]         = av_writedata;
-      cp_data[PKT_BYTEEN_H   :PKT_BYTEEN_L     ]         = av_byteenable;
-      cp_data[PKT_BURST_SIZE_H:PKT_BURST_SIZE_L]         = burstsize_sig;
-      cp_data[PKT_ORI_BURST_SIZE_H:PKT_ORI_BURST_SIZE_L] = burstsize_sig;
-      cp_data[PKT_BURST_TYPE_H:PKT_BURST_TYPE_L]            = bursttype_value;
-      cp_data[PKT_SRC_ID_H   :PKT_SRC_ID_L     ]         = id_int[PKT_SRC_ID_W-1:0];
-      cp_data[PKT_THREAD_ID_H:PKT_THREAD_ID_L  ]         = '0;
-      cp_data[PKT_CACHE_H    :PKT_CACHE_L      ]         = CACHE_VALUE[3:0];
-      cp_data[PKT_QOS_H      : PKT_QOS_L]                = '0;        
-      cp_data[PKT_ADDR_SIDEBAND_H:PKT_ADDR_SIDEBAND_L]   = '0;
-      cp_data[PKT_DATA_SIDEBAND_H :PKT_DATA_SIDEBAND_L]  = '0;
+      cp_data[PKT_PROTECTION_L]                            = av_debugaccess;    
+      cp_data[PKT_PROTECTION_L+1]                          = SECURE_ACCESS_BIT[0];  // secure cache bit
+      cp_data[PKT_PROTECTION_L+2]                          = 1'b0;                  // instruction/data cache bit
+      cp_data[PKT_BURSTWRAP_H : PKT_BURSTWRAP_L]           = burstwrap_value_int[PKT_BURSTWRAP_W-1 : 0];
+      cp_data[PKT_BYTE_CNT_H : PKT_BYTE_CNT_L]             = av_burstcount;
+      cp_data[PKT_ADDR_H : PKT_ADDR_L]                     = av_address_aligned;
+      cp_data[PKT_TRANS_EXCLUSIVE]                         = 1'b0;
+      cp_data[PKT_TRANS_LOCK]                              = av_lock;
+      cp_data[PKT_TRANS_COMPRESSED_READ]                   = av_read & is_burst;
+      cp_data[PKT_TRANS_READ]                              = av_read;
+      cp_data[PKT_TRANS_WRITE]                             = av_write;
+      cp_data[PKT_TRANS_POSTED]                            = av_write & !USE_WRITERESPONSE;
+      cp_data[PKT_DATA_H : PKT_DATA_L]                     = av_writedata;
+      cp_data[PKT_BYTEEN_H : PKT_BYTEEN_L]                 = av_byteenable;
+      cp_data[PKT_BURST_SIZE_H : PKT_BURST_SIZE_L]         = burstsize_sig;
+      cp_data[PKT_ORI_BURST_SIZE_H : PKT_ORI_BURST_SIZE_L] = burstsize_sig;
+      cp_data[PKT_BURST_TYPE_H : PKT_BURST_TYPE_L]         = bursttype_value;
+      cp_data[PKT_SRC_ID_H : PKT_SRC_ID_L]                 = id_int[PKT_SRC_ID_W-1 : 0];
+      cp_data[PKT_THREAD_ID_H : PKT_THREAD_ID_L]           = '0;
+      cp_data[PKT_CACHE_H : PKT_CACHE_L]                   = CACHE_VALUE[3 : 0];
+      cp_data[PKT_QOS_H : PKT_QOS_L]                       = '0;        
+      cp_data[PKT_ADDR_SIDEBAND_H : PKT_ADDR_SIDEBAND_L]   = '0;
+      cp_data[PKT_DATA_SIDEBAND_H : PKT_DATA_SIDEBAND_L]   = '0;
 
-      av_readdata                                        = rp_data[PKT_DATA_H : PKT_DATA_L];
+      av_readdata                                          = rp_data[PKT_DATA_H : PKT_DATA_L];
       if (USE_WRITERESPONSE || USE_READRESPONSE)
-         av_response  = rp_data[PKT_RESPONSE_STATUS_H : PKT_RESPONSE_STATUS_L];
+         av_response = rp_data[PKT_RESPONSE_STATUS_H : PKT_RESPONSE_STATUS_L];
       else
-         av_response  = '0;
-
+         av_response = '0;
       end
 
    // --------------------------------------
    // Command Control
    // --------------------------------------
-   always @* begin
+   reg hold_waitrequest;
+
+   always @ (posedge clk, posedge reset) begin
+      if (reset)
+         hold_waitrequest <= 1'b1;
+      else
+         hold_waitrequest <= 1'b0;
+   end  
+   
+   always_comb begin
       cp_valid = 0;
 
-      if (av_write || av_read)
+      if ((av_write || av_read) && ~hold_waitrequest)
          cp_valid = 1;
    end
 
@@ -277,35 +283,19 @@ module altera_merlin_master_agent
    // --------------------------------------
    // Backpressure & Readdatavalid
    // --------------------------------------
-   reg hold_waitrequest;
+   always_comb begin
+      rp_ready              = 1;
+      av_readdatavalid      = 0;
+      av_writeresponsevalid = 0;
+      av_waitrequest = hold_waitrequest | !cp_ready;
 
-   always @ (posedge clk, posedge reset) begin
-      if (reset)
-         hold_waitrequest <= 1'b1;
+      if (USE_WRITERESPONSE && (rp_data[PKT_TRANS_WRITE] == 1))
+         av_writeresponsevalid = rp_valid;
       else
-         hold_waitrequest <= 1'b0;
-   end  
-
-   always @* begin
-      rp_ready               = 1;
-      av_readdatavalid       = 0;
-      av_writeresponsevalid  = 0;
-      av_waitrequest  = hold_waitrequest | !cp_ready;
-
-      // --------------------------------------
-      // Currently, responses are _always_ read responses because
-      // this Avalon agent only issues posted writes, which do
-      // not have responses. -> not true for now
-      // Now Avalon supports response, so based on type of transaction
-      // return, assert correct thing
-      // --------------------------------------
-      if (rp_data[PKT_TRANS_WRITE] == 1)
-         av_writeresponsevalid  = rp_valid;
-      else
-         av_readdatavalid       = rp_valid;
+         av_readdatavalid      = rp_valid;
 
       if (SUPPRESS_0_BYTEEN_RSP) begin
-         if (rp_data[PKT_BYTEEN_H:PKT_BYTEEN_L] == 0)
+         if (rp_data[PKT_BYTEEN_H : PKT_BYTEEN_L] == 0)
             av_readdatavalid = 0;
       end
    end
