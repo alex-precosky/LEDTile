@@ -11,10 +11,10 @@
 // agreement for further details.
 
 
-// $Id: //depot/users/tgngo/new_burst_adapter/opt_work/altera_incr_burst_converter.sv#9 $
-// $Revision: #9 $
-// $Date: 2014/04/17 $
-// $Author: tgngo $
+// $Id: //acds/rel/14.1/ip/merlin/altera_merlin_burst_adapter/new_source/altera_incr_burst_converter.sv#1 $
+// $Revision: #1 $
+// $Date: 2014/10/06 $
+// $Author: swbranch $
 
 // ----------------------------------------------------------
 // This component is used for INCR Avalon slave
@@ -32,83 +32,72 @@ module altera_incr_burst_converter
     // Burst length Parameters
     // (real burst length value, not bytecount)
     // ----------------------------------------
-    LEN_W               = 16,
+    MAX_IN_LEN          = 16,
     MAX_OUT_LEN         = 4,
     NUM_SYMBOLS         = 4,
-    ADDR_W              = 12,
-    BNDRY_W             = 12,
-    BURSTSIZE_W         = 3,
+    ADDR_WIDTH          = 12,
+    BNDRY_WIDTH         = 12,
+    BURSTSIZE_WIDTH     = 3,
     IN_NARROW_SIZE      = 0,
     PURELY_INCR_AVL_SYS = 0,
-    LOG2_NUM_SYMBOLS    = 4,
-
     // ------------------
     // Derived Parameters
     // ------------------
-    OUT_LEN_W   = log2ceil(MAX_OUT_LEN) + 1
+    LEN_WIDTH       = log2ceil(MAX_IN_LEN) + 1,
+    OUT_LEN_WIDTH   = log2ceil(MAX_OUT_LEN) + 1,
+    LOG2_NUMSYMBOLS = log2ceil(NUM_SYMBOLS)
 )
 (
-    input                       clk,
-    input                       reset,
-    input                       enable,
+    input                               clk,
+    input                               reset,
+    input                               enable,
 
-    input                       is_write,
-    input [LEN_W - 1 : 0]       in_len,
-    input                       in_sop,
+    input                               is_write,
+    input [LEN_WIDTH       - 1 : 0]     in_len,
+    input                               in_sop,
 
-    input [ADDR_W - 1 : 0]      in_addr,
-    input [ADDR_W - 1 : 0]      in_addr_reg,
-    input [BNDRY_W - 1 : 0]     in_burstwrap_reg,
-    input [BURSTSIZE_W - 1 : 0] in_size,
-    input [BURSTSIZE_W - 1 : 0] in_size_reg,
+    input [ADDR_WIDTH      - 1 : 0]     in_addr,
+    input [ADDR_WIDTH      - 1 : 0]     in_addr_reg,
+    input [BNDRY_WIDTH     - 1 : 0]     in_burstwrap_reg,
+    input [BURSTSIZE_WIDTH - 1 : 0]     in_size_t,
+    input [BURSTSIZE_WIDTH - 1 : 0]     in_size_reg,
 
     // converted output length
     // out_len         : compressed burst, read
     // uncompressed_len: uncompressed, write
-    output reg [LEN_W - 1 : 0]  out_len,
-    output reg [LEN_W - 1 : 0]  uncompr_out_len,
+    output reg [LEN_WIDTH  - 1 : 0]     out_len,
+    output reg [LEN_WIDTH  - 1 : 0]     uncompr_out_len,
     // Compressed address output
-    output reg [ADDR_W - 1 : 0] out_addr,
-    output reg                  new_burst_export
-  );
-    // ---------------------------------------------------
-    // AXI Burst Type Encoding
-    // ---------------------------------------------------
-    typedef enum bit  [1:0]
-    {
-     FIXED       = 2'b00,
-     INCR        = 2'b01,
-     WRAP        = 2'b10,
-     RESERVED    = 2'b11
-    } AxiBurstType;
+    output reg [ADDR_WIDTH - 1 : 0]     out_addr,
+    output reg                          new_burst_export
+);
 
     // ----------------------------------------
     // Signals for wrapping support
     // ----------------------------------------
-    reg [LEN_W - 1 : 0]        remaining_len;
-    reg [LEN_W - 1 : 0]        next_out_len;
-    reg [LEN_W - 1 : 0]        next_rem_len;
-    reg [LEN_W - 1 : 0]        uncompr_remaining_len;
-    reg [LEN_W - 1 : 0]        next_uncompr_remaining_len;
-    reg [LEN_W - 1 : 0]        next_uncompr_rem_len;
-    reg                        new_burst;
-    reg                        uncompr_sub_burst;
+    reg [LEN_WIDTH - 1 : 0]        remaining_len;
+    reg [LEN_WIDTH - 1 : 0]        next_out_len;
+    reg [LEN_WIDTH - 1 : 0]        next_rem_len;
+    reg [LEN_WIDTH - 1 : 0]        uncompr_remaining_len;
+    reg [LEN_WIDTH - 1 : 0]        next_uncompr_remaining_len;
+    reg [LEN_WIDTH - 1 : 0]        next_uncompr_rem_len;
+    reg                            new_burst;
+    reg                            uncompr_sub_burst;
 
     // Avoid QIS warning
-    // OUT_LEN_WIDTH might be larger than LEN_W as the BA at slave side, so here use cannot share LEN_W
-    wire [OUT_LEN_W - 1 : 0]   max_out_length;
-    assign max_out_length  = MAX_OUT_LEN[OUT_LEN_W - 1 : 0];
+    wire [OUT_LEN_WIDTH - 1 : 0]   max_out_length;
+    assign max_out_length  = MAX_OUT_LEN[OUT_LEN_WIDTH - 1 : 0];
 
     always_comb begin
         new_burst_export = new_burst;
     end
 
     // -------------------------------------------
-    // Uncompressed burst length calculation
+    // length remaining calculation
     // -------------------------------------------
 
     always_comb begin : proc_uncompressed_remaining_len
-        if ((in_len < max_out_length) && is_write) begin
+        if ((in_len <= max_out_length) && is_write) begin
             uncompr_remaining_len = in_len;
         end else begin
             uncompr_remaining_len = max_out_length;
@@ -127,16 +116,23 @@ module altera_incr_burst_converter
         end
     end
 
-    // --------------------------------------------------
-    // Compressed burst length calculation
-    // --------------------------------------------------
-    // length remaining for compressed transaction
-    // for wrap, need special handling for first out length
-
     always_comb begin : proc_compressed_remaining_len
        remaining_len  = in_len;
         if (!new_burst)
             remaining_len = next_rem_len;
+    end
+
+    always_ff@(posedge clk or posedge reset) begin : proc_next_uncompressed_remaining_len
+        if(reset) begin
+            next_uncompr_remaining_len <= '0;
+        end
+        else if (enable) begin
+            if (in_sop) begin
+                next_uncompr_remaining_len <= in_len - max_out_length;
+            end
+            else if (!uncompr_sub_burst)
+                next_uncompr_remaining_len <= next_uncompr_remaining_len - max_out_length;
+        end
     end
 
     always_comb begin
@@ -145,6 +141,12 @@ module altera_incr_burst_converter
             next_out_len = remaining_len;
         end
     end // always_comb
+
+    // --------------------------------------------------
+    // Length remaining calculation : compressed
+    // --------------------------------------------------
+    // length remaining for compressed transaction
+    // for wrap, need special handling for first out length
 
     always_ff @(posedge clk, posedge reset) begin
         if (reset)
@@ -157,10 +159,6 @@ module altera_incr_burst_converter
         end
     end
 
-
-    // --------------------------------------------------
-    // Control signals for un-compressed burst
-    // --------------------------------------------------
     always_ff @(posedge clk, posedge reset) begin
         if (reset) begin
             uncompr_sub_burst <= 0;
@@ -170,8 +168,9 @@ module altera_incr_burst_converter
         end
     end
 
+
     // --------------------------------------------------
-    // Control signals for compressed burst
+    // Control signals
     // --------------------------------------------------
     wire end_compressed_sub_burst;
     assign end_compressed_sub_burst  = (remaining_len == next_out_len);
@@ -211,32 +210,33 @@ module altera_incr_burst_converter
     // --------------------------------------------------
     // Address Calculation
     // --------------------------------------------------
-    reg [ADDR_W - 1 : 0]        addr_incr_sel;
-    reg [ADDR_W - 1 : 0]        addr_incr_sel_reg;
-    reg [ADDR_W - 1 : 0]        addr_incr_full_size;
+    reg [ADDR_WIDTH - 1 : 0]        addr_incr_sel;
+    reg [ADDR_WIDTH - 1 : 0]        addr_incr_sel_reg;
+    reg [ADDR_WIDTH - 1 : 0]        addr_incr_full_size;
 
-    localparam [ADDR_W - 1 : 0] ADDR_INCR = MAX_OUT_LEN << LOG2_NUM_SYMBOLS;
+    localparam [ADDR_WIDTH - 1 : 0] ADDR_INCR = MAX_OUT_LEN << LOG2_NUMSYMBOLS;
 
     generate
-        if (IN_NARROW_SIZE) begin
-            reg [ADDR_W - 1 : 0]    addr_incr_variable_size;
-            reg [ADDR_W - 1 : 0]    addr_incr_variable_size_reg;
+        if (IN_NARROW_SIZE) begin : narrow_addr_incr
+            reg [ADDR_WIDTH - 1 : 0]    addr_incr_variable_size;
+            reg [ADDR_WIDTH - 1 : 0]    addr_incr_variable_size_reg;
 
-            assign addr_incr_variable_size = MAX_OUT_LEN << in_size;
+            assign addr_incr_variable_size = MAX_OUT_LEN << in_size_t;
             assign addr_incr_variable_size_reg = MAX_OUT_LEN << in_size_reg;
 
             assign addr_incr_sel  = addr_incr_variable_size;
             assign addr_incr_sel_reg  = addr_incr_variable_size_reg;
         end
-        else begin
-            assign addr_incr_full_size  = ADDR_INCR[ADDR_W - 1 : 0];
+        else begin : full_addr_incr
+            assign addr_incr_full_size  = ADDR_INCR[ADDR_WIDTH - 1 : 0];
             assign addr_incr_sel  = addr_incr_full_size;
-            assign addr_incr_sel_reg  = addr_incr_full_size;
+            assign addr_incr_sel_reg = addr_incr_full_size;
         end
     endgenerate
 
-    reg [ADDR_W - 1 : 0]    next_out_addr;
-    reg [ADDR_W - 1 : 0]    incremented_addr;
+
+    reg [ADDR_WIDTH - 1 : 0]    next_out_addr;
+    reg [ADDR_WIDTH - 1 : 0]    incremented_addr;
 
     always_ff @(posedge clk, posedge reset) begin
         if (reset) begin
@@ -248,8 +248,8 @@ module altera_incr_burst_converter
         end
     end
 
-    generate begin : address_increment
-        if (!PURELY_INCR_AVL_SYS) begin
+    generate
+        if (!PURELY_INCR_AVL_SYS) begin : incremented_addr_normal
             always_ff @(posedge clk, posedge reset) begin
                 if (reset) begin
                     incremented_addr <= '0;
@@ -262,19 +262,14 @@ module altera_incr_burst_converter
                 end
             end // always_ff @
 
-            reg [ADDR_W - 1 : 0]    extended_burstwrap_reg;
             always_comb begin
-                extended_burstwrap_reg  = {{(ADDR_W - BNDRY_W) {in_burstwrap_reg[BNDRY_W - 1]}}, in_burstwrap_reg};
-            end
-
-            always_comb begin
-                next_out_addr  = in_addr;
+                next_out_addr = in_addr;
                 if (!new_burst) begin
-                    next_out_addr  = in_addr_reg & ~extended_burstwrap_reg | incremented_addr;
+                    next_out_addr = incremented_addr;
                 end
             end
         end
-        else begin
+        else begin : incremented_addr_pure_av
             always_ff @(posedge clk, posedge reset) begin
             if (reset) begin
                incremented_addr <= '0;
@@ -292,7 +287,6 @@ module altera_incr_burst_converter
             end
 
         end
-    end
     endgenerate
 
     // --------------------------------------------------

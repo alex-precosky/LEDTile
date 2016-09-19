@@ -11,9 +11,9 @@
 // agreement for further details.
 
 
-// $File: //acds/rel/14.0/ip/avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v $
+// $File: //acds/rel/14.1/ip/avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v $
 // $Revision: #1 $
-// $Date: 2014/02/16 $
+// $Date: 2014/10/06 $
 // $Author: swbranch $
 //------------------------------------------------------------------------------
 

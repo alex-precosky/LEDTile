@@ -491,8 +491,13 @@ const AnimatedImage* animations[] =
 const int numAnimations = 26;
 
 
-
-
+const AnimatedImage* halloweenAnimations[] =
+{
+		&mosaic,
+		&ie,
+		&Netscapethrobber
+};
+const int numHalloweenAnimations=3;
 
 
 

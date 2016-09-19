@@ -94,11 +94,4 @@
 		<nature>com.altera.sbtgui.project.SBTGUIAppNature</nature>
 		<nature>com.altera.sbtgui.project.SBTGUIManagedNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>kain.zip</name>
-			<type>1</type>
-			<location>C:/Users/Alex/Desktop/LEDTile/QSys/software/kain.zip</location>
-		</link>
-	</linkedResources>
 </projectDescription>

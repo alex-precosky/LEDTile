@@ -24,9 +24,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/14.0/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/14.1/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2014/02/16 $
+// $Date: 2014/10/06 $
 // $Author: swbranch $
 
 // -------------------------------------------------------
@@ -44,40 +44,38 @@
 
 module QSys_mm_interconnect_0_router_001_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 1,
+     parameter DEFAULT_CHANNEL = 2,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 9 
    )
   (output [91 - 88 : 0] default_destination_id,
-   output [13-1 : 0] default_wr_channel,
-   output [13-1 : 0] default_rd_channel,
-   output [13-1 : 0] default_src_channel
+   output [14-1 : 0] default_wr_channel,
+   output [14-1 : 0] default_rd_channel,
+   output [14-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
     DEFAULT_DESTID[91 - 88 : 0];
 
-  generate begin : default_decode
-    if (DEFAULT_CHANNEL == -1) begin
+  generate
+    if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
-    else begin
-      assign default_src_channel = 13'b1 << DEFAULT_CHANNEL;
+    else begin : default_channel_assignment
+      assign default_src_channel = 14'b1 << DEFAULT_CHANNEL;
     end
-  end
   endgenerate
 
-  generate begin : default_decode_rw
-    if (DEFAULT_RD_CHANNEL == -1) begin
+  generate
+    if (DEFAULT_RD_CHANNEL == -1) begin : no_default_rw_channel_assignment
       assign default_wr_channel = '0;
       assign default_rd_channel = '0;
     end
-    else begin
-      assign default_wr_channel = 13'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 13'b1 << DEFAULT_RD_CHANNEL;
+    else begin : default_rw_channel_assignment
+      assign default_wr_channel = 14'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 14'b1 << DEFAULT_RD_CHANNEL;
     end
-  end
   endgenerate
 
 endmodule
@@ -105,7 +103,7 @@ module QSys_mm_interconnect_0_router_001
     // -------------------
     output                          src_valid,
     output reg [105-1    : 0] src_data,
-    output reg [13-1 : 0] src_channel,
+    output reg [14-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -121,7 +119,7 @@ module QSys_mm_interconnect_0_router_001
     localparam PKT_PROTECTION_H = 95;
     localparam PKT_PROTECTION_L = 93;
     localparam ST_DATA_W = 105;
-    localparam ST_CHANNEL_W = 13;
+    localparam ST_CHANNEL_W = 14;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 65;
@@ -168,7 +166,7 @@ module QSys_mm_interconnect_0_router_001
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [13-1 : 0] default_src_channel;
+    wire [14-1 : 0] default_src_channel;
 
 
 
@@ -194,19 +192,19 @@ module QSys_mm_interconnect_0_router_001
 
     // ( 0x2000000 .. 0x4000000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 27'h2000000   ) begin
-            src_channel = 13'b010;
+            src_channel = 14'b100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
     end
 
     // ( 0x4009000 .. 0x4009800 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 27'h4009000   ) begin
-            src_channel = 13'b100;
+            src_channel = 14'b010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x4009800 .. 0x400a000 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 27'h4009800   ) begin
-            src_channel = 13'b001;
+            src_channel = 14'b001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 

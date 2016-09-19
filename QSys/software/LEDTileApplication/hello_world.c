@@ -643,7 +643,13 @@ int main()
 	  	  int i;
 
 	  	  scanf("%d", &i);
+	  	  printf("%d", i);
 	  	  fflush(stdin);
+
+//	  	  if(i < numHalloweenAnimations)
+//	  		  currentAnimation = halloweenAnimations[i];
+  		  currentAnimation = halloweenAnimations[0];
+	  	  /*
 	  	  if(i==1)
 	  	  {
 	  		  animationsMenu();
@@ -688,7 +694,7 @@ int main()
 	  	  }
 	  	  else
 	  		  printMenu();
-
+		*/
 
 
 
@@ -702,7 +708,7 @@ int main()
 
 
 void printMenu()
-{
+{/*
 	printf("LED Tile Menu\n");
 	printf("-------------\n");
 	printf("1) Select animation\n");
@@ -713,7 +719,7 @@ void printMenu()
 	printf("6) Display 98-half gamma corrected RGB colour bars\n");
 	printf("7) Display 46-half gamma corrected RGB colour bars\n\n");
 	printf("Enter Selection: ");
-
+*/
 }
 
 

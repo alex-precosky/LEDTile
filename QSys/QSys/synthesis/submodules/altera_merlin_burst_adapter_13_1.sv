@@ -42,13 +42,13 @@ module altera_merlin_burst_adapter_burstwrap_increment #(parameter WIDTH = 8)
     input [WIDTH - 1:0] mask,
     output [WIDTH - 1:0] inc
   );
+    assign inc[0] = ~mask[0];
+
     genvar i;
-    generate begin : burstwrap_increment_gen
-        assign inc[0] = ~mask[0];
+    generate
         for (i = 1; i < WIDTH; i = i+1) begin : burstwrap_increment_loop
           assign inc[i] = mask[i - 1] & ~mask[i];
         end
-      end
     endgenerate
 endmodule
 
@@ -60,17 +60,17 @@ module altera_merlin_burst_adapter_adder #(parameter WIDTH = 8) (
   );
 
   genvar i;
-  generate begin : full_adder
-      wire [WIDTH-1:0] carry;
-      assign sum[0]  = a[0] ^ b[0] ^ cin;
-      assign carry[0] = a[0] & b[0] | a[0] & cin | b[0] & cin;
 
+  wire [WIDTH-1:0] carry;
+  assign sum[0] = a[0] ^ b[0] ^ cin;
+  assign carry[0] = a[0] & b[0] | a[0] & cin | b[0] & cin;
+
+  generate
       for (i = 1; i < WIDTH; i = i+1) begin : full_adder_loop
           assign sum[i] = a[i] ^ b[i] ^ carry[i-1];
           assign carry[i] = a[i] & b[i] | a[i] & carry[i-1] | b[i] & carry[i-1];
       end
-
-  end endgenerate
+  endgenerate
 endmodule
 
 // a - b = a + ~b + 1
@@ -262,212 +262,6 @@ endmodule
 
 
 module altera_merlin_burst_adapter_13_1
-#(
-  parameter // Merlin packet parameters
-    PKT_BEGIN_BURST             = 81,
-    PKT_ADDR_H                  = 79,
-    PKT_ADDR_L                  = 48,
-    PKT_BYTE_CNT_H              = 5,
-    PKT_BYTE_CNT_L              = 0,
-    PKT_BURSTWRAP_H             = 11,
-    PKT_BURSTWRAP_L             = 6,
-    PKT_TRANS_COMPRESSED_READ   = 14,
-    PKT_TRANS_WRITE             = 13,
-    PKT_TRANS_READ              = 12,
-    PKT_BYTEEN_H                = 83,
-    PKT_BYTEEN_L                = 80,
-    PKT_BURST_TYPE_H            = 88,
-    PKT_BURST_TYPE_L            = 87,
-    PKT_BURST_SIZE_H            = 86,
-    PKT_BURST_SIZE_L            = 84,
-    IN_NARROW_SIZE              = 0,
-    OUT_NARROW_SIZE             = 0,
-    OUT_FIXED                   = 0,
-    OUT_COMPLETE_WRAP           = 0,
-    ST_DATA_W                   = 89,
-    ST_CHANNEL_W                = 8,
-
-    // Component-specific parameters
-    BYTEENABLE_SYNTHESIS        = 0,
-    BURSTWRAP_CONST_MASK        = 0,
-    BURSTWRAP_CONST_VALUE       = -1,
-    NO_WRAP_SUPPORT             = 0,
-    PIPE_INPUTS                 = 0,
-    INCOMPLETE_WRAP_SUPPORT     = 1,
-    ADAPTER_VERSION             = "13_1",
-    OUT_BYTE_CNT_H              = 5,
-    OUT_BURSTWRAP_H             = 11,
-    COMPRESSED_READ_SUPPORT     = 1
-)
-(
-    input clk,
-    input reset,
-
-    // -------------------
-    // Command Sink (Input)
-    // -------------------
-    input                           sink0_valid,
-    input  [ST_DATA_W-1 : 0]        sink0_data,
-    input  [ST_CHANNEL_W-1 : 0]     sink0_channel,
-    input                           sink0_startofpacket,
-    input                           sink0_endofpacket,
-    output reg                      sink0_ready,
-
-    // -------------------
-    // Command Source (Output)
-    // -------------------
-    output reg                      source0_valid,
-    output reg [ST_DATA_W-1    : 0] source0_data,
-    output reg [ST_CHANNEL_W-1 : 0] source0_channel,
-    output reg                      source0_startofpacket,
-    output reg                      source0_endofpacket,
-    input                           source0_ready
-);
-  localparam PKT_BURSTWRAP_W = PKT_BURSTWRAP_H - PKT_BURSTWRAP_L + 1;
-
-  generate if (COMPRESSED_READ_SUPPORT == 1) begin : altera_merlin_burst_adapter_full
-    altera_merlin_burst_adapter_full_13_1 #(
-      .PKT_BEGIN_BURST           (PKT_BEGIN_BURST),
-      .PKT_ADDR_H                (PKT_ADDR_H ),
-      .PKT_ADDR_L                (PKT_ADDR_L),
-      .PKT_BYTE_CNT_H            (PKT_BYTE_CNT_H),
-      .PKT_BYTE_CNT_L            (PKT_BYTE_CNT_L ),
-      .PKT_BURSTWRAP_H           (PKT_BURSTWRAP_H),
-      .PKT_BURSTWRAP_L           (PKT_BURSTWRAP_L),
-      .PKT_TRANS_COMPRESSED_READ (PKT_TRANS_COMPRESSED_READ),
-      .PKT_TRANS_WRITE           (PKT_TRANS_WRITE),
-      .PKT_TRANS_READ            (PKT_TRANS_READ),
-      .PKT_BYTEEN_H              (PKT_BYTEEN_H),
-      .PKT_BYTEEN_L              (PKT_BYTEEN_L),
-      .PKT_BURST_TYPE_H          (PKT_BURST_TYPE_H),
-      .PKT_BURST_TYPE_L          (PKT_BURST_TYPE_L),
-      .PKT_BURST_SIZE_H          (PKT_BURST_SIZE_H),
-      .PKT_BURST_SIZE_L          (PKT_BURST_SIZE_L),
-      .IN_NARROW_SIZE            (IN_NARROW_SIZE),
-      .BYTEENABLE_SYNTHESIS      (BYTEENABLE_SYNTHESIS),
-      .OUT_NARROW_SIZE           (OUT_NARROW_SIZE),
-      .OUT_FIXED                 (OUT_FIXED),
-      .OUT_COMPLETE_WRAP         (OUT_COMPLETE_WRAP),
-      .ST_DATA_W                 (ST_DATA_W),
-      .ST_CHANNEL_W              (ST_CHANNEL_W),
-      .BURSTWRAP_CONST_MASK      (BURSTWRAP_CONST_MASK),
-      .BURSTWRAP_CONST_VALUE     (BURSTWRAP_CONST_VALUE),
-	    .PIPE_INPUTS		    (PIPE_INPUTS),
-	    .NO_WRAP_SUPPORT	    (NO_WRAP_SUPPORT),
-      .OUT_BYTE_CNT_H            (OUT_BYTE_CNT_H),
-      .OUT_BURSTWRAP_H           (OUT_BURSTWRAP_H)
-    ) the_ba_13_1(
-      .clk                   (clk),
-      .reset                 (reset),
-      .sink0_valid           (sink0_valid),
-      .sink0_data            (sink0_data),
-      .sink0_channel         (sink0_channel),
-      .sink0_startofpacket   (sink0_startofpacket),
-      .sink0_endofpacket     (sink0_endofpacket),
-      .sink0_ready           (sink0_ready),
-      .source0_valid         (source0_valid),
-      .source0_data          (source0_data),
-      .source0_channel       (source0_channel),
-      .source0_startofpacket (source0_startofpacket),
-      .source0_endofpacket   (source0_endofpacket),
-      .source0_ready         (source0_ready)
-    );
-  end
-  else begin : altera_merlin_burst_adapter_uncompressed_only
-    altera_merlin_burst_adapter_uncompressed_only_13_1 #(
-      .PKT_BYTE_CNT_H            (PKT_BYTE_CNT_H),
-      .PKT_BYTE_CNT_L            (PKT_BYTE_CNT_L ),
-      .PKT_BYTEEN_H              (PKT_BYTEEN_H),
-      .PKT_BYTEEN_L              (PKT_BYTEEN_L),
-      .ST_DATA_W                 (ST_DATA_W),
-      .ST_CHANNEL_W              (ST_CHANNEL_W)
-    ) the_ba_13_1(
-      .clk                   (clk),
-      .reset                 (reset),
-      .sink0_valid           (sink0_valid),
-      .sink0_data            (sink0_data),
-      .sink0_channel         (sink0_channel),
-      .sink0_startofpacket   (sink0_startofpacket),
-      .sink0_endofpacket     (sink0_endofpacket),
-      .sink0_ready           (sink0_ready),
-      .source0_valid         (source0_valid),
-      .source0_data          (source0_data),
-      .source0_channel       (source0_channel),
-      .source0_startofpacket (source0_startofpacket),
-      .source0_endofpacket   (source0_endofpacket),
-      .source0_ready         (source0_ready)
-    );
-  end endgenerate
-
-  // synthesis translate_off
-  // Check for incoming burstwrap values inconsistent with
-  // BURSTWRAP_CONST_MASK.
-  always @(posedge clk or posedge reset) begin
-    if (~reset && sink0_valid &&
-        BURSTWRAP_CONST_MASK[PKT_BURSTWRAP_W - 1:0] &
-        (BURSTWRAP_CONST_VALUE[PKT_BURSTWRAP_W - 1:0] ^ sink0_data[PKT_BURSTWRAP_H : PKT_BURSTWRAP_L])
-      ) begin
-      $display("%t: %m: Error: burstwrap value %X is inconsistent with BURSTWRAP_CONST_MASK value %X", $time(), sink0_data[PKT_BURSTWRAP_H : PKT_BURSTWRAP_L], BURSTWRAP_CONST_MASK[PKT_BURSTWRAP_W - 1:0]);
-    end
-  end
-  // synthesis translate_on
-endmodule
-
-module altera_merlin_burst_adapter_uncompressed_only_13_1
-#(
-  parameter // Merlin packet parameters
-    PKT_BYTE_CNT_H  = 5,
-    PKT_BYTE_CNT_L  = 0,
-    PKT_BYTEEN_H    = 83,
-    PKT_BYTEEN_L    = 80,
-    ST_DATA_W       = 84,
-    ST_CHANNEL_W    = 8
-)
-(
-    input clk,
-    input reset,
-
-    // -------------------
-    // Command Sink (Input)
-    // -------------------
-    input                       sink0_valid,
-    input  [ST_DATA_W-1 : 0]    sink0_data,
-    input  [ST_CHANNEL_W-1 : 0] sink0_channel,
-    input                       sink0_startofpacket,
-    input                       sink0_endofpacket,
-    output reg                  sink0_ready,
-
-    // -------------------
-    // Command Source (Output)
-    // -------------------
-    output reg                      source0_valid,
-    output reg [ST_DATA_W-1    : 0] source0_data,
-    output reg [ST_CHANNEL_W-1 : 0] source0_channel,
-    output reg                      source0_startofpacket,
-    output reg                      source0_endofpacket,
-    input                           source0_ready
-);
-  localparam
-    PKT_BYTE_CNT_W    = PKT_BYTE_CNT_H - PKT_BYTE_CNT_L + 1,
-    NUM_SYMBOLS       = PKT_BYTEEN_H - PKT_BYTEEN_L + 1;
-
-  wire [PKT_BYTE_CNT_W - 1 : 0] num_symbols_sig = NUM_SYMBOLS[PKT_BYTE_CNT_W - 1 : 0];
-
-  always_comb begin : source0_data_assignments
-    source0_valid = sink0_valid;
-    source0_channel = sink0_channel;
-    source0_startofpacket = sink0_startofpacket;
-    source0_endofpacket = sink0_endofpacket;
-    sink0_ready = source0_ready;
-
-    source0_data = sink0_data;
-    source0_data[PKT_BYTE_CNT_H : PKT_BYTE_CNT_L] = num_symbols_sig;
-  end
-
-endmodule
-
-
-module altera_merlin_burst_adapter_full_13_1
 #(
   parameter // Merlin packet parameters
     PKT_BEGIN_BURST             = 81,
@@ -758,7 +552,7 @@ module altera_merlin_burst_adapter_full_13_1
   wire [PKT_BURSTWRAP_W - 1 : 0]  in_burstwrap;
 
   genvar i;
-  generate begin : constant_or_variable_burstwrap
+  generate
     for (i = 0; i < PKT_BURSTWRAP_W; i = i + 1) begin : assign_burstwrap_bit
       if (BURSTWRAP_CONST_MASK[i]) begin
         assign in_burstwrap[i] = BURSTWRAP_CONST_VALUE[i];
@@ -767,7 +561,7 @@ module altera_merlin_burst_adapter_full_13_1
         assign in_burstwrap[i] = sink0_data[PKT_BURSTWRAP_L + i];
       end
     end
-  end endgenerate
+  endgenerate
 
   // ----------------------------------
   // Input Load control signals

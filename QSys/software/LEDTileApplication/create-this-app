@@ -3,7 +3,7 @@
 # This script creates the hello_world application in this directory.
 
 
-BSP_DIR=../LEDTileApplication_bsp
+BSP_DIR=../LEDTile_bsp
 QUARTUS_PROJECT_DIR=../../
 NIOS2_APP_GEN_ARGS="--elf-name LEDTileApplication.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files hello_world.c"
 

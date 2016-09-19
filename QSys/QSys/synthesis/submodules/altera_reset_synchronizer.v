@@ -11,9 +11,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/14.0/ip/merlin/altera_reset_controller/altera_reset_synchronizer.v#1 $
+// $Id: //acds/rel/14.1/ip/merlin/altera_reset_controller/altera_reset_synchronizer.v#1 $
 // $Revision: #1 $
-// $Date: 2014/02/16 $
+// $Date: 2014/10/06 $
 // $Author: swbranch $
 
 // -----------------------------------------------

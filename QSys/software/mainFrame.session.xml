@@ -1,69 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<java version="1.6.0_23" class="java.beans.XMLDecoder"> 
- <object class="java.util.HashMap"> 
-  <void method="put"> 
-   <string>jTabbedPane1/log_tab_pane/JPanel1/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string> 
-   <object class="org.jdesktop.application.SessionStorage$TabbedPaneState"> 
-    <void property="selectedIndex"> 
-     <int>2</int> 
-    </void> 
-    <void property="tabCount"> 
-     <int>3</int> 
-    </void> 
-   </object> 
-  </void> 
-  <void method="put"> 
-   <string>files_table/JViewport0/jScrollPane3/filesPanel/centerPanel/Flash: epcs_flash_controller/MainTabbedPane/JPanel0/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string> 
-   <object class="org.jdesktop.application.SessionStorage$TableState"> 
-    <void property="columnWidths"> 
-     <array class="int" length="3"> 
-      <void index="0"> 
-       <int>613</int> 
-      </void> 
-      <void index="1"> 
-       <int>288</int> 
-      </void> 
-      <void index="2"> 
-       <int>288</int> 
-      </void> 
-     </array> 
-    </void> 
-   </object> 
-  </void> 
-  <void method="put"> 
-   <string>mainFrame</string> 
-   <object class="org.jdesktop.application.SessionStorage$WindowState"> 
-    <void property="bounds"> 
-     <object class="java.awt.Rectangle"> 
-      <int>1125</int> 
-      <int>180</int> 
-      <int>1338</int> 
-      <int>998</int> 
-     </object> 
-    </void> 
-    <void property="graphicsConfigurationBounds"> 
-     <object class="java.awt.Rectangle"> 
-      <int>0</int> 
-      <int>0</int> 
-      <int>2560</int> 
-      <int>1440</int> 
-     </object> 
-    </void> 
-    <void property="screenCount"> 
-     <int>2</int> 
-    </void> 
-   </object> 
-  </void> 
-  <void method="put"> 
-   <string>MainTabbedPane/JPanel0/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string> 
-   <object class="org.jdesktop.application.SessionStorage$TabbedPaneState"> 
-    <void property="selectedIndex"> 
-     <int>0</int> 
-    </void> 
-    <void property="tabCount"> 
-     <int>1</int> 
-    </void> 
-   </object> 
-  </void> 
- </object> 
-</java> 
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_05" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>jTabbedPane1/log_tab_pane/JPanel1/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string>
+   <object class="org.jdesktop.application.SessionStorage$TabbedPaneState">
+    <void property="selectedIndex">
+     <int>2</int>
+    </void>
+    <void property="tabCount">
+     <int>3</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>files_table/JViewport0/jScrollPane3/filesPanel/centerPanel/Flash: epcs_flash_controller/MainTabbedPane/JPanel0/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string>
+   <object class="org.jdesktop.application.SessionStorage$TableState">
+    <void property="columnWidths">
+     <array class="int" length="3">
+      <void index="0">
+       <int>613</int>
+      </void>
+      <void index="1">
+       <int>288</int>
+      </void>
+      <void index="2">
+       <int>288</int>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>MainTabbedPane/JPanel0/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string>
+   <object class="org.jdesktop.application.SessionStorage$TabbedPaneState">
+    <void property="selectedIndex">
+     <int>0</int>
+    </void>
+    <void property="tabCount">
+     <int>1</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>mainFrame</string>
+   <object class="org.jdesktop.application.SessionStorage$WindowState" id="SessionStorage$WindowState0">
+    <void id="Rectangle0" property="bounds">
+     <void class="java.awt.Rectangle" method="getField">
+      <string>x</string>
+      <void method="set">
+       <object idref="Rectangle0"/>
+       <int>435</int>
+      </void>
+     </void>
+     <void class="java.awt.Rectangle" method="getField">
+      <string>y</string>
+      <void method="set">
+       <object idref="Rectangle0"/>
+       <int>65</int>
+      </void>
+     </void>
+     <void class="java.awt.Rectangle" method="getField">
+      <string>width</string>
+      <void method="set">
+       <object idref="Rectangle0"/>
+       <int>1338</int>
+      </void>
+     </void>
+     <void class="java.awt.Rectangle" method="getField">
+      <string>height</string>
+      <void method="set">
+       <object idref="Rectangle0"/>
+       <int>998</int>
+      </void>
+     </void>
+    </void>
+    <void property="bounds">
+     <object idref="Rectangle0"/>
+    </void>
+    <void property="graphicsConfigurationBounds">
+     <object class="java.awt.Rectangle" id="Rectangle1">
+      <void class="java.awt.Rectangle" method="getField">
+       <string>width</string>
+       <void method="set">
+        <object idref="Rectangle1"/>
+        <int>2560</int>
+       </void>
+      </void>
+      <void class="java.awt.Rectangle" method="getField">
+       <string>height</string>
+       <void method="set">
+        <object idref="Rectangle1"/>
+        <int>1440</int>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void property="screenCount">
+     <int>2</int>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

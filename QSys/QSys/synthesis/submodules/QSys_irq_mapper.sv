@@ -11,18 +11,18 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/14.0/ip/merlin/altera_irq_mapper/altera_irq_mapper.sv.terp#1 $
+// $Id: //acds/rel/14.1/ip/merlin/altera_irq_mapper/altera_irq_mapper.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2014/02/16 $
+// $Date: 2014/10/06 $
 // $Author: swbranch $
 
 // -------------------------------------------------------
 // Altera IRQ Mapper
 //
 // Parameters
-//   NUM_RCVRS        : 4
+//   NUM_RCVRS        : 5
 //   SENDER_IRW_WIDTH : 32
-//   IRQ_MAP          : 0:2,1:0,2:1,3:3
+//   IRQ_MAP          : 0:2,1:0,2:1,3:3,4:4
 //
 // -------------------------------------------------------
 
@@ -43,6 +43,7 @@ module QSys_irq_mapper
     input                receiver1_irq,
     input                receiver2_irq,
     input                receiver3_irq,
+    input                receiver4_irq,
 
     // -------------------
     // Command Source (Output)
@@ -58,6 +59,7 @@ module QSys_irq_mapper
         sender_irq[0] = receiver1_irq;
         sender_irq[1] = receiver2_irq;
         sender_irq[3] = receiver3_irq;
+        sender_irq[4] = receiver4_irq;
     end
 
 endmodule
