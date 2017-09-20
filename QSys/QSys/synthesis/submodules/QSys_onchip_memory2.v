@@ -25,6 +25,7 @@ module QSys_onchip_memory2 (
                               chipselect,
                               clk,
                               clken,
+                              freeze,
                               reset,
                               reset_req,
                               write,
@@ -44,14 +45,16 @@ module QSys_onchip_memory2 (
   input            chipselect;
   input            clk;
   input            clken;
+  input            freeze;
   input            reset;
   input            reset_req;
   input            write;
   input   [ 15: 0] writedata;
 
-  wire             clocken0;
-  wire    [ 15: 0] readdata;
-  wire             wren;
+
+wire             clocken0;
+wire    [ 15: 0] readdata;
+wire             wren;
   assign wren = chipselect & write & clken;
   assign clocken0 = clken & ~reset_req;
   altsyncram the_altsyncram
@@ -74,6 +77,7 @@ module QSys_onchip_memory2 (
            the_altsyncram.outdata_reg_a = "UNREGISTERED",
            the_altsyncram.ram_block_type = "AUTO",
            the_altsyncram.read_during_write_mode_mixed_ports = "DONT_CARE",
+           the_altsyncram.read_during_write_mode_port_a = "DONT_CARE",
            the_altsyncram.width_a = 16,
            the_altsyncram.width_byteena_a = 2,
            the_altsyncram.widthad_a = 14;
