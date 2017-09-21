@@ -20,6 +20,9 @@ A 32x32 LED tile that I hung up on my wall.  Uses a Terasic DE0-Nano FPGA with a
 * On/Off Switch
 * 5V DC power jack
 
+The are connected as shown: 
+![Wiring Diagram](doc/WiringDiagram.jpg)
+
 ### About the Terasic DE0-Nano
 
 Of interest to this project, the board contains...
