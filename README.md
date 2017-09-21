@@ -33,3 +33,7 @@ Of interest to this project, the board contains...
 * 50 MHz oscillator
 * 72 IO pins
 * On-board USB Blaster circuit
+
+### Bootup
+
+The Nios II processor reset address is set to the base address of the EPCS controller in Qsys. At reset, a boot copier program runs on the Nios II from on chip ram, the program skips the FPGA configuration in the EPCS device, then reads the data following it into the SDRAM, then jumps to the start of the program.  The boot copier is put there by Quartus.
