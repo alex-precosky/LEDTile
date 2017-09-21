@@ -2,7 +2,7 @@ set_global_assignment -entity "QSys" -library "QSys" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "QSys" -library "QSys" -name IP_TOOL_VERSION "16.1"
 set_global_assignment -entity "QSys" -library "QSys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "QSys" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../QSys.sopcinfo"]
-set_global_assignment -entity "QSys" -library "QSys" -name SLD_INFO "QSYS_NAME QSys HAS_SOPCINFO 1 GENERATION_ID 1480130080"
+set_global_assignment -entity "QSys" -library "QSys" -name SLD_INFO "QSYS_NAME QSys HAS_SOPCINFO 1 GENERATION_ID 1505957833"
 set_global_assignment -library "QSys" -name MISC_FILE [file join $::quartus(qip_path) "../QSys.cmp"]
 set_global_assignment -library "QSys" -name SLD_FILE [file join $::quartus(qip_path) "QSys.regmap"]
 set_global_assignment -library "QSys" -name SLD_FILE [file join $::quartus(qip_path) "QSys.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_DISPLAY_
 set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTQ4MDEzMDA4MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUwNTk1NzgzMw==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0UyMkYxN0M2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "QSys" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1452,9 +1452,7 @@ set_global_assignment -entity "QSys_altpll_0" -library "QSys" -name IP_COMPONENT
 set_global_assignment -entity "QSys_altpll_0" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "QSys_altpll_0" -library "QSys" -name IP_COMPONENT_PARAMETER "QVVUT19JTkNMS19JTlRFUkZBQ0VfQ0xPQ0tfUkFURQ==::NTAwMDAwMDA=::QXV0byBDTE9DS19SQVRF"
 
-set_global_assignment -library "QSys" -name VHDL_FILE [file join $::quartus(qip_path) "QSys.vhd"]
-set_global_assignment -library "QSys" -name VHDL_FILE [file join $::quartus(qip_path) "qsys_rst_controller.vhd"]
-set_global_assignment -library "QSys" -name VHDL_FILE [file join $::quartus(qip_path) "qsys_rst_controller_001.vhd"]
+set_global_assignment -library "QSys" -name VERILOG_FILE [file join $::quartus(qip_path) "QSys.v"]
 set_global_assignment -library "QSys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "QSys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "QSys" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
