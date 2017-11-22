@@ -1,11 +1,11 @@
 //altpll_avalon avalon_use_separate_sysclk="NO" CBX_SINGLE_OUTPUT_FILE="ON" CBX_SUBMODULE_USED_PORTS="altpll:areset,clk,locked,inclk" address areset c0 c1 clk configupdate locked phasecounterselect phasedone phasestep phaseupdown read readdata reset scanclk scanclkena scandata write writedata bandwidth_type="AUTO" clk0_divide_by=1 clk0_duty_cycle=50 clk0_multiply_by=1 clk0_phase_shift="-3000" clk1_divide_by=1 clk1_duty_cycle=50 clk1_multiply_by=1 clk1_phase_shift="0" compensate_clock="CLK0" device_family="CYCLONEIVE" inclk0_input_frequency=20000 intended_device_family="Cyclone IV E" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_UNUSED" port_clk3="PORT_UNUSED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" width_clock=5
-//VERSION_BEGIN 16.1 cbx_altclkbuf 2016:10:24:15:04:16:SJ cbx_altiobuf_bidir 2016:10:24:15:04:16:SJ cbx_altiobuf_in 2016:10:24:15:04:16:SJ cbx_altiobuf_out 2016:10:24:15:04:16:SJ cbx_altpll 2016:10:24:15:04:16:SJ cbx_altpll_avalon 2016:10:24:15:04:16:SJ cbx_cycloneii 2016:10:24:15:04:16:SJ cbx_lpm_add_sub 2016:10:24:15:04:16:SJ cbx_lpm_compare 2016:10:24:15:04:16:SJ cbx_lpm_counter 2016:10:24:15:04:16:SJ cbx_lpm_decode 2016:10:24:15:04:16:SJ cbx_lpm_mux 2016:10:24:15:04:16:SJ cbx_lpm_shiftreg 2016:10:24:15:04:16:SJ cbx_mgl 2016:10:24:15:05:03:SJ cbx_nadder 2016:10:24:15:04:16:SJ cbx_stratix 2016:10:24:15:04:16:SJ cbx_stratixii 2016:10:24:15:04:16:SJ cbx_stratixiii 2016:10:24:15:04:16:SJ cbx_stratixv 2016:10:24:15:04:16:SJ cbx_util_mgl 2016:10:24:15:04:16:SJ  VERSION_END
+//VERSION_BEGIN 17.1 cbx_altclkbuf 2017:10:25:18:06:52:SJ cbx_altiobuf_bidir 2017:10:25:18:06:52:SJ cbx_altiobuf_in 2017:10:25:18:06:52:SJ cbx_altiobuf_out 2017:10:25:18:06:52:SJ cbx_altpll 2017:10:25:18:06:53:SJ cbx_altpll_avalon 2017:10:25:18:06:52:SJ cbx_cycloneii 2017:10:25:18:06:53:SJ cbx_lpm_add_sub 2017:10:25:18:06:53:SJ cbx_lpm_compare 2017:10:25:18:06:53:SJ cbx_lpm_counter 2017:10:25:18:06:53:SJ cbx_lpm_decode 2017:10:25:18:06:53:SJ cbx_lpm_mux 2017:10:25:18:06:53:SJ cbx_lpm_shiftreg 2017:10:25:18:06:53:SJ cbx_mgl 2017:10:25:18:08:29:SJ cbx_nadder 2017:10:25:18:06:53:SJ cbx_stratix 2017:10:25:18:06:53:SJ cbx_stratixii 2017:10:25:18:06:53:SJ cbx_stratixiii 2017:10:25:18:06:53:SJ cbx_stratixv 2017:10:25:18:06:53:SJ cbx_util_mgl 2017:10:25:18:06:53:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
 
 
-// Copyright (C) 2016  Intel Corporation. All rights reserved.
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
 //  Your use of Intel Corporation's design tools, logic functions 
 //  and other software and tools, and its AMPP partner logic 
 //  functions, and any output files from any of the foregoing 
@@ -13,22 +13,21 @@
 //  associated documentation or information are expressly subject 
 //  to the terms and conditions of the Intel Program License 
 //  Subscription Agreement, the Intel Quartus Prime License Agreement,
-//  the Intel MegaCore Function License Agreement, or other 
-//  applicable license agreement, including, without limitation, 
-//  that your use is for the sole purpose of programming logic 
-//  devices manufactured by Intel and sold by Intel or its 
-//  authorized distributors.  Please refer to the applicable 
-//  agreement for further details.
+//  the Intel FPGA IP License Agreement, or other applicable license
+//  agreement, including, without limitation, that your use is for
+//  the sole purpose of programming logic devices manufactured by
+//  Intel and sold by Intel or its authorized distributors.  Please
+//  refer to the applicable agreement for further details.
 
 
 
 
 //altera_std_synchronizer CBX_SINGLE_OUTPUT_FILE="ON" clk din dout reset_n
-//VERSION_BEGIN 16.1 cbx_mgl 2016:10:24:15:05:03:SJ cbx_stratixii 2016:10:24:15:04:16:SJ cbx_util_mgl 2016:10:24:15:04:16:SJ  VERSION_END
+//VERSION_BEGIN 17.1 cbx_mgl 2017:10:25:18:08:29:SJ cbx_stratixii 2017:10:25:18:06:53:SJ cbx_util_mgl 2017:10:25:18:06:53:SJ  VERSION_END
 
 
 //dffpipe CBX_SINGLE_OUTPUT_FILE="ON" DELAY=3 WIDTH=1 clock clrn d q ALTERA_INTERNAL_OPTIONS=AUTO_SHIFT_REGISTER_RECOGNITION=OFF
-//VERSION_BEGIN 16.1 cbx_mgl 2016:10:24:15:05:03:SJ cbx_stratixii 2016:10:24:15:04:16:SJ cbx_util_mgl 2016:10:24:15:04:16:SJ  VERSION_END
+//VERSION_BEGIN 17.1 cbx_mgl 2017:10:25:18:08:29:SJ cbx_stratixii 2017:10:25:18:06:53:SJ cbx_util_mgl 2017:10:25:18:06:53:SJ  VERSION_END
 
 //synthesis_resources = reg 3 
 //synopsys translate_off
@@ -121,7 +120,7 @@ endmodule //QSys_altpll_0_stdsync_sv6
 
 
 //altpll bandwidth_type="AUTO" CBX_SINGLE_OUTPUT_FILE="ON" clk0_divide_by=1 clk0_duty_cycle=50 clk0_multiply_by=1 clk0_phase_shift="-3000" clk1_divide_by=1 clk1_duty_cycle=50 clk1_multiply_by=1 clk1_phase_shift="0" compensate_clock="CLK0" device_family="CYCLONEIVE" inclk0_input_frequency=20000 intended_device_family="Cyclone IV E" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_UNUSED" port_clk3="PORT_UNUSED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" width_clock=5 areset clk inclk locked
-//VERSION_BEGIN 16.1 cbx_altclkbuf 2016:10:24:15:04:16:SJ cbx_altiobuf_bidir 2016:10:24:15:04:16:SJ cbx_altiobuf_in 2016:10:24:15:04:16:SJ cbx_altiobuf_out 2016:10:24:15:04:16:SJ cbx_altpll 2016:10:24:15:04:16:SJ cbx_cycloneii 2016:10:24:15:04:16:SJ cbx_lpm_add_sub 2016:10:24:15:04:16:SJ cbx_lpm_compare 2016:10:24:15:04:16:SJ cbx_lpm_counter 2016:10:24:15:04:16:SJ cbx_lpm_decode 2016:10:24:15:04:16:SJ cbx_lpm_mux 2016:10:24:15:04:16:SJ cbx_mgl 2016:10:24:15:05:03:SJ cbx_nadder 2016:10:24:15:04:16:SJ cbx_stratix 2016:10:24:15:04:16:SJ cbx_stratixii 2016:10:24:15:04:16:SJ cbx_stratixiii 2016:10:24:15:04:16:SJ cbx_stratixv 2016:10:24:15:04:16:SJ cbx_util_mgl 2016:10:24:15:04:16:SJ  VERSION_END
+//VERSION_BEGIN 17.1 cbx_altclkbuf 2017:10:25:18:06:52:SJ cbx_altiobuf_bidir 2017:10:25:18:06:52:SJ cbx_altiobuf_in 2017:10:25:18:06:52:SJ cbx_altiobuf_out 2017:10:25:18:06:52:SJ cbx_altpll 2017:10:25:18:06:53:SJ cbx_cycloneii 2017:10:25:18:06:53:SJ cbx_lpm_add_sub 2017:10:25:18:06:53:SJ cbx_lpm_compare 2017:10:25:18:06:53:SJ cbx_lpm_counter 2017:10:25:18:06:53:SJ cbx_lpm_decode 2017:10:25:18:06:53:SJ cbx_lpm_mux 2017:10:25:18:06:53:SJ cbx_mgl 2017:10:25:18:08:29:SJ cbx_nadder 2017:10:25:18:06:53:SJ cbx_stratix 2017:10:25:18:06:53:SJ cbx_stratixii 2017:10:25:18:06:53:SJ cbx_stratixiii 2017:10:25:18:06:53:SJ cbx_stratixv 2017:10:25:18:06:53:SJ cbx_util_mgl 2017:10:25:18:06:53:SJ  VERSION_END
 
 //synthesis_resources = cycloneive_pll 1 reg 1 
 //synopsys translate_off
