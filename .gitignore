@@ -20,6 +20,7 @@ output_files/*
 .qsys_edit/*
 EclipseWorkspace/
 QSys/synthesis/*
+QSys/QSys/synthesis/*
 testbench/work/*
 *.S
 *.o

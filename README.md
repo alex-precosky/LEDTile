@@ -20,6 +20,9 @@ A 32x32 LED tile that I hung up on my wall.  Uses a Terasic DE0-Nano FPGA with a
 * On/Off Switch
 * 5V DC power jack
 
+The are connected as shown: 
+![Wiring Diagram](doc/WiringDiagram.jpg)
+
 ### About the Terasic DE0-Nano
 
 Of interest to this project, the board contains...
@@ -30,3 +33,7 @@ Of interest to this project, the board contains...
 * 50 MHz oscillator
 * 72 IO pins
 * On-board USB Blaster circuit
+
+### Bootup
+
+The Nios II processor reset address is set to the base address of the EPCS controller in Qsys. At reset, a boot copier program runs on the Nios II from on chip ram, the program skips the FPGA configuration in the EPCS device, then reads the data following it into the SDRAM, then jumps to the start of the program.  The boot copier is put there by Quartus.
