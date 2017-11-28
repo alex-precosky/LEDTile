@@ -14,26 +14,26 @@ const char* host = "LEDPanel";
 
 
 void setup() {
-   WiFi.mode(WIFI_STA);
+  WiFi.mode(WIFI_STA);
 
-   WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);
 
-    while (WiFi.waitForConnectResult() != WL_CONNECTED){
-        WiFi.begin(ssid, password);
-    }
+  while (WiFi.waitForConnectResult() != WL_CONNECTED){
+    WiFi.begin(ssid, password);
+  }
 
-    ArduinoOTA.setHostname(host);
+  ArduinoOTA.setHostname(host);
 
-    ArduinoOTA.onError([](ota_error_t error) { ESP.restart(); });
+  ArduinoOTA.onError([](ota_error_t error) { ESP.restart(); });
 
-    ArduinoOTA.begin();
+  ArduinoOTA.begin();
 
 
-    pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
 
-      webPage += "<h1>LED Web Server</h1><p>Coming soon: A REST API for making this thing go!</p>";
+  webPage += "<h1>LED Web Server</h1><p>Coming soon: A REST API for making this thing go!</p>";
 
-      server.on("/", [](){
+  server.on("/", [](){
     server.send(200, "text/html", webPage);
   });
 
@@ -46,3 +46,4 @@ void loop() {
     server.handleClient();
    digitalWrite(LED_BUILTIN, LOW);
 }
+
