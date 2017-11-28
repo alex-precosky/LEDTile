@@ -4,6 +4,7 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 #include <ESP8266WebServer.h>
+#include <ArduinoJson.h>
 
 const char* ssid = "SHAW-E75060";
 const char* password = "25116A147879";
@@ -12,6 +13,7 @@ const char* host = "LEDPanel";
     ESP8266WebServer server(80);
     String webPage = "";
 
+    void onSetPixel();
 
 void setup() {
   WiFi.mode(WIFI_STA);
@@ -37,8 +39,30 @@ void setup() {
     server.send(200, "text/html", webPage);
   });
 
+  server.on("/setPixel", HTTP_POST, onSetPixel);
+
   server.begin();
 
+}
+
+void onSetPixel() {
+  StaticJsonBuffer<200> jsonBuffer;
+
+  String data = server.arg("plain");
+  JsonObject& root = jsonBuffer.parseObject(data);
+  
+  const char* x = root["x"];
+  if (x) 
+  {
+    server.send(200, "text/plain", "Hi I am Alex's LED panel sending a 200 OK to your HTTP API call");
+  }
+  else
+  {
+    server.send(400, "text/plain", "Bad request");
+  }
+
+
+    
 }
 
 void loop() {
