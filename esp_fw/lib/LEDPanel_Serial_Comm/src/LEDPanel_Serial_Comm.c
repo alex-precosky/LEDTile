@@ -5,7 +5,8 @@
 void encode_serial_packet(char* dest, char* payload, int payload_size)
 {
     dest[0] = LEDPANEL_COMM_START_BYTE;
-    memcpy(dest+1, payload, payload_size);
+    memcpy(dest+1, &payload_size, 4);
+    memcpy(dest+5, payload, payload_size);
 
     return;
 }

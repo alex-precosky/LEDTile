@@ -2,6 +2,10 @@
 
 #ifndef __LEDPANEL_SERIAL_COMM_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
     #define LEDPANEL_COMM_START_BYTE 0x00
 
     #define LEDPANEL_COMM_NOERROR 0x00
@@ -19,5 +23,7 @@
     int decode_serial_packet(char* payload, char* packet);
 
 
-
+#ifdef __cplusplus
+}
+#endif
 #endif

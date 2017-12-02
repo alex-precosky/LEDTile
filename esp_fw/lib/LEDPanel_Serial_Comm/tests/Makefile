@@ -2,7 +2,7 @@
 SILENCE = 
 
 #---- Outputs ----#
-COMPONENT_NAME = shared
+COMPONENT_NAME = LEDPanel_Serial_Comm
 TARGET_LIB = \
 	lib/lib$(COMPONENT_NAME).a
 
