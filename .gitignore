@@ -30,3 +30,5 @@ testbench/work/*
 *.map
 *.objdump
 *.stackdump
+*~
+*.exe
