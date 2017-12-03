@@ -16,9 +16,8 @@ int decode_serial_packet(char* payload, char* packet)
     if( packet[0] != LEDPANEL_COMM_START_BYTE )
         return LEDPANEL_COMM_CHECKSUM_ERROR;
 
-    uint32_t length = *(payload+1);
-
-    memcpy(payload, packet+1, length);
+    uint32_t length = *((uint32_t*)(packet+1));
+    memcpy(payload, packet+5, length);
 
     return LEDPANEL_COMM_NOERROR;
 }
