@@ -5,6 +5,7 @@
 #include <ArduinoOTA.h>
 #include <ESP8266WebServer.h>
 #include <ArduinoJson.h>
+#include "LEDPanel_Serial_Comm.h"
 
 const char* ssid = "SHAW-E75060";
 const char* password = "25116A147879";
