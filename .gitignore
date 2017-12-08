@@ -37,3 +37,4 @@ esp_fw/.vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+esp_fw/.vscode/settings.json
