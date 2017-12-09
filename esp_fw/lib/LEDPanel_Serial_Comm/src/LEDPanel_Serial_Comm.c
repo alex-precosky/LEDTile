@@ -2,6 +2,30 @@
 #include <stdint.h>
 #include "LEDPanel_Serial_Comm.h"
 
+
+void send_set_pixel(char x, char y, char r, char g, char b)
+{
+  // encodes a packet with the command for setting a pixel
+  // and sends it to the FPGA
+
+  // the payload looks like...:  [0x01][x][y][r][g][b]
+  const int payload_size = 7;
+  const int packet_size = payload_size + 9;
+  char payload[payload_size];
+  char packet[packet_size];
+
+  payload[0] = LEDPANEL_COMM_CMD_SETPIXEL;
+  payload[1] = x;
+  payload[2] = y;
+  payload[3] = r;
+  payload[4] = g;
+  payload[5] = b;
+
+  encode_serial_packet(packet, payload, payload_size);
+
+  Uart_SendPacket(packet, packet_size);  
+}
+
 void encode_serial_packet(char* dest, char* payload, int payload_size)
 {
     dest[0] = LEDPANEL_COMM_START_BYTE;
