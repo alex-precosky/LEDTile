@@ -41,7 +41,11 @@ LEDTile.qpf is the Quartus project file and should be opened in Quartus. It can 
 
 ## Nios II Software
 Open the Eclipse tools for Nios II and create a new workspace, and add all of the projects in
-/software to it.  Build LEDTileApplication and write it to the serial configuration device.
+/software to it.  
+
+The Board Support Package will likely need to be regenerated.  Right click LEDTile_BSP2 then go Nios II->Generate BSP
+
+Build LEDTileApplication and write it to the serial configuration device.
 
 ## ESP8266 Software
 This is a Platform IO project built in Visual Studio Code. It can be uploaded by a USB-Serial cable to the board or over WiFi if first loaded with the ESP8266 WiFi loader and configured with the access details for an access point.
