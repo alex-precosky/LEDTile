@@ -29,7 +29,7 @@ port(
 	
 	GPIO_1			: in std_logic_vector(33 downto 0);
 	
-	GPIO_0		  : out std_logic_vector(33 downto 0)
+	GPIO_0		  : inout std_logic_vector(33 downto 0)
 	
 	
 	
@@ -178,7 +178,7 @@ begin
 		);
 		
 		
-		uart_inv <= GPIO_1(9);
+		uart_inv <= GPIO_0(18);
 		
 	m0 : component LEDMatrix_Ctrl
 		port map (

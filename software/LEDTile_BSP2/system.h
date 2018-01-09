@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
  * SOPC Builder design path: ../../QSys.sopcinfo
  *
- * Generated: Sat Dec 09 12:53:34 PST 2017
+ * Generated: Mon Jan 08 19:43:56 PST 2018
  */
 
 /*
@@ -166,12 +166,12 @@
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x400a0b8
-#define ALT_STDIN_DEV jtag_uart
-#define ALT_STDIN_IS_JTAG_UART
+#define ALT_STDIN "/dev/uart_0"
+#define ALT_STDIN_BASE 0x400a000
+#define ALT_STDIN_DEV uart_0
+#define ALT_STDIN_IS_UART
 #define ALT_STDIN_PRESENT
-#define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDIN_TYPE "altera_avalon_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
 #define ALT_STDOUT_BASE 0x400a0b8
 #define ALT_STDOUT_DEV jtag_uart
@@ -453,7 +453,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1511414540
+#define SYSID_TIMESTAMP 1515469103
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
