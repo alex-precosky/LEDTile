@@ -32,6 +32,9 @@ extern "C" {
   void (*Uart_SendPacket)(char* packet, int n);
 
 
+  // Send using Uart_SendPacket a set pixel command
+  void send_set_pixel(char x, char y, char r, char g, char b);
+
 #ifdef __cplusplus
 }
 #endif
