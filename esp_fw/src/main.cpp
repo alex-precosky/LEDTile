@@ -75,13 +75,7 @@ void onSetPixel() {
   {
     server.send(400, "text/plain", "Bad request");
   }
-<<<<<<< HEAD
   
-=======
-
-
-
->>>>>>> 29a0b421e505fa97a326b3d937d6ab18bfec31d9
 }
 
 void loop() {
