@@ -20,6 +20,10 @@ const char* host = "LEDPanel";
 void (*Uart_SendPacket)(char* packet, int n) = &ESP8266_Uart_SendPacket;
 
 void setup() {
+  // Set up function pointer for sending packets
+  Serial.begin(9600);
+  Uart_SendPacket = ESP8266_Uart_SendPacket;   
+
   WiFi.mode(WIFI_STA);
 
   WiFi.begin(ssid, password);
@@ -45,6 +49,7 @@ void setup() {
 
   server.on("/setPixel", HTTP_POST, onSetPixel);
 
+  Serial.begin(9600);
   server.begin();
 
 }
@@ -55,16 +60,28 @@ void onSetPixel() {
   String data = server.arg("plain");
   JsonObject& root = jsonBuffer.parseObject(data);
   
-  const char* x = root["x"];
+  int x = root["x"];
+  int y = root["y"];
+  int r = root["r"];
+  int g = root["g"];
+  int b = root["b"];
+
   if (x) 
   {
-    server.send(200, "text/plain", "Hi I am Alex's LED panel sending a 200 OK to your HTTP API call");
+    server.send(200, "text/plain", "Sending Set pixel!");
+    send_set_pixel(x, y, r, g, b);
   }
   else
   {
     server.send(400, "text/plain", "Bad request");
   }
+<<<<<<< HEAD
   
+=======
+
+
+
+>>>>>>> 29a0b421e505fa97a326b3d937d6ab18bfec31d9
 }
 
 void loop() {

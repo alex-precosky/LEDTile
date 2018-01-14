@@ -157,9 +157,9 @@ SOPC_SYSID_FLAG += --sidp=0x400a0b0
 ELF_PATCH_FLAG  += --sidp 0x400a0b0
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1511414540
-SOPC_SYSID_FLAG += --timestamp=1511414540
-ELF_PATCH_FLAG  += --timestamp 1511414540
+# setting SOPC_TIMESTAMP is 1515641248
+SOPC_SYSID_FLAG += --timestamp=1515641248
+ELF_PATCH_FLAG  += --timestamp 1515641248
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 
@@ -358,8 +358,8 @@ ELF_PATCH_FLAG  += --stderr_dev jtag_uart
 
 # Slave descriptor of STDIN character-mode device. This setting is used by the 
 # ALT_STDIN family of defines in system.h. none 
-# setting hal.stdin is jtag_uart
-ELF_PATCH_FLAG  += --stdin_dev jtag_uart
+# setting hal.stdin is uart_0
+ELF_PATCH_FLAG  += --stdin_dev uart_0
 
 # Slave descriptor of STDOUT character-mode device. This setting is used by the 
 # ALT_STDOUT family of defines in system.h. none 

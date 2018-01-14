@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2017-12-09 12:53:32</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1512852812016</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile\software\LEDTile_BSP2</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>10-Jan-2018 7:31:48 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1515641508640</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\software\LEDTile_BSP2</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\QSys.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -194,7 +194,7 @@
                 <SettingName>hal.stdin</SettingName>
                 <Identifier>none</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>jtag_uart</Value>
+                <Value>uart_0</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of STDIN character-mode device. This setting is used by the ALT_STDIN family of defines in system.h.</Description>
