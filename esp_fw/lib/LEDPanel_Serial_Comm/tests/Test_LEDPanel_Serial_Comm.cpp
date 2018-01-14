@@ -2,9 +2,13 @@
 #include "CppUTest/TestHarness.h"
 #include "LEDPanel_Serial_Comm.h"
 
-
 TEST_GROUP(SerialCommGroup)
 {
+  void setup()
+  {
+    Uart_SendPacket = 0;
+  }
+
 };
 
 TEST(SerialCommGroup, Test_encode)
@@ -18,6 +22,7 @@ TEST(SerialCommGroup, Test_encode)
   CHECK_EQUAL(payload_size,  *((int*)(packet+1) ) );
   STRNCMP_EQUAL("My Packet", packet+5, payload_size);
 }
+
 
  TEST(SerialCommGroup, Test_decode)
  {

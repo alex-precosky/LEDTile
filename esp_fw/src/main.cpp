@@ -17,6 +17,8 @@ const char* host = "LEDPanel";
 
     void onSetPixel();
 
+void (*Uart_SendPacket)(char* packet, int n) = &ESP8266_Uart_SendPacket;
+
 void setup() {
   WiFi.mode(WIFI_STA);
 
@@ -62,9 +64,7 @@ void onSetPixel() {
   {
     server.send(400, "text/plain", "Bad request");
   }
-
-
-  Uart_SendPacket = ESP8266_Uart_SendPacket;   
+  
 }
 
 void loop() {

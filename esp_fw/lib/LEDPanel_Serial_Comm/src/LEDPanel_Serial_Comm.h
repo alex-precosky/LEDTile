@@ -7,6 +7,8 @@
 extern "C" {
 #endif
 
+    #define LEDPANEL_RECEIVE_BUFFER_SIZE 255
+
     #define LEDPANEL_COMM_START_BYTE 0x00
 
     #define LEDPANEL_COMM_NOERROR 0x00
@@ -28,7 +30,8 @@ extern "C" {
   /**
      Only the ESP8266 sends packets... so it will only point to something on that platform
   */
-  void (*Uart_SendPacket)(char* packet, int n);
+  extern void (*Uart_SendPacket)(char* packet, int n);
+
 
 
 #ifdef __cplusplus
