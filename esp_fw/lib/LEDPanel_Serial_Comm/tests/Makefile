@@ -22,7 +22,7 @@ CPPUTEST_CFLAGS += -std=c99
 CPPUTEST_CFLAGS += -Wextra 
 CPPUTEST_CFLAGS += -pedantic 
 CPPUTEST_CFLAGS += -Wstrict-prototypes
-CPPUTEST_CFLAGS += -Wno-c++14-compat 
+#CPPUTEST_CFLAGS += -Wno-c++14-compat 
 
 SRC_DIRS = \
 	..\src
