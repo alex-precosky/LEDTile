@@ -446,6 +446,11 @@
 								</inputType>
 							</tool>
 							<tool id="altera.tool.gnu.c.compiler.mingw.1784339627" name="Nios II GCC C Compiler" superClass="altera.tool.gnu.c.compiler.mingw">
+								<option id="gnu.c.compiler.option.include.paths.91554167" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../..\LEDTile_BSP2\HAL\inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\LEDTile_BSP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../..\LEDTile_BSP2\drivers\inc&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1046412666" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="altera.tool.gnu.cpp.compiler.mingw.2098339884" name="Nios II GCC C++ Compiler" superClass="altera.tool.gnu.cpp.compiler.mingw">
@@ -476,15 +481,6 @@
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="LEDTileHalloween.null.625922520" name="LEDTileHalloween"/>
-	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1479759462;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1132050866">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC"/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1942519489;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.46326502">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP"/>
-		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
@@ -521,4 +517,19 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700.;altera.tool.gnu.cpp.compiler.mingw.2098339884;cdt.managedbuild.tool.gnu.cpp.compiler.input.916377816">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700.;altera.tool.gnu.c.compiler.mingw.1784339627;cdt.managedbuild.tool.gnu.c.compiler.input.1046412666">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1479759462;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1132050866">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1582085700.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1942519489;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.46326502">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
 </cproject>
