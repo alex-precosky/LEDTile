@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>LEDPanel_Serial_Comm</name>
+	<name>LEDTileSerialAPIApplication</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>com.altera.sbtgui.project.makefileBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.altera.sbtgui.project.makefileBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
@@ -24,29 +34,7 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>com.altera.sbtgui.project.SBTGUINature</nature>
-		<nature>com.altera.sbtgui.project.SBTGUILibNature</nature>
+		<nature>com.altera.sbtgui.project.SBTGUIAppNature</nature>
 		<nature>com.altera.sbtgui.project.SBTGUIManagedNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>LEDPanel_Serial_Comm.c</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c</locationURI>
-		</link>
-		<link>
-			<name>LEDPanel_Serial_Comm.h</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.h</locationURI>
-		</link>
-		<link>
-			<name>LEDPanel_Serial_Receiver.c</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c</locationURI>
-		</link>
-		<link>
-			<name>LEDPanel_Serial_Receiver.h</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.h</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
