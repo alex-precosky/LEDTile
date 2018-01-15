@@ -3,6 +3,7 @@
 	<name>LEDTileSerialAPIApplication</name>
 	<comment></comment>
 	<projects>
+		<project>LEDPanel_Serial_Comm</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

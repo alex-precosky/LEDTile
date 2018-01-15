@@ -21,6 +21,8 @@ extern "C" {
     char buf[LEDPANEL_RECEIVE_BUFFER_SIZE];
   } receive_status_t;
 
+  extern receive_status_t receive_status;
+
   // Initialize the state and the Uart
   void init_serial_receiver();
 

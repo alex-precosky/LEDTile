@@ -34,6 +34,12 @@ void encode_serial_packet(char* dest, char* payload, int payload_size)
     memcpy(dest+1, &payload_size, 4);
     memcpy(dest+5, payload, payload_size);
 
+    // make up a fake checksum for now
+    dest[5+payload_size] = 0xfc;
+    dest[6+payload_size] = 0xfd;
+    dest[7+payload_size] = 0xfe;
+    dest[8+payload_size] = 0xff;
+
     return;
 }
 

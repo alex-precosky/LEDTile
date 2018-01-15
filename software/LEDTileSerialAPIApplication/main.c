@@ -9,13 +9,20 @@
 #include "LEDPanel_Serial_Receiver.h"
 
 void HandleSetPixelCommand(char x, char y, char r, char g, char b);
-
+void print_receiver_status();
 
 void HandleSetPixelCommand(char x, char y, char r, char g, char b)
 {
 	printf("Got set pixel command!");
 }
 
+void print_receiver_status()
+{
+	printf("Bytes: %d Start: %d Length Received: %d Payload length: %u\n ", receive_status.bytes_received,
+										receive_status.is_start_received,
+										receive_status.is_length_received,
+										receive_status.payload_length);
+}
 
 int main()
 {
@@ -33,8 +40,6 @@ int main()
 
 		ch = getchar();
 	  	process_serial_char(ch);
-	  	printf("hi");
-
 
 	}
 
