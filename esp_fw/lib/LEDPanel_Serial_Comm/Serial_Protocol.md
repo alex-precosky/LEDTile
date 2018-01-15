@@ -7,7 +7,7 @@ Each command is sent in a frame:
 
 [Start Byte][Payload Length][Payload][CRC32]
  - Start Byte: 0x00
- - Length: 4 byte integer
+ - Length: 4 byte integer, is of just the payload
  - Payload: some command
  - CRC32: 4 bytes
 

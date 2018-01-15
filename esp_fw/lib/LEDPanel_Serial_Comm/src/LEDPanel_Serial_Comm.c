@@ -10,7 +10,7 @@ void send_set_pixel(char x, char y, char r, char g, char b)
   // and sends it to the FPGA
 
   // the payload looks like...:  [0x01][x][y][r][g][b]
-  const int payload_size = 7;
+  const int payload_size = 6;
   const int packet_size = payload_size + 9;
   char payload[payload_size];
   char packet[packet_size];

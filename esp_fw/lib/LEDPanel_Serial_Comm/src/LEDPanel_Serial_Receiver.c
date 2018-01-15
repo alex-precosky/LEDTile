@@ -46,15 +46,18 @@ void process_serial_char(char ch)
   if( receive_status.is_payload_received == 0)
     {
       receive_status.buf[ receive_status.bytes_received++ ] = ch;
-      if( receive_status.bytes_received == receive_status.payload_length )
-	{
-	  receive_status.is_payload_received = 1;
-	  return;
-	}
+      if( receive_status.bytes_received == receive_status.payload_length  + 5)
+	    {
+	      receive_status.is_payload_received = 1;
+	    }
+      return;
     }
 
-  // by here, all that's left is the checksum
+  // by here, all that's left is the checksum of 4 bytes
   receive_status.buf[ receive_status.bytes_received++ ] = ch;
+
+  if( receive_status.bytes_received != (receive_status.payload_length + 5 + 4) )
+    return;
 
   // todo: check the checksum
 
