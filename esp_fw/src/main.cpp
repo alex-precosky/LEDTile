@@ -16,12 +16,13 @@ const char* host = "LEDPanel";
     String webPage = "";
 
     void onSetPixel();
+    void onClear();
 
 void (*Uart_SendPacket)(char* packet, int n) = &ESP8266_Uart_SendPacket;
 
 void setup() {
   // Set up function pointer for sending packets
-  Serial.begin(9600);
+  Serial.begin(115200);
   Uart_SendPacket = ESP8266_Uart_SendPacket;   
 
   WiFi.mode(WIFI_STA);
@@ -48,9 +49,24 @@ void setup() {
   });
 
   server.on("/setPixel", HTTP_POST, onSetPixel);
+  server.on("/clear", HTTP_POST, onClear);
 
-  Serial.begin(9600);
+  Serial.begin(115200);
   server.begin();
+
+}
+
+void onClear() {
+    for(int i =0; i < 32; i++)
+    {
+      for(int j = 0; j < 32; j++)
+      {
+        send_set_pixel(i,j,0,0,0);
+        
+      }
+        
+    }
+    server.send(200, "text/plain", "Clearing!");
 
 }
 
@@ -60,16 +76,17 @@ void onSetPixel() {
   String data = server.arg("plain");
   JsonObject& root = jsonBuffer.parseObject(data);
   
-  int x = root["x"];
-  int y = root["y"];
-  int r = root["r"];
-  int g = root["g"];
-  int b = root["b"];
-
-  if (x) 
+  int x,y,r,g,b;
+  x = root["x"];
+  y = root["y"];
+  r = root["r"];
+  g = root["g"];
+  b = root["b"];
+ 
+  if (root.success()) 
   {
-    server.send(200, "text/plain", "Sending Set pixel!");
     send_set_pixel(x, y, r, g, b);
+    server.send(200, "text/plain", "Sending Set pixel!");
   }
   else
   {
