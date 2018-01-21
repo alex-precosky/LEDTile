@@ -5,12 +5,12 @@
 #include "LEDPanel_Serial_Receiver.h"
 #include "LEDPanel_Serial_Comm.h"
 
-void FakeHandle_SetPixel(char x, char y, char r, char g, char b);
+void FakeHandle_SetPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
 void FakeUart_SendPacket(char*, int);
 
 void (*Uart_SendPacket)(char* packet, int n) = &FakeUart_SendPacket;
 
-void FakeHandle_SetPixel(char x, char y, char r, char g, char b)
+void FakeHandle_SetPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
   mock().actualCall("FakeHandle_SetPixel");
 }

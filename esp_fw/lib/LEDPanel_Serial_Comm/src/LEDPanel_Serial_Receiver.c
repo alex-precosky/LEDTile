@@ -35,11 +35,12 @@ void process_serial_char(char ch)
       receive_status.buf[ receive_status.bytes_received++ ] = ch;
 
       if( receive_status.bytes_received == 5 )
-	{
-
-	  receive_status.payload_length = receive_status.buf[1] + (receive_status.buf[2] << 8) + (receive_status.buf[3] << 16) + (receive_status.buf[4] << 24);
-	  receive_status.is_length_received =  1;
-	}
+	    {
+	      receive_status.payload_length = receive_status.buf[1] + (receive_status.buf[2] << 8) + (receive_status.buf[3] << 16) + (receive_status.buf[4] << 24);
+	      receive_status.is_length_received =  1;
+        if(receive_status.payload_length > LEDPANEL_RECEIVE_BUFFER_SIZE-9)  // if the length is too long, reset the receiver state
+          init_serial_receiver();
+	    }
       return;
     }
 
