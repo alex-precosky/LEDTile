@@ -8,6 +8,8 @@
 			epcs_sce                   : out   std_logic;                                        -- sce
 			epcs_sdo                   : out   std_logic;                                        -- sdo
 			epcs_data0                 : in    std_logic                     := 'X';             -- data0
+			fifoed_uart_0_rxd          : in    std_logic                     := 'X';             -- rxd
+			fifoed_uart_0_txd          : out   std_logic;                                        -- txd
 			pio_led_export             : out   std_logic_vector(7 downto 0);                     -- export
 			pll_areset_export          : in    std_logic                     := 'X';             -- export
 			pll_locked_export          : out   std_logic;                                        -- export
@@ -38,6 +40,8 @@
 			epcs_sce                   => CONNECTED_TO_epcs_sce,                   --                    .sce
 			epcs_sdo                   => CONNECTED_TO_epcs_sdo,                   --                    .sdo
 			epcs_data0                 => CONNECTED_TO_epcs_data0,                 --                    .data0
+			fifoed_uart_0_rxd          => CONNECTED_TO_fifoed_uart_0_rxd,          --       fifoed_uart_0.rxd
+			fifoed_uart_0_txd          => CONNECTED_TO_fifoed_uart_0_txd,          --                    .txd
 			pio_led_export             => CONNECTED_TO_pio_led_export,             --             pio_led.export
 			pll_areset_export          => CONNECTED_TO_pll_areset_export,          --          pll_areset.export
 			pll_locked_export          => CONNECTED_TO_pll_locked_export,          --          pll_locked.export

@@ -8,6 +8,8 @@ module QSys (
 	epcs_sce,
 	epcs_sdo,
 	epcs_data0,
+	fifoed_uart_0_rxd,
+	fifoed_uart_0_txd,
 	pio_led_export,
 	pll_areset_export,
 	pll_locked_export,
@@ -34,6 +36,8 @@ module QSys (
 	output		epcs_sce;
 	output		epcs_sdo;
 	input		epcs_data0;
+	input		fifoed_uart_0_rxd;
+	output		fifoed_uart_0_txd;
 	output	[7:0]	pio_led_export;
 	input		pll_areset_export;
 	output		pll_locked_export;

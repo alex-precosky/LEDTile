@@ -296,6 +296,14 @@ altera_nios2_gen2_hal_driver_ASM_LIB_SRCS := \
 	$(altera_nios2_gen2_hal_driver_SRCS_ROOT)/src/alt_log_macro.S \
 	$(altera_nios2_gen2_hal_driver_SRCS_ROOT)/src/crt0.S
 
+# fifoed_avalon_uart_driver sources root 
+fifoed_avalon_uart_driver_SRCS_ROOT := drivers
+
+# fifoed_avalon_uart_driver sources 
+fifoed_avalon_uart_driver_C_LIB_SRCS := \
+	$(fifoed_avalon_uart_driver_SRCS_ROOT)/src/fifoed_avalon_uart_fd.c \
+	$(fifoed_avalon_uart_driver_SRCS_ROOT)/src/fifoed_avalon_uart.c
+
 # hal sources root 
 hal_SRCS_ROOT := HAL
 
@@ -364,6 +372,7 @@ COMPONENT_C_LIB_SRCS += \
 	$(altera_avalon_timer_driver_C_LIB_SRCS) \
 	$(altera_avalon_uart_driver_C_LIB_SRCS) \
 	$(altera_nios2_gen2_hal_driver_C_LIB_SRCS) \
+	$(fifoed_avalon_uart_driver_C_LIB_SRCS) \
 	$(hal_C_LIB_SRCS)
 
 # Assemble all component assembly source files 

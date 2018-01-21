@@ -180,9 +180,12 @@ SYS_LIB :=
 BSP_ROOT_DIR := ../LEDTile_BSP2/
 
 # List of application specific include directories, library directories and library names
-APP_INCLUDE_DIRS := ../../esp_fw/lib/LEDPanel_Serial_Comm/src
-APP_LIBRARY_DIRS := ../LEDPanel_Serial_Comm/obj/default
-APP_LIBRARY_NAMES := LEDPanel_Serial_Comm
+APP_INCLUDE_DIRS += ../../esp_fw/lib/LEDPanel_Serial_Comm/src
+APP_INCLUDE_DIRS += ../LEDTileLib
+APP_LIBRARY_DIRS += ../LEDPanel_Serial_Comm/obj/default
+APP_LIBRARY_DIRS += ../LEDTileLib/obj/default
+APP_LIBRARY_NAMES += LEDPanel_Serial_Comm
+APP_LIBRARY_NAMES += LEDTileLib
 
 # Pre- and post- processor settings.
 BUILD_PRE_PROCESS :=

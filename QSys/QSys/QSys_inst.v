@@ -7,6 +7,8 @@
 		.epcs_sce                   (<connected-to-epcs_sce>),                   //                    .sce
 		.epcs_sdo                   (<connected-to-epcs_sdo>),                   //                    .sdo
 		.epcs_data0                 (<connected-to-epcs_data0>),                 //                    .data0
+		.fifoed_uart_0_rxd          (<connected-to-fifoed_uart_0_rxd>),          //       fifoed_uart_0.rxd
+		.fifoed_uart_0_txd          (<connected-to-fifoed_uart_0_txd>),          //                    .txd
 		.pio_led_export             (<connected-to-pio_led_export>),             //             pio_led.export
 		.pll_areset_export          (<connected-to-pll_areset_export>),          //          pll_areset.export
 		.pll_locked_export          (<connected-to-pll_locked_export>),          //          pll_locked.export

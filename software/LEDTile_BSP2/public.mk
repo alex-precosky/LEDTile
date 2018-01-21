@@ -152,14 +152,14 @@ SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x400a0b0
-SOPC_SYSID_FLAG += --sidp=0x400a0b0
-ELF_PATCH_FLAG  += --sidp 0x400a0b0
+# setting SOPC_SYSID_BASE_ADDRESS is 0x400a0f0
+SOPC_SYSID_FLAG += --sidp=0x400a0f0
+ELF_PATCH_FLAG  += --sidp 0x400a0f0
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1515641248
-SOPC_SYSID_FLAG += --timestamp=1515641248
-ELF_PATCH_FLAG  += --timestamp 1515641248
+# setting SOPC_TIMESTAMP is 1516477923
+SOPC_SYSID_FLAG += --timestamp=1516477923
+ELF_PATCH_FLAG  += --timestamp 1516477923
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 
@@ -175,7 +175,16 @@ ELF_PATCH_FLAG  += --timestamp 1515641248
 # setting altera_avalon_uart_driver.enable_ioctl is false
 
 # Small-footprint (polled mode) driver none 
-# setting altera_avalon_uart_driver.enable_small_driver is false
+# setting altera_avalon_uart_driver.enable_small_driver is true
+
+# Enable driver ioctl() support. This feature is not compatible with the 
+# 'small' driver; ioctl() support will not be compiled if either the UART 
+# 'enable_small_driver' or HAL 'enable_reduced_device_drivers' settings are 
+# enabled. none 
+# setting fifoed_avalon_uart_driver.enable_ioctl is false
+
+# Small-footprint (polled mode) driver none 
+# setting fifoed_avalon_uart_driver.enable_small_driver is true
 
 # Build a custom version of newlib with the specified space-separated compiler 
 # flags. The custom newlib build will be placed in the <bsp root>/newlib 
@@ -358,8 +367,8 @@ ELF_PATCH_FLAG  += --stderr_dev jtag_uart
 
 # Slave descriptor of STDIN character-mode device. This setting is used by the 
 # ALT_STDIN family of defines in system.h. none 
-# setting hal.stdin is uart_0
-ELF_PATCH_FLAG  += --stdin_dev uart_0
+# setting hal.stdin is fifoed_avalon_uart_0
+ELF_PATCH_FLAG  += --stdin_dev fifoed_avalon_uart_0
 
 # Slave descriptor of STDOUT character-mode device. This setting is used by the 
 # ALT_STDOUT family of defines in system.h. none 
@@ -378,6 +387,13 @@ ALT_INCLUDE_DIRS += $(ALT_LIBRARY_ROOT_DIR)/HAL/inc
 #------------------------------------------------------------------------------
 
 ALT_CPPFLAGS += -DALT_SINGLE_THREADED
+
+#------------------------------------------------------------------------------
+#        SOFTWARE COMPONENT & DRIVER SETTING-PRODUCED DEFINITIONS
+#------------------------------------------------------------------------------
+
+ALT_CPPFLAGS += -DALTERA_AVALON_UART_SMALL
+ALT_CPPFLAGS += -DFIFOED_AVALON_UART_SMALL
 
 #END MANAGED
 

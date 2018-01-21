@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
  * SOPC Builder design path: ../../QSys.sopcinfo
  *
- * Generated: Sun Jan 07 18:58:23 PST 2018
+ * Generated: Thu Jan 18 23:17:15 PST 2018
  */
 
 /*
@@ -64,6 +64,7 @@
 #include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_timer.h"
 #include "altera_avalon_uart.h"
+#include "fifoed_avalon_uart.h"
 
 /*
  * Allocate the device storage
@@ -76,6 +77,7 @@ ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( SYS_CLK_TIMER, sys_clk_timer);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_0, timer_0);
 ALTERA_AVALON_UART_INSTANCE ( UART_0, uart_0);
+FIFOED_AVALON_UART_INSTANCE ( FIFOED_AVALON_UART_0, fifoed_avalon_uart_0);
 
 /*
  * Initialize the interrupt controller devices
@@ -104,4 +106,5 @@ void alt_sys_init( void )
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
     ALTERA_AVALON_UART_INIT ( UART_0, uart_0);
+    FIFOED_AVALON_UART_INIT ( FIFOED_AVALON_UART_0, fifoed_avalon_uart_0);
 }

@@ -8,6 +8,8 @@
 			epcs_sce                   : out   std_logic;                                        -- sce
 			epcs_sdo                   : out   std_logic;                                        -- sdo
 			epcs_data0                 : in    std_logic                     := 'X';             -- data0
+			fifoed_uart_0_rxd          : in    std_logic                     := 'X';             -- rxd
+			fifoed_uart_0_txd          : out   std_logic;                                        -- txd
 			pio_led_export             : out   std_logic_vector(7 downto 0);                     -- export
 			pll_areset_export          : in    std_logic                     := 'X';             -- export
 			pll_locked_export          : out   std_logic;                                        -- export

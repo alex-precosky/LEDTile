@@ -1,42 +1,44 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst QSys.sysid -pg 1 -lvl 2 -y 1190
-preplace inst QSys.clk_50 -pg 1 -lvl 1 -y 450
+preplace inst QSys.sysid -pg 1 -lvl 2 -y 1290
+preplace inst QSys.clk_50 -pg 1 -lvl 1 -y 550
 preplace inst QSys.cpu.reset_bridge -pg 1
+preplace inst QSys.fifoed_avalon_uart_0 -pg 1 -lvl 3 -y 430
 preplace inst QSys.display_buffer_ctrl -pg 1 -lvl 2 -y 130
-preplace inst QSys.altpll_0 -pg 1 -lvl 2 -y 430
-preplace inst QSys.jtag_uart -pg 1 -lvl 2 -y 690
-preplace inst QSys.cpu -pg 1 -lvl 1 -y 1160
-preplace inst QSys.uart_0 -pg 1 -lvl 2 -y 1070
-preplace inst QSys.timer_0 -pg 1 -lvl 2 -y 970
-preplace inst QSys.sys_clk_timer -pg 1 -lvl 2 -y 870
-preplace inst QSys.pio_led -pg 1 -lvl 2 -y 330
+preplace inst QSys.altpll_0 -pg 1 -lvl 2 -y 530
+preplace inst QSys.jtag_uart -pg 1 -lvl 2 -y 790
+preplace inst QSys.cpu -pg 1 -lvl 1 -y 1280
+preplace inst QSys.uart_0 -pg 1 -lvl 2 -y 1170
+preplace inst QSys.timer_0 -pg 1 -lvl 2 -y 1070
+preplace inst QSys.sys_clk_timer -pg 1 -lvl 2 -y 970
+preplace inst QSys.pio_led -pg 1 -lvl 2 -y 350
 preplace inst QSys.cpu.cpu -pg 1
-preplace inst QSys.onchip_memory2 -pg 1 -lvl 2 -y 790
-preplace inst QSys.sdram_controller -pg 1 -lvl 2 -y 1310
-preplace inst QSys.epcs_flash_controller -pg 1 -lvl 2 -y 570
-preplace inst QSys.display_buffer_data -pg 1 -lvl 2 -y 230
+preplace inst QSys.onchip_memory2 -pg 1 -lvl 2 -y 890
+preplace inst QSys.sdram_controller -pg 1 -lvl 2 -y 1410
+preplace inst QSys.epcs_flash_controller -pg 1 -lvl 2 -y 670
+preplace inst QSys.display_buffer_data -pg 1 -lvl 2 -y 250
 preplace inst QSys.display_buffer_addr -pg 1 -lvl 2 -y 30
 preplace inst QSys.cpu.clock_bridge -pg 1
-preplace inst QSys.clock_bridge_0 -pg 1 -lvl 2 -y 1270
+preplace inst QSys.clock_bridge_0 -pg 1 -lvl 2 -y 1370
 preplace inst QSys -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc POINT_TO_POINT<net_container>QSys</net_container>(SLAVE)altpll_0.inclk_interface,(MASTER)clk_50.clk) 1 1 1 N
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.sdram,(SLAVE)sdram_controller.wire) 1 0 2 NJ 1380 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.epcs,(SLAVE)epcs_flash_controller.external) 1 0 2 NJ 620 NJ
+preplace netloc FAN_OUT<net_container>QSys</net_container>(SLAVE)fifoed_avalon_uart_0.irq,(SLAVE)jtag_uart.irq,(SLAVE)epcs_flash_controller.irq,(SLAVE)sys_clk_timer.irq,(SLAVE)uart_0.irq,(MASTER)cpu.irq,(SLAVE)timer_0.irq) 1 1 2 600 660 900
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.epcs,(SLAVE)epcs_flash_controller.external) 1 0 2 NJ 720 NJ
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)uart_0.external_connection,(SLAVE)QSys.uart_0) 1 0 2 NJ 1200 NJ
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)altpll_0.locked_conduit,(SLAVE)QSys.pll_locked) 1 0 2 NJ 620 NJ
+preplace netloc POINT_TO_POINT<net_container>QSys</net_container>(MASTER)clk_50.clk,(SLAVE)altpll_0.inclk_interface) 1 1 1 N
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)sdram_controller.wire,(SLAVE)QSys.sdram) 1 0 2 NJ 1480 NJ
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.fifoed_uart_0,(SLAVE)fifoed_avalon_uart_0.external_connection) 1 0 3 NJ 460 NJ 460 NJ
 preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.display_buffer_addr,(SLAVE)display_buffer_addr.external_connection) 1 0 2 NJ 60 NJ
-preplace netloc INTERCONNECT<net_container>QSys</net_container>(SLAVE)onchip_memory2.s1,(SLAVE)display_buffer_ctrl.s1,(SLAVE)altpll_0.pll_slave,(SLAVE)uart_0.s1,(MASTER)cpu.instruction_master,(SLAVE)timer_0.s1,(SLAVE)cpu.debug_mem_slave,(SLAVE)sdram_controller.s1,(SLAVE)epcs_flash_controller.epcs_control_port,(SLAVE)sysid.control_slave,(MASTER)cpu.data_master,(SLAVE)sys_clk_timer.s1,(SLAVE)display_buffer_addr.s1,(SLAVE)pio_led.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)display_buffer_data.s1) 1 0 2 160 1320 580
-preplace netloc EXPORT<net_container>QSys</net_container>(MASTER)altpll_0.c0,(MASTER)QSys.sdram_clk) 1 2 1 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)clk_50.clk_in,(SLAVE)QSys.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(MASTER)clock_bridge_0.out_clk,(MASTER)QSys.sys_clk) 1 2 1 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)altpll_0.areset_conduit,(SLAVE)QSys.pll_areset) 1 0 2 NJ 440 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.display_buffer_data,(SLAVE)display_buffer_data.external_connection) 1 0 2 NJ 260 NJ
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.clk,(SLAVE)clk_50.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>QSys</net_container>(SLAVE)sdram_controller.clk,(SLAVE)timer_0.clk,(SLAVE)pio_led.clk,(SLAVE)jtag_uart.clk,(SLAVE)display_buffer_data.clk,(SLAVE)uart_0.clk,(SLAVE)cpu.clk,(SLAVE)display_buffer_addr.clk,(SLAVE)sys_clk_timer.clk,(SLAVE)display_buffer_ctrl.clk,(SLAVE)onchip_memory2.clk1,(SLAVE)clock_bridge_0.in_clk,(MASTER)altpll_0.c1,(SLAVE)epcs_flash_controller.clk,(SLAVE)fifoed_avalon_uart_0.clk,(SLAVE)sysid.clk) 1 0 3 180 1420 640 480 880
+preplace netloc EXPORT<net_container>QSys</net_container>(MASTER)QSys.sdram_clk,(MASTER)altpll_0.c0) 1 2 2 NJ 560 NJ
+preplace netloc INTERCONNECT<net_container>QSys</net_container>(SLAVE)jtag_uart.reset,(SLAVE)pio_led.reset,(SLAVE)altpll_0.inclk_interface_reset,(SLAVE)uart_0.reset,(SLAVE)display_buffer_ctrl.reset,(SLAVE)display_buffer_addr.reset,(SLAVE)timer_0.reset,(SLAVE)sys_clk_timer.reset,(MASTER)cpu.debug_reset_request,(SLAVE)cpu.reset,(SLAVE)fifoed_avalon_uart_0.reset,(SLAVE)onchip_memory2.reset1,(SLAVE)sysid.reset,(MASTER)clk_50.clk_reset,(SLAVE)sdram_controller.reset,(SLAVE)epcs_flash_controller.reset,(SLAVE)display_buffer_data.reset) 1 0 3 200 1440 580 500 N
+preplace netloc EXPORT<net_container>QSys</net_container>(MASTER)QSys.sys_clk,(MASTER)clock_bridge_0.out_clk) 1 2 2 NJ 1380 NJ
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)altpll_0.areset_conduit,(SLAVE)QSys.pll_areset) 1 0 2 NJ 540 NJ
 preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.display_buffer_ctrl,(SLAVE)display_buffer_ctrl.external_connection) 1 0 2 NJ 160 NJ
-preplace netloc INTERCONNECT<net_container>QSys</net_container>(SLAVE)jtag_uart.reset,(SLAVE)sdram_controller.reset,(SLAVE)sysid.reset,(MASTER)clk_50.clk_reset,(SLAVE)display_buffer_ctrl.reset,(SLAVE)timer_0.reset,(SLAVE)altpll_0.inclk_interface_reset,(SLAVE)onchip_memory2.reset1,(SLAVE)display_buffer_addr.reset,(MASTER)cpu.debug_reset_request,(SLAVE)pio_led.reset,(SLAVE)cpu.reset,(SLAVE)display_buffer_data.reset,(SLAVE)epcs_flash_controller.reset,(SLAVE)uart_0.reset,(SLAVE)sys_clk_timer.reset) 1 0 2 180 1300 560
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.uart_0,(SLAVE)uart_0.external_connection) 1 0 2 NJ 1100 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.pio_led,(SLAVE)pio_led.external_connection) 1 0 2 NJ 360 NJ
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.pll_locked,(SLAVE)altpll_0.locked_conduit) 1 0 2 NJ 520 NJ
-preplace netloc FAN_OUT<net_container>QSys</net_container>(SLAVE)clock_bridge_0.in_clk,(SLAVE)sdram_controller.clk,(MASTER)altpll_0.c1,(SLAVE)sys_clk_timer.clk,(SLAVE)epcs_flash_controller.clk,(SLAVE)display_buffer_ctrl.clk,(SLAVE)uart_0.clk,(SLAVE)cpu.clk,(SLAVE)display_buffer_addr.clk,(SLAVE)onchip_memory2.clk1,(SLAVE)timer_0.clk,(SLAVE)pio_led.clk,(SLAVE)jtag_uart.clk,(SLAVE)sysid.clk,(SLAVE)display_buffer_data.clk) 1 0 3 160 1120 600 560 860
-preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)clk_50.clk_in_reset,(SLAVE)QSys.reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>QSys</net_container>(SLAVE)jtag_uart.irq,(SLAVE)sys_clk_timer.irq,(SLAVE)epcs_flash_controller.irq,(SLAVE)uart_0.irq,(SLAVE)timer_0.irq,(MASTER)cpu.irq) 1 1 1 620
-levelinfo -pg 1 0 130 970
-levelinfo -hier QSys 140 300 670 880
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.pio_led,(SLAVE)pio_led.external_connection) 1 0 2 NJ 380 NJ
+preplace netloc INTERCONNECT<net_container>QSys</net_container>(SLAVE)timer_0.s1,(SLAVE)pio_led.s1,(SLAVE)display_buffer_ctrl.s1,(SLAVE)sdram_controller.s1,(SLAVE)onchip_memory2.s1,(SLAVE)cpu.debug_mem_slave,(SLAVE)sys_clk_timer.s1,(SLAVE)display_buffer_data.s1,(MASTER)cpu.data_master,(SLAVE)display_buffer_addr.s1,(SLAVE)altpll_0.pll_slave,(SLAVE)epcs_flash_controller.epcs_control_port,(SLAVE)uart_0.s1,(MASTER)cpu.instruction_master,(SLAVE)fifoed_avalon_uart_0.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sysid.control_slave) 1 0 3 160 1460 620 520 N
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)QSys.reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>QSys</net_container>(SLAVE)display_buffer_data.external_connection,(SLAVE)QSys.display_buffer_data) 1 0 2 NJ 280 NJ
+levelinfo -pg 1 0 130 1200
+levelinfo -hier QSys 140 320 690 950 1110

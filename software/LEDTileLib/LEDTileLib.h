@@ -17,7 +17,7 @@ void displayGamma149ColourBars();
 void displayGamma98ColourBars();
 void displayGamma46ColourBars();
 void displayBitmap(const unsigned int* bitmap);
-
+void setPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
 
 
 

@@ -67,6 +67,19 @@ void blank()
 
 }
 
+void setPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
+{
+	int addr = 1024 + 32*x + y;
+
+	unsigned int rgb = ((r << 20) & 0x3FF00000) | ((g << 10) & 0x0FFC00) | (b & 0x0003FF);
+
+	IOWR_ALTERA_AVALON_PIO_DATA(DISPLAY_BUFFER_ADDR_BASE, addr);
+	IOWR_ALTERA_AVALON_PIO_DATA(DISPLAY_BUFFER_DATA_BASE, rgb);
+
+	IOWR_ALTERA_AVALON_PIO_DATA(DISPLAY_BUFFER_CTRL_BASE, 0x01);
+	IOWR_ALTERA_AVALON_PIO_DATA(DISPLAY_BUFFER_CTRL_BASE, 0x00);
+
+}
 
 // Writes a bitmap to the FPGA memory frame buffer
 // Expects 1024 pixels, 8 bits per red green blue colour channel

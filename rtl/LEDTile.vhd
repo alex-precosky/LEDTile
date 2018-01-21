@@ -79,7 +79,9 @@ architecture LEDTile_arch of LEDTile is
 			display_buffer_ctrl_export : out   std_logic_vector(7 downto 0);               -- export
 			sys_clk_clk                : out   std_logic;                                         -- clk
 			uart_0_rxd                 : in    std_logic                     := 'X';             -- rxd
-			uart_0_txd                 : out   std_logic                                         -- txd			
+			uart_0_txd                 : out   std_logic;                                         -- txd		
+			fifoed_uart_0_rxd          : in    std_logic                     := 'X';             -- rxd
+			fifoed_uart_0_txd          : out   std_logic                                         -- txd
 		);
 	end component QSys;
 
@@ -174,7 +176,10 @@ begin
 			display_buffer_data_export => mem_d, -- display_buffer_data.export
 			display_buffer_ctrl_export => display_buffer_ctrl,  -- display_buffer_ctrl.export		
 			sys_clk_clk                => sys_clk,                 --             sys_clk.clk	 From PLL
-			uart_0_rxd                 => uart_inv                  --              uart_0.rxd	
+			uart_0_rxd                 => uart_inv,                  --              uart_0.rxd	
+			uart_0_txd                 => GPIO_0(19),
+			fifoed_uart_0_rxd          => uart_inv
+			
 		);
 		
 		

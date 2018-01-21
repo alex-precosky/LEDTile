@@ -45,7 +45,7 @@ Open the Eclipse tools for Nios II and create a new workspace, and add all of th
 
 The Board Support Package will likely need to be regenerated.  Right click LEDTile_BSP2 then go Nios II->Generate BSP
 
-Build LEDTileApplication and write it to the serial configuration device.
+Build LEDTileApplication and write it to the serial configuration device using the Flash Programmer under the NIOS II menu.
 
 ## ESP8266 Software
 This is a Platform IO project built in Visual Studio Code. It can be uploaded by a USB-Serial cable to the board or over WiFi if first loaded with the ESP8266 WiFi loader and configured with the access details for an access point.
@@ -54,3 +54,4 @@ This is a Platform IO project built in Visual Studio Code. It can be uploaded by
 The FPGA loads its configuration from the EPCS configuration device.  This includes the Nios II soft core CPU and the FPGA logic that reads from a display buffer to update pixels on the display.
 
 The Nios II processor reset address is set to the base address of the EPCS controller in Qsys. At reset, a boot copier program runs on the Nios II from on chip ram, the program skips the FPGA configuration in the EPCS device, then reads the data following it into the SDRAM, then jumps to the start of the program.  The boot copier is put there by Quartus.
+![Nios II Flash Programmer](doc/Nios II Flash Programmer.jpg)
