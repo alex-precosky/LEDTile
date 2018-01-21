@@ -7,13 +7,15 @@
 #include <stdio.h>
 #include "LEDPanel_Serial_Comm.h"
 #include "LEDPanel_Serial_Receiver.h"
+#include "LEDTileLib.h"
 
-void HandleSetPixelCommand(char x, char y, char r, char g, char b);
+void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
 void print_receiver_status();
 
-void HandleSetPixelCommand(char x, char y, char r, char g, char b)
+void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
-	printf("Got set pixel command!");
+	//printf("%d %d %d %d %d", x, y, r, g, b);
+	setPixel(x, y, r, g, b);
 }
 
 void print_receiver_status()
@@ -38,8 +40,10 @@ int main()
 	{
 		char ch;
 
-		ch = getchar();
+		ch = alt_getchar();
 	  	process_serial_char(ch);
+
+	  //	printf("0x%x ", ch);
 
 	}
 
