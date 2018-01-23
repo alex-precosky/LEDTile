@@ -55,3 +55,47 @@ The FPGA loads its configuration from the EPCS configuration device.  This inclu
 
 The Nios II processor reset address is set to the base address of the EPCS controller in Qsys. At reset, a boot copier program runs on the Nios II from on chip ram, the program skips the FPGA configuration in the EPCS device, then reads the data following it into the SDRAM, then jumps to the start of the program.  The boot copier is put there by Quartus.
 ![Nios II Flash Programmer](doc/Nios II Flash Programmer.jpg)
+
+# HTTP API
+
+The device should be available under LEDPanel.local, thanks to bonjour/zeroconf.
+
+## Set Pixel
+
+Set a single pixel to an RGB value as specified by a JSON object
+
+* **URL**
+/setPixel
+
+* **Method**
+`POST`
+
+* **Data Params**
+
+```
+{"x": 1,
+"y": 1,
+"r": 0,
+"g": 0,
+"b": 255}
+```
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
+
+* **URL**
+/setImage
+
+* **Method**
+`POST`
+
+* **Data Params**
+
+1024 * 3 bytes encoded as Base 64. One 3-tuple of RGB values per pixel in the display. R1G1B1R2G2B2...R1024G1024B1024
+
+```
+{
+  image_base64="c2RmYXNmYXNz......(much longer)"
+}
+```

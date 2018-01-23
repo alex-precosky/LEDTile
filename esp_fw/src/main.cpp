@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "base64.hpp"
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
@@ -7,6 +8,7 @@
 #include <ArduinoJson.h>
 #include "LEDPanel_Serial_Comm.h"
 #include "ESP8266_Uart.h"
+
 
 const char* ssid = "SHAW-E75060";
 const char* password = "25116A147879";
@@ -17,6 +19,7 @@ const char* host = "LEDPanel";
 
     void onSetPixel();
     void onClear();
+    void onSetImage();
 
 void (*Uart_SendPacket)(char* packet, int n) = &ESP8266_Uart_SendPacket;
 
@@ -50,6 +53,7 @@ void setup() {
 
   server.on("/setPixel", HTTP_POST, onSetPixel);
   server.on("/clear", HTTP_POST, onClear);
+  server.on("/setImage", HTTP_POST, onSetImage);
 
   Serial.begin(115200);
   server.begin();
@@ -61,13 +65,10 @@ void onClear() {
     {
       for(int j = 0; j < 32; j++)
       {
-        send_set_pixel(i,j,0,0,0);
-        
+        send_set_pixel(i,j,0,0,0); 
       }
-        
     }
     server.send(200, "text/plain", "Clearing!");
-
 }
 
 void onSetPixel() {
@@ -93,6 +94,46 @@ void onSetPixel() {
     server.send(400, "text/plain", "Bad request");
   }
   
+}
+
+void onSetImage()
+{
+  StaticJsonBuffer<4200> jsonBuffer;
+
+  String data = server.arg("plain");
+  JsonObject& root = jsonBuffer.parseObject(data);
+  unsigned char image_bytes[1024*3];
+
+  if(root.success())
+  {
+    const char* image_base64 = root["image_base64"];
+
+    decode_base64((unsigned char*)image_base64, image_bytes);
+
+    int pixel_ptr = 0;
+    for(int j =0; j < 32; j++)
+    {
+      for(int i = 0; i < 32; i++)
+      { 
+        unsigned char r = image_bytes[pixel_ptr];
+        unsigned char g = image_bytes[pixel_ptr + 1];
+        unsigned char b = image_bytes[pixel_ptr + 2];
+
+        send_set_pixel(i, j, r, g, b);
+
+        pixel_ptr += 3;
+      }
+    }
+
+
+  
+
+    server.send(200, "text/plain", "Setting the image!");
+  }
+  else
+  {
+    server.send(400, "text/plain", "Bad request");
+  }
 }
 
 void loop() {
