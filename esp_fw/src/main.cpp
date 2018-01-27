@@ -17,6 +17,8 @@ const char* host = "LEDPanel";
     ESP8266WebServer server(80);
     String webPage = "";
 
+      StaticJsonBuffer<JSON_OBJECT_SIZE(1) + 4570> jsonBuffer;
+
     void onSetPixel();
     void onClear();
     void onSetImage();
@@ -72,6 +74,7 @@ void onClear() {
 }
 
 void onSetPixel() {
+  
   StaticJsonBuffer<200> jsonBuffer;
 
   String data = server.arg("plain");
@@ -98,7 +101,8 @@ void onSetPixel() {
 
 void onSetImage()
 {
-  StaticJsonBuffer<4200> jsonBuffer;
+
+jsonBuffer.clear();
 
   String data = server.arg("plain");
   JsonObject& root = jsonBuffer.parseObject(data);

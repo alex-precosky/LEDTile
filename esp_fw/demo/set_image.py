@@ -18,8 +18,8 @@ for i in range(32):
         rgb_pixels[pixel_counter+2] = 0   # b
         pixel_counter += 3
 
-image_base64 = str(base64.b64encode(rgb_pixels))
-payload = {"image_base64": image_base64}
+image_base64 = base64.b64encode(rgb_pixels)
+payload = {"image_base64": image_base64.decode("utf-8") }
 
-print(json.dumps(payload))
-#r = requests.post(url, data=json.dumps(payload))
+#print(json.dumps(payload ))
+r = requests.post(url, data=json.dumps(payload))

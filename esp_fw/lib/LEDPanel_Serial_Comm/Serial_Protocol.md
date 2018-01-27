@@ -26,3 +26,4 @@ All arguments as single bytes
 Sets the entire display at once. Takes a string of the R, G, B, values for all 1024 pixels.
 
 [0x02][r0][g0][b0][r1][g1][b1]...[r1023][g1023][b1023]
+
