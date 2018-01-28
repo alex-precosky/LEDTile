@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-    #define LEDPANEL_RECEIVE_BUFFER_SIZE 255
+    #define LEDPANEL_RECEIVE_BUFFER_SIZE 3090
 
     #define LEDPANEL_COMM_START_BYTE 0x00
 
@@ -18,6 +18,7 @@ extern "C" {
     #define LEDPANEL_COMM_START_BYTE_ERROR 0x01
 
     #define LEDPANEL_COMM_CMD_SETPIXEL 0x01
+    #define LEDPANEL_COMM_CMD_SETIMAGE 0x02
 
     // Encoded packet will be stored in dest. It must be as big as the payload plus
     // 9 bytes for the start byte, four length bytes, and a four byte checksum
@@ -33,10 +34,9 @@ extern "C" {
   */
   extern void (*Uart_SendPacket)(char* packet, int n);
 
-
-
-  // Send using Uart_SendPacket a set pixel command
+  // Send using Uart_SendPacket serial commands
   void send_set_pixel(char x, char y, char r, char g, char b);
+  void send_set_image(unsigned char* rgb_array);
 
 #ifdef __cplusplus
 }

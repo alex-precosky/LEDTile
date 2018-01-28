@@ -27,6 +27,24 @@ void send_set_pixel(char x, char y, char r, char g, char b)
   Uart_SendPacket(packet, packet_size);  
 }
 
+void send_set_image(unsigned char* rgb_array)
+{
+    // Sets the entire display at once. Takes a string of the R, G, B, values for all 1024 pixels.
+    // [0x02][r0][g0][b0][r1][g1][b1]...[r1023][g1023][b1023]
+    const int payload_size = 1 + 1024*3;
+    const int packet_size = payload_size + 9;
+    static char payload[1 + 1024*3 + 9];
+    static char packet[1 + 1024*3];
+
+    payload[0] = LEDPANEL_COMM_CMD_SETIMAGE;
+    memcpy(payload+1, rgb_array, 1024*3);
+
+    encode_serial_packet(packet, payload, payload_size);
+
+    Uart_SendPacket(packet, packet_size);  
+}
+
+
 void encode_serial_packet(char* dest, char* payload, int payload_size)
 {
     dest[0] = LEDPANEL_COMM_START_BYTE;

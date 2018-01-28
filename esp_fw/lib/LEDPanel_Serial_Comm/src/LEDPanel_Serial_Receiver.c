@@ -87,5 +87,10 @@ void process_serial_payload( char* payload, uint32_t payload_length )
 
       	Handle_SetPixel(x, y, r, g, b);
 	      break;
+
+      case LEDPANEL_COMM_CMD_SETIMAGE:
+        ;
+        Handle_SetImage((unsigned char*)payload+1); // skip the first byte, which is the command byte. The rest is pixels
+        break;
     }
 }

@@ -24,6 +24,19 @@ TEST(SerialCommGroup, Test_encode)
 }
 
 
+TEST(SerialCommGroup, Test_bigencode)
+{
+  char payload[] = "My Packet";
+  char packet[3072];
+  int payload_size = 3072+9;
+  
+  encode_serial_packet(packet, payload, payload_size);
+
+  CHECK_EQUAL(LEDPANEL_COMM_START_BYTE, packet[0]);
+  CHECK_EQUAL(payload_size,  *((int*)(packet+1) ) );
+  STRNCMP_EQUAL("My Packet", packet+5, payload_size);
+}
+
  TEST(SerialCommGroup, Test_decode)
  {
    char packet[20];

@@ -18,13 +18,13 @@
     <void property="columnWidths">
      <array class="int" length="3">
       <void index="0">
-       <int>944</int>
+       <int>471</int>
       </void>
       <void index="1">
-       <int>100</int>
+       <int>147</int>
       </void>
       <void index="2">
-       <int>100</int>
+       <int>146</int>
       </void>
      </array>
     </void>
@@ -49,28 +49,28 @@
       <string>x</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>695</int>
+       <int>823</int>
       </void>
      </void>
      <void class="java.awt.Rectangle" method="getField">
       <string>y</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>121</int>
+       <int>350</int>
       </void>
      </void>
      <void class="java.awt.Rectangle" method="getField">
       <string>width</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>1293</int>
+       <int>913</int>
       </void>
      </void>
      <void class="java.awt.Rectangle" method="getField">
       <string>height</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>968</int>
+       <int>739</int>
       </void>
      </void>
     </void>

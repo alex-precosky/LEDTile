@@ -35,6 +35,7 @@ extern "C" {
   // Function pointers should be set up on the Nios II project to
   // point at functions that handle commands
   void (*Handle_SetPixel)(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
+  void (*Handle_SetImage)(unsigned char* rgb_pixels);
 
 
 #ifdef __cplusplus

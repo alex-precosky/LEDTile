@@ -10,12 +10,32 @@
 #include "LEDTileLib.h"
 
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
+void HandleSetImageCommand(unsigned char* rgb_pixels);
 void print_receiver_status();
 
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
-	//printf("%d %d %d %d %d", x, y, r, g, b);
 	setPixel(x, y, r, g, b);
+}
+
+void HandleSetImageCommand(unsigned char* rgb_pixels)
+{
+
+   int pixel_ptr = 0;
+   for(int j =0; j < 32; j++)
+	{
+	  for(int i = 0; i < 32; i++)
+	  {
+		unsigned char r = rgb_pixels[pixel_ptr];
+		unsigned char g = rgb_pixels[pixel_ptr + 1];
+		unsigned char b = rgb_pixels[pixel_ptr + 2];
+
+		setPixel(i, j, r, g, b);
+
+		pixel_ptr += 3;
+	  }
+	}
+
 }
 
 void print_receiver_status()
@@ -35,6 +55,7 @@ int main()
 	init_serial_receiver();
 
 	Handle_SetPixel = &HandleSetPixelCommand;
+	Handle_SetImage = &HandleSetImageCommand;
 
 	while(1)
 	{

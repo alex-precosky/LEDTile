@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jan 20, 2018 12:26:05 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1516479965378</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>27-Jan-2018 9:32:15 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1517117535216</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\software\LEDTile_BSP2</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\QSys.sopcinfo</SopcDesignFile>
