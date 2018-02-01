@@ -71,7 +71,11 @@ void setPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g
 {
 	int addr = 1024 + 32*x + y;
 
-	unsigned int rgb = ((r << 20) & 0x3FF00000) | ((g << 10) & 0x0FFC00) | (b & 0x0003FF);
+	  unsigned short b8 = gamma46half[b];
+	  unsigned short g8 = gamma46half[g];
+	  unsigned short r8 = gamma46half[r];
+
+	unsigned int rgb = ((r8 << 20) & 0x3FF00000) | ((g8 << 10) & 0x0FFC00) | (b8 & 0x0003FF);
 
 	IOWR_ALTERA_AVALON_PIO_DATA(DISPLAY_BUFFER_ADDR_BASE, addr);
 	IOWR_ALTERA_AVALON_PIO_DATA(DISPLAY_BUFFER_DATA_BASE, rgb);
