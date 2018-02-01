@@ -22,4 +22,4 @@ image_base64 = base64.b64encode(rgb_pixels)
 payload = {"image_base64": image_base64.decode("utf-8") }
 
 #print(json.dumps(payload ))
-r = requests.post(url, data=json.dumps(payload))
+r = requests.post(led_panel_url, data=json.dumps(payload))
