@@ -1,6 +1,8 @@
 # LEDTile
 
-A 32x32 LED tile that I hung up on my wall.  Uses a Terasic DE0-Nano FPGA with a Nios II core soft CPU and a custom circuitboard.
+This is an FPGA-driven WiFi connected 32x32 LED tile that I hang on my wall.  Uses a Terasic DE0-Nano FPGA with a Nios II core soft CPU, a custom circuitboard, and an ESP8266 serving an HTTP API for controlling it.  
+
+New ESP8266 firmware can be done over the air, but the FPGA configuration and Nios II are loaded over a USB cable.
 
 ![Tile on wall](doc/LEDTile.png)
 
@@ -9,21 +11,27 @@ A 32x32 LED tile that I hung up on my wall.  Uses a Terasic DE0-Nano FPGA with a
 * Quartus Prime 17.1 Lite Edition
 * A Terasic DE0-Nano FPGA or something like it
 * My circuit or something else to power the board and FPGA and connect them together
+* PlatformIO to build the ESP8266 firmware
 
 # Components
 
 * The DE0-Nano board
-  * Logic for pushing a memory pixel buffer to the tile
-  * Nios II core CPU for graphics into the pixel buffer
+  * Logic for pushing a memory pixel buffer to the tile and managing the timing of the R, G, and B LED components to create the illusion of colour mixing
+  * Nios II core CPU for transferring graphics into the pixel buffer
 * My custom circuit board the provides a place to hook up the FPGA and LED tile to, and supplies power
+* ESP8266 WiFi SoC serving an HTTP API for control of the unit
 * Cables
 * On/Off Switch
 * 5V DC power jack
 
-The are connected as shown: 
-![Wiring Diagram](doc/WiringDiagram.jpg)
+They are connected as shown: 
+![Wiring Diagram](doc/Wiring.png)
 
-### About the Terasic DE0-Nano
+The insides in detail look like:
+![Inside](doc/inside.jpg)
+![Inside Up Close](doc/inside2.jpg)
+
+### About the Terasic DE0-Nano FPGA Board
 
 Of interest to this project, the board contains...
 
@@ -41,7 +49,7 @@ LEDTile.qpf is the Quartus project file and should be opened in Quartus. It can 
 
 ## Nios II Software
 Open the Eclipse tools for Nios II and create a new workspace, and add all of the projects in
-/software to it.  
+/software to it.
 
 The Board Support Package will likely need to be regenerated.  Right click LEDTile_BSP2 then go Nios II->Generate BSP
 
