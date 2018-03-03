@@ -42,6 +42,9 @@ Of interest to this project, the board contains...
 * 72 IO pins
 * On-board USB Blaster circuit
 
+Here is a high level diagram of the logic implemented in the FPGA:
+![FPGA Logic](doc/FPGA.png)
+
 # Building
 
 ## FPGA Configuration
