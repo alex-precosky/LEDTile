@@ -95,6 +95,10 @@ Set a single pixel to an RGB value as specified by a JSON object
   * **Code** 200
   * **Content** A congradulatory string
 
+## Set Image
+
+Set all of the pixels to RGB values as specified by a JSON object
+
 * **URL**
 /setImage
 
@@ -103,10 +107,33 @@ Set a single pixel to an RGB value as specified by a JSON object
 
 * **Data Params**
 
-1024 * 3 bytes encoded as Base 64. One 3-tuple of RGB values per pixel in the display. R1G1B1R2G2B2...R1024G1024B1024
+1024 * 3 bytes encoded as Base 64. One 3-tuple of RGB values per pixel in the display. R1G1B1R2G2B2...R1024G1024B1024.  The first pixel is the top-left, then continues across the first row, then the second row, etc.
 
 ```
 {
   image_base64="c2RmYXNmYXNz......(much longer)"
 }
 ```
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
+
+
+## Clear Display
+
+Set all of the images to black.  I.e. clears the display.
+
+* **URL**
+/clear
+
+* **Method**
+`POST`
+
+* **Data Params**
+
+None
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
