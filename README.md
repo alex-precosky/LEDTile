@@ -65,7 +65,8 @@ This is a Platform IO project built in Visual Studio Code. It can be uploaded by
 The FPGA loads its configuration from the EPCS configuration device.  This includes the Nios II soft core CPU and the FPGA logic that reads from a display buffer to update pixels on the display.
 
 The Nios II processor reset address is set to the base address of the EPCS controller in Qsys. At reset, a boot copier program runs on the Nios II from on chip ram, the program skips the FPGA configuration in the EPCS device, then reads the data following it into the SDRAM, then jumps to the start of the program.  The boot copier is put there by Quartus.
-![Nios II Flash Programmer](doc/Nios II Flash Programmer.jpg)
+
+![Nios II Flash Programmer](doc/NiosIIFlashProgrammer.jpg)
 
 # HTTP API
 
