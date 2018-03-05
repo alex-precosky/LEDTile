@@ -42,6 +42,9 @@ Of interest to this project, the board contains...
 * 72 IO pins
 * On-board USB Blaster circuit
 
+Here is a high level diagram of the logic implemented in the FPGA:
+![FPGA Logic](doc/FPGA.png)
+
 # Building
 
 ## FPGA Configuration
@@ -62,7 +65,8 @@ This is a Platform IO project built in Visual Studio Code. It can be uploaded by
 The FPGA loads its configuration from the EPCS configuration device.  This includes the Nios II soft core CPU and the FPGA logic that reads from a display buffer to update pixels on the display.
 
 The Nios II processor reset address is set to the base address of the EPCS controller in Qsys. At reset, a boot copier program runs on the Nios II from on chip ram, the program skips the FPGA configuration in the EPCS device, then reads the data following it into the SDRAM, then jumps to the start of the program.  The boot copier is put there by Quartus.
-![Nios II Flash Programmer](doc/Nios II Flash Programmer.jpg)
+
+![Nios II Flash Programmer](doc/NiosIIFlashProgrammer.jpg)
 
 # HTTP API
 
@@ -92,6 +96,10 @@ Set a single pixel to an RGB value as specified by a JSON object
   * **Code** 200
   * **Content** A congradulatory string
 
+## Set Image
+
+Set all of the pixels to RGB values as specified by a JSON object
+
 * **URL**
 /setImage
 
@@ -100,10 +108,33 @@ Set a single pixel to an RGB value as specified by a JSON object
 
 * **Data Params**
 
-1024 * 3 bytes encoded as Base 64. One 3-tuple of RGB values per pixel in the display. R1G1B1R2G2B2...R1024G1024B1024
+1024 * 3 bytes encoded as Base 64. One 3-tuple of RGB values per pixel in the display. R1G1B1R2G2B2...R1024G1024B1024.  The first pixel is the top-left, then continues across the first row, then the second row, etc.
 
 ```
 {
   image_base64="c2RmYXNmYXNz......(much longer)"
 }
 ```
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
+
+
+## Clear Display
+
+Set all of the images to black.  I.e. clears the display.
+
+* **URL**
+/clear
+
+* **Method**
+`POST`
+
+* **Data Params**
+
+None
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
