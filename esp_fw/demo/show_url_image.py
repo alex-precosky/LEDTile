@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QLineEdit,
 import sys
 
 
-HOST = "192.168.0.21"
+HOST = "192.168.0.11"
 LED_PANEL_URL = f"http://{HOST}/setImage"
 
 
