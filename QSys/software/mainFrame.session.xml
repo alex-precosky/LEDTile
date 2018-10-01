@@ -13,33 +13,8 @@
    </object>
   </void>
   <void method="put">
-   <string>files_table/JViewport0/jScrollPane3/filesPanel/centerPanel/Flash: epcs_flash_controller/MainTabbedPane/JPanel0/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string>
-   <object class="org.jdesktop.application.SessionStorage$TableState">
-    <void property="columnWidths">
-     <array class="int" length="3">
-      <void index="0">
-       <int>833</int>
-      </void>
-      <void index="1">
-       <int>286</int>
-      </void>
-      <void index="2">
-       <int>286</int>
-      </void>
-     </array>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>MainTabbedPane/JPanel0/JSplitPane0/MainWindow/null.contentPane/null.layeredPane/JRootPane0/mainFrame</string>
-   <object class="org.jdesktop.application.SessionStorage$TabbedPaneState">
-    <void property="selectedIndex">
-     <int>0</int>
-    </void>
-    <void property="tabCount">
-     <int>1</int>
-    </void>
-   </object>
+   <object class="org.jdesktop.application.SessionStorage$TabbedPaneState"/>
   </void>
   <void method="put">
    <string>mainFrame</string>
@@ -49,28 +24,28 @@
       <string>x</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>385</int>
+       <int>1049</int>
       </void>
      </void>
      <void class="java.awt.Rectangle" method="getField">
       <string>y</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>274</int>
+       <int>279</int>
       </void>
      </void>
      <void class="java.awt.Rectangle" method="getField">
       <string>width</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>1554</int>
+       <int>1543</int>
       </void>
      </void>
      <void class="java.awt.Rectangle" method="getField">
       <string>height</string>
       <void method="set">
        <object idref="Rectangle0"/>
-       <int>725</int>
+       <int>974</int>
       </void>
      </void>
     </void>

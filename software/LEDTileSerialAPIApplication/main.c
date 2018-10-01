@@ -57,6 +57,8 @@ int main()
 	Handle_SetPixel = &HandleSetPixelCommand;
 	Handle_SetImage = &HandleSetImageCommand;
 
+	blank();
+
 	while(1)
 	{
 		char ch;
