@@ -33,8 +33,8 @@ void send_set_image(unsigned char* rgb_array)
     // [0x02][r0][g0][b0][r1][g1][b1]...[r1023][g1023][b1023]
     const int payload_size = 1 + 1024*3;
     const int packet_size = payload_size + 9;
-    static char payload[1 + 1024*3 + 9];
-    static char packet[1 + 1024*3];
+    static char payload[1 + 1024*3];
+    static char packet[1 + 1024*3 + 9];
 
     payload[0] = LEDPANEL_COMM_CMD_SETIMAGE;
     memcpy(payload+1, rgb_array, 1024*3);
@@ -44,8 +44,49 @@ void send_set_image(unsigned char* rgb_array)
     Uart_SendPacket(packet, packet_size);  
 }
 
+void send_set_animation_frame(uint32_t frame_index, unsigned char* rgb_array) {
+    // Sets the entire display at once. Takes a string of the R, G, B, values for all 1024 pixels.
+    // [0x03][0x00][0x00][0x00][frame_index0][frame_index1][frame_index2][frame_index3][r0][g0][b0][r1][g1][b1]...[r1023][g1023][b1023]
+	// Second byte is padding for 2-byte alignment requirement on NIOS ii (TODO dont need this anymore)
+    const int payload_size = 4 + 4 + 1024*3;
+    const int packet_size = payload_size + 9;
+    static char payload[4 + 4 + 1024*3];
+    static char packet[4 + 4 + 1024*3 + 9];
 
-void encode_serial_packet(char* dest, char* payload, int payload_size)
+    payload[0] = LEDPANEL_COMM_CMD_SETANIMATIONFRAME;
+    payload[1] = 0x00;
+    payload[2] = 0x00;
+    payload[3] = 0x00;
+
+    memcpy(payload+4, &frame_index, sizeof(frame_index));
+    memcpy(payload+8, rgb_array, 1024*3);
+
+    encode_serial_packet(packet, payload, payload_size);
+
+    Uart_SendPacket(packet, packet_size);  
+}
+
+void send_start_animation(uint32_t num_frames, uint16_t delay) {
+  // [0x04][0x00][0x00][0x00][num_frames0][num_frames1][num_frames2][num_frames3][delay_ms0][delay_ms1]
+  // Second byte is padding for 2-byte alignment requirement on NIOS ii (TODO dont need this anymore)
+  const int payload_size = 4 + 4 + 2;
+  const int packet_size = payload_size + 9;
+  static char payload[4 + 4 + 2];
+  static char packet[4 + 4 + 2 + 9];
+
+  payload[0] = LEDPANEL_COMM_CMD_STARTANIMATION;
+  payload[1] = 0x00;
+  payload[2] = 0x00;
+  payload[3] = 0x00;
+  memcpy(payload+4, &num_frames, sizeof(num_frames));
+  memcpy(payload+8, &delay, sizeof(delay));
+  encode_serial_packet(packet, payload, payload_size);
+
+  Uart_SendPacket(packet, packet_size);
+}
+
+
+void encode_serial_packet(char* dest, const char* payload, int payload_size)
 {
     dest[0] = LEDPANEL_COMM_START_BYTE;
 
@@ -61,7 +102,7 @@ void encode_serial_packet(char* dest, char* payload, int payload_size)
     return;
 }
 
-int decode_serial_packet(char* payload, char* packet)
+int decode_serial_packet(char* payload, const char* packet)
 {
     if( packet[0] != LEDPANEL_COMM_START_BYTE )
         return LEDPANEL_COMM_CHECKSUM_ERROR;

@@ -1,5 +1,5 @@
 # LED Panel Serial Protocol
-Describes communications between the ESP8266 WiFi module and the Nios II core soft CPU.  Communications are from the ESP to the Nios II, commanding it to do things.  
+Describes communications between the ESP8266 WiFi module and the Nios II core soft CPU.  Communications are from the ESP to the Nios II, commanding it to do things.
 
 ## Serial Frame
 
@@ -27,3 +27,12 @@ Sets the entire display at once. Takes a string of the R, G, B, values for all 1
 
 [0x02][r0][g0][b0][r1][g1][b1]...[r1023][g1023][b1023]
 
+### Set Animation Frame
+Sets the indicated frame
+
+[0x03][i][r0][g0][b0][r1][g1][b1]...[r1023][g1023][b1023]
+ - i is 4-byte integer, the index of the frame being set
+ - R, G, B balues, like in *Set Display*
+
+### Start Animation
+[0x04]

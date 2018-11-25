@@ -19,7 +19,7 @@ extern "C" {
     uint32_t payload_length;
     uint32_t bytes_received;
     char buf[LEDPANEL_RECEIVE_BUFFER_SIZE];
-  } receive_status_t;
+  } __attribute__ ((aligned (4)))receive_status_t;
 
   extern receive_status_t receive_status;
 
@@ -36,6 +36,8 @@ extern "C" {
   // point at functions that handle commands
   void (*Handle_SetPixel)(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
   void (*Handle_SetImage)(unsigned char* rgb_pixels);
+  void (*Handle_SetAnimationFrame)(uint32_t frame_index, unsigned char* rgb_pixels);
+  void (*Handle_StartAnimation)(uint32_t num_frames, uint16_t delay_ms);
 
 
 #ifdef __cplusplus

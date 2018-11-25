@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
  * SOPC Builder design path: ../../QSys.sopcinfo
  *
- * Generated: Sun Sep 30 23:27:57 PDT 2018
+ * Generated: Sat Nov 24 16:16:47 PST 2018
  */
 
 /*
@@ -299,7 +299,7 @@
 #define ALT_MODULE_CLASS_fifoed_avalon_uart_0 fifoed_avalon_uart
 #define FIFOED_AVALON_UART_0_ADD_ERROR_BITS 0
 #define FIFOED_AVALON_UART_0_BASE 0x400a000
-#define FIFOED_AVALON_UART_0_BAUD 230400
+#define FIFOED_AVALON_UART_0_BAUD 921600
 #define FIFOED_AVALON_UART_0_DATA_BITS 8
 #define FIFOED_AVALON_UART_0_FIFO_EXPORT_USED 0
 #define FIFOED_AVALON_UART_0_FIXED_BAUD 1
@@ -499,7 +499,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1538374649
+#define SYSID_TIMESTAMP 1543104709
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

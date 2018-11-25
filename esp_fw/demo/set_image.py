@@ -4,7 +4,7 @@ import base64
 
 # example using /setImage to set the entire image of the display at once
 
-host = "192.168.0.21"
+host = "192.168.0.119"
 url = f"http://{host}/setImage"
 
 

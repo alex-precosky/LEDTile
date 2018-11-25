@@ -10,24 +10,32 @@
 #include "ESP8266_Uart.h"
 
 
-const char* ssid = "SHAW-E75060";
-const char* password = "25116A147879";
+const char* ssid = "TP-LINK_2CBD";
+const char* password = "19444598";
 const char* host = "LEDPanel";
+
+const int BAUD_RATE = 921600;
+
+const int HTTP_RESPONSE_SIZE = 50;
+
+static unsigned char image_bytes[1024*3];
 
     ESP8266WebServer server(80);
     String webPage = "";
 
-      StaticJsonBuffer<JSON_OBJECT_SIZE(1) + 4570> jsonBuffer;
+    StaticJsonBuffer<JSON_OBJECT_SIZE(1) + 4570> jsonBuffer;
 
     void onSetPixel();
     void onClear();
     void onSetImage();
+    void onSetAnimationFrame();
+    void onStartAnimation();
 
 void (*Uart_SendPacket)(char* packet, int n) = &ESP8266_Uart_SendPacket;
 
 void setup() {
   // Set up function pointer for sending packets
-  Serial.begin(230400);
+  Serial.begin(BAUD_RATE);
   Uart_SendPacket = ESP8266_Uart_SendPacket;   
 
   WiFi.mode(WIFI_STA);
@@ -56,15 +64,16 @@ void setup() {
   server.on("/setPixel", HTTP_POST, onSetPixel);
   server.on("/clear", HTTP_POST, onClear);
   server.on("/setImage", HTTP_POST, onSetImage);
+  server.on("/setAnimationFrame", HTTP_POST, onSetAnimationFrame);
+  server.on("/startAnimation", HTTP_POST, onStartAnimation);
 
-  Serial.begin(230400);
+
+  Serial.begin(BAUD_RATE);
   server.begin();
 
 }
 
 void onClear() {
-
-  unsigned char image_bytes[1024*3];
 
   memset(image_bytes, 0, 1024*3);
 
@@ -87,46 +96,93 @@ void onSetPixel() {
   g = root["g"];
   b = root["b"];
  
-  if (root.success()) 
-  {
+  if (root.success()) {
     send_set_pixel(x, y, r, g, b);
     server.send(200, "text/plain", "Sending Set pixel!");
-  }
-  else
-  {
+  } else {
     server.send(400, "text/plain", "Bad request");
   }
   
 }
 
-void onSetImage()
-{
+void onSetImage() {
 
-jsonBuffer.clear();
+  unsigned long startTime = millis();
+  unsigned long endTime;
+  unsigned long elapsedTime;
+
+  jsonBuffer.clear();
 
   String data = server.arg("plain");
   JsonObject& root = jsonBuffer.parseObject(data);
-  unsigned char image_bytes[1024*3];
 
-  if(root.success())
-  {
+  if(root.success()) {
     const char* image_base64 = root["image_base64"];
 
     decode_base64((unsigned char*)image_base64, image_bytes);
 
+    // takes about 30 ms
     send_set_image(image_bytes);
 
-    server.send(200, "text/plain", "Setting the image!");
-  }
-  else
-  {
+    endTime = millis();
+    elapsedTime = endTime - startTime;    
+
+    server.send(200, "text/plain", "Setting the image. Request handling time: " + String(elapsedTime, 10));
+  } else {
     server.send(400, "text/plain", "Bad request");
   }
 }
 
+void onSetAnimationFrame() {
+
+  jsonBuffer.clear();
+
+  String data = server.arg("plain");
+  JsonObject& root = jsonBuffer.parseObject(data);
+  char response[HTTP_RESPONSE_SIZE];
+
+  if(root.success()) {
+    const char* image_base64 = root["image_base64"];
+
+    uint32_t i;
+    i = root["frame_index"];
+
+    decode_base64((unsigned char*)image_base64, image_bytes);
+
+    send_set_animation_frame(i, image_bytes);
+
+    server.send(200, "text/plain", "Setting animation frame " + String(i, 10) + "!");
+  } else {
+    server.send(400, "text/plain", "Bad request");
+  }
+}
+
+void onStartAnimation() {
+  
+  StaticJsonBuffer<200> jsonBuffer;
+
+  String data = server.arg("plain");
+  JsonObject& root = jsonBuffer.parseObject(data);
+  
+  uint32_t num_frames;
+  num_frames = root["num_frames"];
+
+  uint16_t delay_ms;
+  delay_ms = root["delay_ms"];
+
+  if (root.success()) {
+    send_start_animation(num_frames, delay_ms);
+    server.send(200, "text/plain", "Starting animation of length " + String(num_frames, 10) + " with delay " + String(delay_ms, 10));
+  } else {
+    server.send(400, "text/plain", "Bad request");
+  }
+  
+}
+
+
 void loop() {
    ArduinoOTA.handle();
-    server.handleClient();
+   server.handleClient();
    digitalWrite(LED_BUILTIN, LOW);
 }
 

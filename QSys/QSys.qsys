@@ -793,7 +793,7 @@
    version="13.2"
    enabled="1">
   <parameter name="add_error_bits" value="false" />
-  <parameter name="baud" value="230400" />
+  <parameter name="baud" value="921600" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="dataBits" value="8" />
   <parameter name="driver_pass_error_bits" value="false" />

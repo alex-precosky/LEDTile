@@ -4,13 +4,23 @@
  *  Created on: Jan 10, 2018
  *      Author: Alex
  */
+#include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 #include "LEDPanel_Serial_Comm.h"
 #include "LEDPanel_Serial_Receiver.h"
 #include "LEDTileLib.h"
 
+#define MAX_NUM_FRAMES 1000
+#define IMAGE_SIZE 1024*3
+unsigned char image_frames[MAX_NUM_FRAMES*IMAGE_SIZE];
+
+
+
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
 void HandleSetImageCommand(unsigned char* rgb_pixels);
+void HandleSetAnimationFrameCommand(uint32_t frame_index, unsigned char* rgb_pixels);
+void HandleStartAnimationCommand(uint32_t num_frames, uint16_t delay_ms);
 void print_receiver_status();
 
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
@@ -38,6 +48,21 @@ void HandleSetImageCommand(unsigned char* rgb_pixels)
 
 }
 
+void HandleSetAnimationFrameCommand(uint32_t frame_index, unsigned char* rgb_pixels) {
+  if (frame_index > MAX_NUM_FRAMES)
+	 return; // TODO should be able to return an error
+
+  printf("Setting frame %u\n", frame_index);
+  memcpy(image_frames + (frame_index * IMAGE_SIZE), rgb_pixels, IMAGE_SIZE);
+}
+
+void HandleStartAnimationCommand(uint32_t num_frames, uint16_t delay_ms) {
+	printf("Starting animation of %u frames with %u ms delay\n", num_frames, delay_ms);
+	for(uint32_t i = 0; i < num_frames; i++) {
+		HandleSetImageCommand(image_frames + (i*IMAGE_SIZE));
+	}
+}
+
 void print_receiver_status()
 {
 	printf("Bytes: %d Start: %d Length Received: %d Payload length: %u\n ", receive_status.bytes_received,
@@ -56,6 +81,8 @@ int main()
 
 	Handle_SetPixel = &HandleSetPixelCommand;
 	Handle_SetImage = &HandleSetImageCommand;
+    Handle_SetAnimationFrame = &HandleSetAnimationFrameCommand;
+    Handle_StartAnimation = &HandleStartAnimationCommand;
 
 	blank();
 
@@ -65,8 +92,6 @@ int main()
 
 		ch = alt_getchar();
 	  	process_serial_char(ch);
-
-	  //	printf("0x%x ", ch);
 
 	}
 

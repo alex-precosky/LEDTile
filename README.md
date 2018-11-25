@@ -128,6 +128,60 @@ Set all of the pixels to RGB values as specified by a JSON object
   * **Code** 200
   * **Content** A congradulatory string
 
+## Set Animation Frame
+
+Store an image in a memory to be played later as part of an animation.
+
+* **URL**
+/setAnimationFrame
+
+* **Method**
+`POST`
+
+* **Data Params**
+
+0-based index of what frame number we're setting
+1024 * 3 bytes encoded as Base 64. One 3-tuple of RGB values per pixel in the display. R1G1B1R2G2B2...R1024G1024B1024.  The first pixel is the top-left, then continues across the first row, then the second row, etc.
+```
+{
+  frame_index: 0
+  image_base64="c2RmYXNmYXNz......(much longer)"
+}
+```
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
+  
+Probably will add one for frame out of range
+
+
+
+## Start Animation
+
+Starts on frame 0 and loops to desired zero-based frame index
+
+* **URL**
+/startAnimation
+
+* **Method**
+`POST`
+
+* **Data Params**
+
+Number of frames
+```
+{
+  number_of_frames: 100
+}
+```
+
+
+* **Success Response**
+  * **Code** 200
+  * **Content** A congradulatory string
+  
+Should have an error for too long of an animation
 
 ## Clear Display
 
