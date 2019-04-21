@@ -1,0 +1,4 @@
+32x32x24bpp image in base-64 needs about 4200 bytes per image
+Transmission between ESP8266 and NIOS II is 230400 bits per second.
+
+Expect transmission time of about 0.2 seconds.  Which isn't fast enough for super smooth animations.

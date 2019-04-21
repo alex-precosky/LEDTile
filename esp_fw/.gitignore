@@ -4,3 +4,4 @@
 .vscode/launch.json
 demo/build
 demo/dist
+.vscode/.browse.c_cpp.db*

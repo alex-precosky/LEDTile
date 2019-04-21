@@ -69,7 +69,7 @@ void blank()
 
 void setPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
-	int addr = 1024 + 32*x + y;
+	int addr = 1024 + (x << 5) + y;
 
 	  unsigned short b8 = gamma46half[b];
 	  unsigned short g8 = gamma46half[g];

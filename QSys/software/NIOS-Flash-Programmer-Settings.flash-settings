@@ -23,7 +23,7 @@
       </object>
      </void>
      <void property="filename">
-      <string>C:\Users\Alex\Desktop\LEDTile\LEDTile_Altera\output_files\LEDTile.sof</string>
+      <string>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\output_files\LEDTile.sof</string>
      </void>
      <void property="memoryName">
       <string>epcs_flash_controller</string>
@@ -51,7 +51,7 @@
       </object>
      </void>
      <void property="filename">
-      <string>C:\Users\Alex\Desktop\LEDTile\LEDTile_Altera\software\LEDTileRandomizer\LEDTileRandomizer.elf</string>
+      <string>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\software\LEDTileSerialAPIApplication\LEDTileSerialAPIApplication.elf</string>
      </void>
      <void property="memoryName">
       <string>epcs_flash_controller</string>
@@ -62,15 +62,15 @@
   <void id="LinkedHashMap0" property="map">
    <void method="put">
     <string>VERSION</string>
-    <string>14.1</string>
+    <string>17.1</string>
    </void>
    <void method="put">
     <string>BUILD</string>
-    <string>186</string>
+    <string>590</string>
    </void>
    <void method="put">
     <string>sopcinfoFile</string>
-    <string>C:\Users\Alex\Desktop\LEDTile\LEDTile_Altera\QSys.sopcinfo</string>
+    <string>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\QSys\QSys.sopcinfo</string>
    </void>
    <void method="put">
     <string>physicalCpuName</string>
@@ -86,11 +86,11 @@
    </void>
    <void method="put">
     <string>flashFilesDir</string>
-    <string>C:\Users\Alex\Desktop\LEDTile\LEDTile_Altera\flash</string>
+    <string>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\QSys\flash</string>
    </void>
    <void method="put">
     <string>scriptDir</string>
-    <string>C:\Users\Alex\Desktop\LEDTile\LEDTile_Altera\script</string>
+    <string>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\QSys\script</string>
    </void>
    <void method="put">
     <string>eraseAllEnabled</string>
@@ -110,7 +110,7 @@
    </void>
    <void method="put">
     <string>processorCableName</string>
-    <string>USB-Blaster on localhost [USB-1]</string>
+    <string>USB-Blaster on localhost [USB-0]</string>
    </void>
    <void method="put">
     <string>processorDeviceIndex</string>
@@ -122,7 +122,7 @@
    </void>
    <void method="put">
     <string>userQpfFile</string>
-    <string>C:\Users\Alex\Desktop\LEDTile\LEDTile_Altera\LEDTile.qpf</string>
+    <null/>
    </void>
   </void>
   <void property="map">

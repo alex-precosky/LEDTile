@@ -1,3 +1,7 @@
+*.flash
+*.bsf
+*.html
+*.qws
 *.flock
 *.rpt
 *.done
@@ -17,7 +21,7 @@ db/*
 incremental_db/*
 greybox_tmp/*
 output_files/*
-.qsys_edit/*
+.qsys_edit
 EclipseWorkspace/
 QSys/synthesis/*
 QSys/QSys/synthesis/*
@@ -38,3 +42,6 @@ esp_fw/.vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+GPATH
+GRTAGS
+GTAGS

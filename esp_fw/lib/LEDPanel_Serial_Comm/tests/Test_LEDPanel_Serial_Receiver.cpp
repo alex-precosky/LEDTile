@@ -15,6 +15,10 @@ void FakeHandle_SetPixel(unsigned char x, unsigned char y, unsigned char r, unsi
   mock().actualCall("FakeHandle_SetPixel");
 }
 
+void FakeHandle_StartAnimation(uint32_t num_frames, uint16_t delay_ms) {
+  mock().actualCall("FakeHandle_StartAnimation");
+}
+
 void FakeUart_SendPacket(char*, int)
 {
   ;
@@ -26,6 +30,7 @@ TEST_GROUP(SerialReceiverGroup)
   void setup()
   {
     Handle_SetPixel = FakeHandle_SetPixel;
+    Handle_StartAnimation = FakeHandle_StartAnimation;
     Uart_SendPacket = FakeUart_SendPacket;
 
     init_serial_receiver();
@@ -125,4 +130,24 @@ TEST(SerialReceiverGroup, Test_ReceiveHandlePixel)
     }
 
     mock().checkExpectations();
+}
+
+TEST(SerialReceiverGroup, Test_ReceiveHandleStartAnimation)
+{
+  mock().expectOneCall("FakeHandle_StartAnimation");
+
+  const int payload_size = 1;
+  const int packet_size = payload_size + 9;
+
+  char packet[payload_size] = "";
+  packet[0] = LEDPANEL_COMM_START_BYTE;
+  memcpy(packet+1, &payload_size, 4);
+  packet[5] = LEDPANEL_COMM_CMD_STARTANIMATION;
+
+
+  for(int i = 0; i < packet_size; i++) {
+      process_serial_char(packet[i]);
+  }
+
+  mock().checkExpectations();
 }
