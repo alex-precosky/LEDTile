@@ -17,10 +17,10 @@
 *.rdb
 *.ddb
 *.bak
-db/*
-incremental_db/*
-greybox_tmp/*
-output_files/*
+FPGA/db/*
+FPGA/incremental_db/*
+FPGA/greybox_tmp/*
+FPGA/output_files/*
 .qsys_edit
 EclipseWorkspace/
 QSys/synthesis/*
