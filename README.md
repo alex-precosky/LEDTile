@@ -1,6 +1,6 @@
 # LEDTile
 
-This is an FPGA-driven WiFi connected 32x32 LED tile that I hang on my wall.  Uses a Terasic DE0-Nano FPGA with a Nios II core soft CPU, a custom circuitboard, and an ESP8266 serving an HTTP API for controlling it.  
+This is an FPGA-driven WiFi connected 32x32 LED tile that I hang on my wall.  Uses a Terasic DE0-Nano FPGA with a Nios II core soft CPU, a custom circuitboard, and an ESP8266 serving an HTTP API for controlling it.
 
 New ESP8266 firmware can be done over the air, but the FPGA configuration and Nios II are loaded over a USB cable.
 
@@ -52,7 +52,7 @@ LEDTile.qpf is the Quartus project file and should be opened in Quartus. It can 
 
 ## Nios II Software
 Open the Eclipse tools for Nios II and create a new workspace, and add all of the projects in
-/software to it.
+/NIOS_II_Software to it.
 
 The Board Support Package will likely need to be regenerated.  Right click LEDTile_BSP2 then go Nios II->Generate BSP
 
@@ -61,7 +61,7 @@ Build LEDTileApplication and write it to the serial configuration device using t
  * Open the menu Nios II->Flash Programmer
  * Select File->New
  * Turn on menu option Options->Run From Reset After Programming
- * Add output_files/LEDTile.sof and software/LEDTileSerialAPIApplication/LEDTileSerialAPIApplication.elf
+ * Add FPGA/output_files/LEDTile.sof and NIOS_II_SOFTWARE/LEDTileSerialAPIApplication/LEDTileSerialAPIApplication.elf
  * Hit Start
  
  The Nios II Flash Programmer window will look like this:
