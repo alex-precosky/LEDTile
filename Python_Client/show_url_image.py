@@ -1,5 +1,4 @@
 import argparse
-from PIL import Image, ImageSequence
 from PyQt5.QtWidgets import (QApplication, QWidget, QLineEdit,
                              QPushButton, QLabel, QHBoxLayout)
 import sys
@@ -51,25 +50,34 @@ def show_url_image(image_url, led_panel_url):
     num_frames = 0
     for frame in ImageSequence.Iterator(img):
         print(f"Sending frame {num_frames}")
-        send_set_animation_frame(num_frames, frame, led_panel_url)
+
+        try:
+            send_set_animation_frame(num_frames, frame, led_panel_url)
+        except TimeoutError:
+            print("HTTP Request timed out")
+            return
+
         time.sleep(0.1)
         num_frames += 1
 
     print("Starting animation")
-    send_start_animation(num_frames,100, HOST)
+    try:
+        send_start_animation(num_frames, 100, HOST)
+    except TimeoutError:
+        print("HTTP Request timed out")
+        return
 
 
 def do_gui_prompt():
     app = QApplication(sys.argv)
 
-    gui = ShowImageURLWindow()
+    ShowImageURLWindow()
     app.exec_()
 
+
 if __name__ == "__main__":
-
-
     ARGS = parse_arguments()
-    
+
     if ARGS.url is not None:
         IMAGE_URL = ARGS.url
         show_url_image(IMAGE_URL, LED_PANEL_URL)
