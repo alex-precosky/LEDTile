@@ -67,17 +67,18 @@ def show_url_image(image_url, led_panel_url):
         print("HTTP Request timed out")
         return
 
-
 def do_gui_prompt():
     app = QApplication(sys.argv)
 
-    ShowImageURLWindow()
+    # Do not delete `gui` - it needs to keep existing
+    gui = ShowImageURLWindow()
     app.exec_()
 
-
 if __name__ == "__main__":
-    ARGS = parse_arguments()
 
+
+    ARGS = parse_arguments()
+    
     if ARGS.url is not None:
         IMAGE_URL = ARGS.url
         show_url_image(IMAGE_URL, LED_PANEL_URL)
