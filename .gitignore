@@ -45,3 +45,4 @@ esp_fw/.vscode/*
 GPATH
 GRTAGS
 GTAGS
+*.pyc
