@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
- * SOPC Builder design path: ../../QSys.sopcinfo
+ * SOPC Builder design path: ../../FPGA/QSys.sopcinfo
  *
- * Generated: Sat Nov 24 16:16:47 PST 2018
+ * Generated: Wed Aug 21 23:26:17 PDT 2019
  */
 
 /*
@@ -499,7 +499,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1543104709
+#define SYSID_TIMESTAMP 1566454767
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

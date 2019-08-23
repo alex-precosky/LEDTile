@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>LEDPanel_Serial_Comm</name>
+	<name>LEDPanelSerialComm</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -31,22 +31,12 @@
 		<link>
 			<name>LEDPanel_Serial_Comm.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c</locationURI>
-		</link>
-		<link>
-			<name>LEDPanel_Serial_Comm.h</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.h</locationURI>
+			<location>C:/Users/Alex/Desktop/LEDTile/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c</location>
 		</link>
 		<link>
 			<name>LEDPanel_Serial_Receiver.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c</locationURI>
-		</link>
-		<link>
-			<name>LEDPanel_Serial_Receiver.h</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.h</locationURI>
+			<location>C:/Users/Alex/Desktop/LEDTile/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c</location>
 		</link>
 	</linkedResources>
 </projectDescription>

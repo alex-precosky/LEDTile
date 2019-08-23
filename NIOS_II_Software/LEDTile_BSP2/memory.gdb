@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'cpu' in SOPC Builder design 'QSys'
-# SOPC Builder design path: ../../QSys.sopcinfo
+# SOPC Builder design path: ../../FPGA/QSys.sopcinfo
 #
-# Generated: Sun Jan 07 18:58:23 PST 2018
+# Generated: Wed Aug 21 23:26:17 PDT 2019
 
 # DO NOT MODIFY THIS FILE
 #

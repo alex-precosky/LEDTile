@@ -101,7 +101,7 @@ ACDS_VERSION := 17.1
 # BUILD_NUMBER: 590
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := ../../QSys.sopcinfo
+SOPC_FILE := ../../FPGA/QSys.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

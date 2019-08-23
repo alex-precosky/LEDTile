@@ -123,8 +123,8 @@ ACDS_VERSION := 17.1
 LIB_NAME := LEDPanel_Serial_Comm
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += ../../esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c
-C_SRCS += ../../esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c
+C_SRCS += ../../ESP8266_Software/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c
+C_SRCS += ../../ESP8266_Software/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c
 CXX_SRCS :=
 ASM_SRCS :=
 

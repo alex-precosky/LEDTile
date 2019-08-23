@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>24-Nov-2018 4:16:44 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1543105004459</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile_git_export_non_bare\software\LEDTile_BSP2</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>21-Aug-2019 11:26:16 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1566455176557</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile\NIOS_II_Software\LEDTile_BSP2</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>..\..\QSys.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>..\..\FPGA\QSys.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
