@@ -1,11 +1,14 @@
 import argparse
+from PIL import ImageSequence
 from PyQt5.QtWidgets import (QApplication, QWidget, QLineEdit,
                              QPushButton, QLabel, QHBoxLayout)
 import sys
 import time
-from pyLEDPanelLib.pyLEDPanel import get_scaled_image, send_set_animation_frame, send_start_animation
+from pyLEDPanelLib.pyLEDPanel import get_image_from_url, send_set_animation_frame, send_start_animation
 
-HOST = "192.168.0.119"
+# Keeping the LED tile on a static IP address. Could also try zeroconf but
+# didn't have much luck with that working across OSs
+HOST = "192.168.0.117"
 
 class ShowImageURLWindow(QWidget):
 
@@ -44,7 +47,7 @@ def parse_arguments():
 
 
 def show_url_image(image_url, led_panel_url):
-    img = get_scaled_image(image_url)
+    img = get_image_from_url(image_url)
     print("Ìmage received")
 
     num_frames = 0

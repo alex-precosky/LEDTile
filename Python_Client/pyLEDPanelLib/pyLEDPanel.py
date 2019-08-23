@@ -52,7 +52,7 @@ def send_start_animation(num_frames, delay_ms, destination_host):
         raise TimeoutError
 
 
-def get_scaled_image(image_url):
+def get_image_from_url(image_url):
     # get image data
     response = urllib.request.urlopen(image_url)
     img_data = response
