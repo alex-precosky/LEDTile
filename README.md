@@ -1,6 +1,6 @@
 # LEDTile
 
-This is an FPGA-driven WiFi connected 32x32 LED tile that I hang on my wall.  Uses a Terasic DE0-Nano FPGA with a Nios II core soft CPU, a custom circuitboard, and an ESP8266 serving an HTTP API for controlling it.
+This is an FPGA-driven WiFi connected 32x32 LED tile that I hang on my wall.  Uses a Terasic DE0-Nano FPGA with a Nios II core soft CP running the Micrium μC/OS-II RTOS kernel, a custom circuitboard, and an ESP8266 serving an HTTP API for controlling it.
 
 New ESP8266 firmware can be done over the air, but the FPGA configuration and Nios II are loaded over a USB cable.
 
