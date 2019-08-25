@@ -46,3 +46,4 @@ GPATH
 GRTAGS
 GTAGS
 *.pyc
+.force_rebuild
