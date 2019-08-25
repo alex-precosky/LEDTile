@@ -1,15 +1,12 @@
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>
 #include <unistd.h>
 #include "LEDPanel_Serial_Comm.h"
 #include "LEDPanel_Serial_Receiver.h"
 #include "LEDTileLib.h"
+#include "app_cfg.h"
 #include "includes.h"
-
-#define MAX_NUM_FRAMES 1000
-#define IMAGE_SIZE 1024*3
-unsigned char image_frames[MAX_NUM_FRAMES*IMAGE_SIZE];
+#include "sequenceTask.h"
 
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
 void HandleSetImageCommand(unsigned char* rgb_pixels);
@@ -17,13 +14,7 @@ void HandleSetAnimationFrameCommand(uint32_t frame_index, unsigned char* rgb_pix
 void HandleStartAnimationCommand(uint32_t num_frames, uint16_t delay_ms);
 void print_receiver_status();
 
-/* Definition of Task Stacks */
-#define   TASK_STACKSIZE       2048
-OS_STK    commTaskStk[TASK_STACKSIZE];
-
-/* Definition of Task Priorities */
-
-#define TASK_PRIORITY_COMM      1
+OS_STK commTaskStk[TASK_STACKSIZE];
 
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
@@ -32,7 +23,6 @@ void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, un
 
 void HandleSetImageCommand(unsigned char* rgb_pixels)
 {
-
    int pixel_ptr = 0;
    for(int j =0; j < 32; j++)
 	{
@@ -51,19 +41,13 @@ void HandleSetImageCommand(unsigned char* rgb_pixels)
 }
 
 void HandleSetAnimationFrameCommand(uint32_t frame_index, unsigned char* rgb_pixels) {
-  if (frame_index > MAX_NUM_FRAMES)
-	 return; // TODO should be able to return an error
-
   printf("Setting frame %u\n", frame_index);
-  memcpy(image_frames + (frame_index * IMAGE_SIZE), rgb_pixels, IMAGE_SIZE);
+  SequenceLoadImage(rgb_pixels, frame_index);
 }
 
 void HandleStartAnimationCommand(uint32_t num_frames, uint16_t delay_ms) {
 	printf("Starting animation of %u frames with %u ms delay\n", num_frames, delay_ms);
-	for(uint32_t i = 0; i < num_frames; i++) {
-		HandleSetImageCommand(image_frames + (i*IMAGE_SIZE));
-		usleep((uint32_t)delay_ms << 6);
-	}
+	SequenceStart(num_frames, delay_ms);
 }
 
 void print_receiver_status()
@@ -81,6 +65,7 @@ void commTask(void* pdata)
 		char ch;
 
 		ch = getchar();
+		SequenceStop();
 	  	process_serial_char(ch);
   }
 }
@@ -99,6 +84,8 @@ int main(void)
   Handle_StartAnimation = &HandleStartAnimationCommand;
 
   blank();
+
+  CreateSequenceTask();
 
   OSTaskCreateExt(commTask,
                   NULL,

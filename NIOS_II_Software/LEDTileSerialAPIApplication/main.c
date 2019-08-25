@@ -7,6 +7,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 #include "LEDPanel_Serial_Comm.h"
 #include "LEDPanel_Serial_Receiver.h"
 #include "LEDTileLib.h"
@@ -22,6 +23,8 @@ void HandleSetImageCommand(unsigned char* rgb_pixels);
 void HandleSetAnimationFrameCommand(uint32_t frame_index, unsigned char* rgb_pixels);
 void HandleStartAnimationCommand(uint32_t num_frames, uint16_t delay_ms);
 void print_receiver_status();
+
+void isr_uart0(void* context);
 
 void HandleSetPixelCommand(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
@@ -60,6 +63,7 @@ void HandleStartAnimationCommand(uint32_t num_frames, uint16_t delay_ms) {
 	printf("Starting animation of %u frames with %u ms delay\n", num_frames, delay_ms);
 	for(uint32_t i = 0; i < num_frames; i++) {
 		HandleSetImageCommand(image_frames + (i*IMAGE_SIZE));
+		usleep((uint32_t)delay_ms << 6);
 	}
 }
 
@@ -79,6 +83,9 @@ int main()
 
 	init_serial_receiver();
 
+	void *my_context;
+//	alt_ic_isr_register(UART0_IRQ_INTERRUPT_CONTROLLER_ID, UART0_IRQ, isr_timer_0, my_context, 0x0);
+
 	Handle_SetPixel = &HandleSetPixelCommand;
 	Handle_SetImage = &HandleSetImageCommand;
     Handle_SetAnimationFrame = &HandleSetAnimationFrameCommand;
@@ -96,4 +103,9 @@ int main()
 	}
 
 	return 0;
+}
+
+void isr_uart0(void* context)
+{
+	;
 }
