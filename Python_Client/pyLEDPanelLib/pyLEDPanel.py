@@ -1,5 +1,5 @@
 import base64
-from PIL import Image, ImageSequence
+from PIL import Image
 import requests
 import urllib.request
 import json
