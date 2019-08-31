@@ -182,7 +182,7 @@ BSP_ROOT_DIR := ../LEDTile_uCOSii_application_bsp/
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS += ../LEDTileLib
-APP_INCLUDE_DIRS += ../../ESP8266_Software/lib/LEDPanel_Serial_Comm/src
+APP_INCLUDE_DIRS += ../../Common_Libs/LEDPanel_Serial_Comm/src
 APP_LIBRARY_DIRS += ../LEDPanel_Serial_Comm/obj/default
 APP_LIBRARY_DIRS += ../LEDTileLib/obj/default
 APP_LIBRARY_NAMES += LEDPanel_Serial_Comm

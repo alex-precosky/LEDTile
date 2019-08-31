@@ -31,12 +31,12 @@
 		<link>
 			<name>LEDPanel_Serial_Comm.c</name>
 			<type>1</type>
-			<location>C:/Users/Alex/Desktop/LEDTile/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c</location>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Common_Libs/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Comm.c</locationURI>
 		</link>
 		<link>
 			<name>LEDPanel_Serial_Receiver.c</name>
 			<type>1</type>
-			<location>C:/Users/Alex/Desktop/LEDTile/esp_fw/lib/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c</location>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Common_Libs/LEDPanel_Serial_Comm/src/LEDPanel_Serial_Receiver.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
