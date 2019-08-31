@@ -799,7 +799,7 @@
   <parameter name="driver_pass_error_bits" value="false" />
   <parameter name="export_handshake" value="false" />
   <parameter name="fifo_export_used" value="false" />
-  <parameter name="fifo_size_rx" value="4096" />
+  <parameter name="fifo_size_rx" value="8192" />
   <parameter name="fifo_size_tx" value="8" />
   <parameter name="fixedBaud" value="true" />
   <parameter name="gap_value" value="4" />

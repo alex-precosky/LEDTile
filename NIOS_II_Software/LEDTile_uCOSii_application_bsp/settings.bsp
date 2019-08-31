@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>24-Aug-2019 4:43:40 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1566690220944</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>31-Aug-2019 12:27:37 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1567236457223</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Alex\Desktop\LEDTile\NIOS_II_Software\LEDTile_uCOSii_application_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\FPGA\QSys.sopcinfo</SopcDesignFile>

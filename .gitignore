@@ -25,6 +25,7 @@ FPGA/output_files/*
 EclipseWorkspace/
 QSys/synthesis/*
 QSys/QSys/synthesis/*
+FPGA/QSys/QSys/QSys.html
 testbench/work/*
 *.S
 *.o
