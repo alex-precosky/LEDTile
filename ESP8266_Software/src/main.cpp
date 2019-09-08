@@ -31,12 +31,10 @@ static unsigned char image_bytes[1024*3];
     void onSetAnimationFrame();
     void onStartAnimation();
 
-void (*Uart_SendPacket)(char* packet, int n) = &ESP8266_Uart_SendPacket;
-
 void setup() {
   // Set up function pointer for sending packets
   Serial.begin(BAUD_RATE);
-  Uart_SendPacket = ESP8266_Uart_SendPacket;   
+  set_uart_sendpacket_callback(ESP8266_Uart_SendPacket);
 
   WiFi.mode(WIFI_STA);
 

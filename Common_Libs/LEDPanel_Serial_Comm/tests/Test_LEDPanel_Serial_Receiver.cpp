@@ -8,8 +8,6 @@
 void FakeHandle_SetPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b);
 void FakeUart_SendPacket(char*, int);
 
-void (*Uart_SendPacket)(char* packet, int n) = &FakeUart_SendPacket;
-
 void FakeHandle_SetPixel(unsigned char x, unsigned char y, unsigned char r, unsigned char g, unsigned char b)
 {
   mock().actualCall("FakeHandle_SetPixel");
@@ -31,7 +29,8 @@ TEST_GROUP(SerialReceiverGroup)
   {
     Handle_SetPixel = FakeHandle_SetPixel;
     Handle_StartAnimation = FakeHandle_StartAnimation;
-    Uart_SendPacket = FakeUart_SendPacket;
+
+    set_uart_sendpacket_callback(FakeUart_SendPacket);
 
     init_serial_receiver();
 

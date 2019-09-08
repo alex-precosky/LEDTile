@@ -3,6 +3,12 @@
 #include <stdint.h>
 #include "LEDPanel_Serial_Comm.h"
 
+void (*Uart_SendPacket)(char* packet, int n) = 0xDEADBEEF;
+
+ void set_uart_sendpacket_callback(void (*Uart_SendPacketParam)(char* packet, int n))
+ {
+     Uart_SendPacket = Uart_SendPacketParam;
+ }
 
 void send_set_pixel(char x, char y, char r, char g, char b)
 {
@@ -10,10 +16,11 @@ void send_set_pixel(char x, char y, char r, char g, char b)
   // and sends it to the FPGA
 
   // the payload looks like...:  [0x01][x][y][r][g][b]
-  const int payload_size = 6;
-  const int packet_size = payload_size + 9;
-  char payload[payload_size];
-  char packet[packet_size];
+#define set_pixel_payload_size (6)
+#define set_pixel_packet_size (set_pixel_payload_size + 9)
+
+  char payload[set_pixel_payload_size];
+  char packet[set_pixel_packet_size];
 
   payload[0] = LEDPANEL_COMM_CMD_SETPIXEL;
   payload[1] = x;
@@ -22,9 +29,9 @@ void send_set_pixel(char x, char y, char r, char g, char b)
   payload[4] = g;
   payload[5] = b;
 
-  encode_serial_packet(packet, payload, payload_size);
+  encode_serial_packet(packet, payload, set_pixel_payload_size);
 
-  Uart_SendPacket(packet, packet_size);  
+  Uart_SendPacket(packet, set_pixel_packet_size);
 }
 
 void send_set_image(unsigned char* rgb_array)

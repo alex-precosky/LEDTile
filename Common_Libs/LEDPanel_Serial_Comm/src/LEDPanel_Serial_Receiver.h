@@ -9,17 +9,25 @@ extern "C" {
 #endif
 
 
+#if defined(_MSC_VER)
+#define ALIGNED_(x) __declspec(align(x))
+#else
+#if defined(__GNUC__)
+#define ALIGNED_(x) __attribute__ ((aligned(x)))
+#endif
+#endif
 
+#define ALIGNED_TYPE_(t,x) typedef t ALIGNED_(x)
 
   // state variable of the receiving of a serial packet
-  typedef struct receive_status_s {
+  ALIGNED_TYPE_(struct, 4) receive_status_s {
     short is_start_received;
     short is_length_received;
     short is_payload_received;
     uint32_t payload_length;
     uint32_t bytes_received;
     char buf[LEDPANEL_RECEIVE_BUFFER_SIZE];
-  } __attribute__ ((aligned (4)))receive_status_t;
+  }receive_status_t;
 
   extern receive_status_t receive_status;
 

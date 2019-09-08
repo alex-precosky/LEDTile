@@ -38,11 +38,12 @@ extern "C" {
     int decode_serial_packet(char* payload, const char* packet);
 
   /**
-     Only the ESP8266 sends packets... so it will only point to something on that platform
+      When calling one of the functions that sends something to the LED panel
+      MCU, this callback will be called to do the actual sending
   */
-  extern void (*Uart_SendPacket)(char* packet, int n);
+  void set_uart_sendpacket_callback(void (*Uart_SendPacket)(char* packet, int n));
 
-  // Send using Uart_SendPacket serial commands
+  // Serial commands sent using callback function Uart_SendPacket
   void send_set_pixel(char x, char y, char r, char g, char b);
   void send_set_image(unsigned char* rgb_array);
   void send_set_animation_frame(uint32_t i, unsigned char* rgb_array);

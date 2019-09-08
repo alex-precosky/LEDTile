@@ -6,7 +6,7 @@ TEST_GROUP(SerialCommGroup)
 {
   void setup()
   {
-    Uart_SendPacket = 0;
+    set_uart_sendpacket_callback(NULL);
   }
 
 };
