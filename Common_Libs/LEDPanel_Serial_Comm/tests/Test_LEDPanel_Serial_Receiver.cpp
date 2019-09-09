@@ -102,8 +102,6 @@ TEST(SerialReceiverGroup, Test_ArgumentBytes)
 
 TEST(SerialReceiverGroup, Test_ReceiveHandlePixel)
 {
-  mock().expectOneCall("FakeHandle_SetPixel");
-
   const int payload_size = 6;
   const int packet_size = payload_size + 9;
 
@@ -112,6 +110,8 @@ TEST(SerialReceiverGroup, Test_ReceiveHandlePixel)
   char r = 3;
   char g = 4;
   char b = 5;
+
+  mock().expectOneCall("FakeHandle_SetPixel");
 
   char packet[payload_size] = "";
   packet[0] = LEDPANEL_COMM_START_BYTE;
@@ -123,12 +123,99 @@ TEST(SerialReceiverGroup, Test_ReceiveHandlePixel)
   packet[9] = g;
   packet[10] = b;
 
-  for(int i = 0; i < packet_size; i++)
-    {
-      process_serial_char(packet[i]);
-    }
+  process_serial_chars(packet, packet_size);
 
-    mock().checkExpectations();
+  mock().checkExpectations();
+}
+
+TEST(SerialReceiverGroup, Test_ReceiveHandlePixelTwice)
+{
+  const int payload_size = 6;
+  const int packet_size = payload_size + 9;
+
+  char x = 1;
+  char y = 2;
+  char r = 3;
+  char g = 4;
+  char b = 5;
+
+  mock().expectNCalls(5, "FakeHandle_SetPixel");
+
+  char packet[payload_size] = "";
+  packet[0] = LEDPANEL_COMM_START_BYTE;
+  memcpy(packet+1, &payload_size, 4);
+  packet[5] = LEDPANEL_COMM_CMD_SETPIXEL;
+  packet[6] = x;
+  packet[7] = y;
+  packet[8] = r;
+  packet[9] = g;
+  packet[10] = b;
+
+  process_serial_chars(packet, packet_size);
+  process_serial_chars(packet, packet_size);
+  process_serial_chars(packet, packet_size);
+  process_serial_chars(packet, packet_size);
+  process_serial_chars(packet, packet_size);
+
+  mock().checkExpectations();
+}
+
+TEST(SerialReceiverGroup, Test_ReceiveHandlePixelTwoPackets)
+{
+  const int payload_size = 6;
+  const int packet_size = payload_size + 9;
+
+  char x = 1;
+  char y = 2;
+  char r = 3;
+  char g = 4;
+  char b = 5;
+
+  mock().expectOneCall("FakeHandle_SetPixel");
+
+  char packet[payload_size] = "";
+  packet[0] = LEDPANEL_COMM_START_BYTE;
+  memcpy(packet+1, &payload_size, 4);
+  packet[5] = LEDPANEL_COMM_CMD_SETPIXEL;
+  packet[6] = x;
+  packet[7] = y;
+  packet[8] = r;
+  packet[9] = g;
+  packet[10] = b;
+
+  process_serial_chars(packet, packet_size - 5);
+  process_serial_chars(packet + packet_size - 5, 5);
+
+  mock().checkExpectations();
+}
+
+TEST(SerialReceiverGroup, Test_ReceiveHandlePixelTwoCommands)
+{
+  const int payload_size = 6;
+  const int packet_size = payload_size + 9;
+
+  char x = 1;
+  char y = 2;
+  char r = 3;
+  char g = 4;
+  char b = 5;
+
+  mock().expectNCalls(2, "FakeHandle_SetPixel");
+
+  char packet[payload_size * 2] = "";
+  packet[0] = LEDPANEL_COMM_START_BYTE;
+  memcpy(packet+1, &payload_size, 4);
+  packet[5] = LEDPANEL_COMM_CMD_SETPIXEL;
+  packet[6] = x;
+  packet[7] = y;
+  packet[8] = r;
+  packet[9] = g;
+  packet[10] = b;
+  memcpy(packet+packet_size, packet, packet_size);
+
+  process_serial_chars(packet, packet_size * 2);
+
+  mock().checkExpectations();
 }
 
 TEST(SerialReceiverGroup, Test_ReceiveHandleStartAnimation)

@@ -26,7 +26,7 @@ extern "C" {
     short is_payload_received;
     uint32_t payload_length;
     uint32_t bytes_received;
-    char buf[LEDPANEL_RECEIVE_BUFFER_SIZE];
+    __attribute__ ((aligned(4))) char buf[LEDPANEL_RECEIVE_BUFFER_SIZE];
   }receive_status_t;
 
   extern receive_status_t receive_status;
@@ -37,6 +37,9 @@ extern "C" {
   // Call this for each character that is received by the Uart to update the state machine
   // and call the payload handler once a full payload has been received
   void process_serial_char(char ch);
+
+  // Call this to process a batch of characters received on the serial port. 
+  void process_serial_chars(char *chars, size_t n);
 
   void process_serial_payload(char* payload, uint32_t payload_length);
 

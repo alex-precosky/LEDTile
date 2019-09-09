@@ -64,9 +64,10 @@ void commTask(void* pdata)
   { 
 		char ch;
 
-		ch = getchar();
+		int bytesRead = read( 0, serialBuf, 4096 );
 		SequenceStop();
-	  	process_serial_char(ch);
+
+		process_serial_chars(serialBuf, bytesRead);
   }
 }
 
